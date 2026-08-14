@@ -1,0 +1,146 @@
+.hero {
+  position: relative;
+  min-height: 480px;
+  background-image: url('https://static.wixstatic.com/media/c837a6_bca53af11a42429b95d66e0f14988c59~mv2.jpg/v1/fill/w_2528,h_1230,fp_0.50_0.50,q_90,enc_auto/fashion_Gemini%203%20(Nano%20Banana%20Pro)_2026-06-07_12-34-58.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 24px 80px;
+  color: var(--pv-white);
+  text-align: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 32, 76, 0.35);
+  }
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  max-width: 640px;
+}
+
+.heroTitle {
+  font-family: var(--pv-font-serif);
+  font-size: 64px;
+  font-weight: 400;
+  color: var(--pv-white);
+  margin-bottom: 12px;
+}
+
+.heroSubtitle {
+  font-family: var(--pv-font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.02em;
+}
+
+.missionSection {
+  background: var(--pv-bg-warm);
+  padding: 96px 24px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.missionContent {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: var(--pv-font-serif);
+  font-size: 48px;
+  font-weight: 400;
+  color: var(--pv-dark);
+  margin-bottom: 24px;
+}
+
+.missionText {
+  font-size: 15px;
+  color: var(--pv-gray-text);
+  line-height: 1.7;
+}
+
+.teamSection {
+  background: var(--pv-bg-warm);
+  padding: 96px 24px 128px;
+  text-align: center;
+}
+
+.teamHeader {
+  max-width: 600px;
+  margin: 0 auto 64px;
+}
+
+.teamSub {
+  font-size: 14px;
+  color: var(--pv-gray-text);
+  margin-top: 8px;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.card {
+  text-align: left;
+}
+
+.imageWrapper {
+  aspect-ratio: 1 / 1.1;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: var(--pv-dark);
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.memberName {
+  font-family: var(--pv-font-serif);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--pv-dark);
+  margin-bottom: 4px;
+}
+
+.memberRole {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--pv-gray-text);
+  margin-bottom: 12px;
+}
+
+.memberBio {
+  font-size: 13px;
+  color: var(--pv-gray-text);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 44px;
+  }
+  .sectionTitle {
+    font-size: 36px;
+  }
+  .teamGrid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}

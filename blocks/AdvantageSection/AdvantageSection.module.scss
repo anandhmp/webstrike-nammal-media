@@ -1,0 +1,107 @@
+.section {
+  padding: 80px 0;
+  background: var(--pv-bg-warm);
+}
+
+.banner {
+  position: relative;
+  border-radius: var(--pv-radius-lg);
+  overflow: hidden;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  padding: 48px;
+  background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1400&q=80');
+  background-size: cover;
+  background-position: center;
+  box-shadow: var(--pv-shadow-md);
+}
+
+.overlayCard {
+  background: rgba(246, 245, 240, 0.95);
+  backdrop-filter: blur(12px);
+  border-radius: var(--pv-radius-md);
+  padding: 40px;
+  max-width: 460px;
+  position: relative;
+  box-shadow: var(--pv-shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.portraitWrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 3px solid var(--pv-white);
+  box-shadow: var(--pv-shadow-sm);
+  margin-top: -60px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.title {
+  font-family: var(--pv-font-serif);
+  font-size: 32px;
+  line-height: 1.15;
+  color: var(--pv-dark);
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 14px 0;
+
+  .statItem {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--pv-dark);
+    letter-spacing: 0.04em;
+    line-height: 1.3;
+  }
+}
+
+.description {
+  font-size: 14px;
+  color: var(--pv-gray-text);
+  line-height: 1.6;
+}
+
+.readMoreBtn {
+  align-self: flex-start;
+  background: var(--pv-dark);
+  color: var(--pv-white);
+  padding: 10px 24px;
+  border-radius: var(--pv-radius-full);
+  font-size: 13px;
+  font-weight: 700;
+  transition: var(--pv-transition);
+
+  &:hover {
+    background: #333333;
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 900px) {
+  .banner {
+    padding: 24px;
+    min-height: auto;
+  }
+  .overlayCard {
+    max-width: 100%;
+  }
+  .portraitWrapper {
+    margin-top: 0;
+  }
+}
