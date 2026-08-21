@@ -1,229 +1,205 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { MapPin, Phone, Mail, Send, Clock, Building2 } from 'lucide-react';
 import styles from '@/styles/Contact.module.scss';
 
 export default function ContactPage() {
-  const [inquiryType, setInquiryType] = useState('General');
-  const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-  });
+  const [openFaq, setOpenFaq] = useState(0);
 
-  const inquiryTypes = ['General', 'Partnership', 'Distribution', 'Careers'];
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
+  const faqs = [
+    {
+      q: 'HOW SOON WILL I RECEIVE A REPLY?',
+      a: 'We usually respond within 24–48 business hours. Whether you have a question about show partnerships, event sponsorships, or brand advertising, our team will prioritize your inquiry and provide custom media support.',
+    },
+    {
+      q: 'CAN I VISIT THE NAMMAL CREATIVE HUB STUDIO?',
+      a: 'Yes! Our studio doors at Grandmaster\'s Creative Hub, Kowdiar PO, Trivandrum remain open for scheduled partner meetings, creative discussions, and broadcast collaborations.',
+    },
+    {
+      q: 'HOW DO I SPONSOR OR PARTNER FOR SHOWS & EVENTS?',
+      a: 'Simply fill out the inquiry form above or reach out directly to grandmastercreativehub@gmail.com or hotline +91 7907760700. Our media strategy team will share tailor-made broadcast & digital package options.',
+    },
+  ];
 
   return (
     <>
       <Head>
-        <title>Contact Us | NAMMAL & Flowers TV</title>
+        <title>Contact Us | NAMMAL & Flowers TV Network</title>
         <meta
           name="description"
-          content="Get connected with Flowers TV & NAMMAL Media. Partner with us, inquire about distribution, or reach out to our team."
+          content="Get in touch with Flowers TV and NAMMAL Media at Grandmaster's Creative Hub, Kowdiar PO, Trivandrum."
         />
       </Head>
 
       <main className={styles.wrapper}>
-        {/* Hero Section */}
+        {/* 1. Hero Section with Giant Typography */}
         <section className={styles.hero}>
-          <div className={styles.heroContent}>
-            <span className={styles.badge}>REACH OUT TO US</span>
-            <h1 className={styles.heroTitle}>Get Connected</h1>
-            <p className={styles.heroSubtitle}>
-              Whether you want to partner with us, advertise, or inquire about distribution, we'd love to hear from you.
-            </p>
-          </div>
-        </section>
-
-        {/* Quick Contact Cards */}
-        <section className={styles.quickCardsSection}>
           <div className="pv-container">
-            <div className={styles.quickGrid}>
-              <div className={styles.quickCard}>
-                <div className={styles.iconCircle}>
-                  <MapPin size={22} />
-                </div>
-                <div className={styles.quickCardBody}>
-                  <span className={styles.quickCardTitle}>Headquarters</span>
-                  <span className={styles.quickCardValue}>
-                    Grandmaster's creative hub, 'Manjusha' TC 23/1777, OD4, Jawaharnagar, Kowdiar PO, Trivandrum
-                  </span>
-                </div>
+            <h1 className={styles.giantTitle}>
+              GET IN TOUCH <span className={styles.accentScript}>the dialogue</span>
+            </h1>
+
+            <div className={styles.heroBottomRow}>
+              {/* Left Subtitle & Paragraph */}
+              <div className={styles.heroLeftDesc}>
+                <span className={styles.subLabel}>LET'S CREATE</span>
+                <h2 className={styles.dialogueHead}>
+                  IN <span>dialogue</span> WITH NAMMAL
+                </h2>
+                <p className={styles.pText}>
+                  OUR STUDIO DOORS REMAIN OPEN FOR INQUIRIES, PARTNERSHIPS, BROADCAST ADVERTISING, AND NEW IDEAS.
+                </p>
               </div>
 
-              <div className={styles.quickCard}>
-                <div className={styles.iconCircle}>
-                  <Phone size={22} />
+              {/* Right Contact Quick Grid */}
+              <div className={styles.heroContactGrid}>
+                <div className={styles.infoCol}>
+                  <span className={styles.infoLabel}>GENERAL INQUIRIES</span>
+                  <p className={styles.infoVal}>
+                    <a href="mailto:grandmastercreativehub@gmail.com">
+                      grandmastercreativehub@gmail.com
+                    </a>
+                  </p>
                 </div>
-                <div className={styles.quickCardBody}>
-                  <span className={styles.quickCardTitle}>Hotline & Support</span>
-                  <span className={styles.quickCardValue}>
+
+                <div className={styles.infoCol}>
+                  <span className={styles.infoLabel}>HOTLINE & SUPPORT</span>
+                  <p className={styles.infoVal}>
                     <a href="tel:+917907760700">+91 7907760700</a>
-                  </span>
+                  </p>
                 </div>
-              </div>
 
-              <div className={styles.quickCard}>
-                <div className={styles.iconCircle}>
-                  <Mail size={22} />
+                <div className={styles.infoCol}>
+                  <span className={styles.infoLabel}>HEADQUARTERS</span>
+                  <p className={styles.infoVal}>Grandmaster's creative hub</p>
                 </div>
-                <div className={styles.quickCardBody}>
-                  <span className={styles.quickCardTitle}>Official Email</span>
-                  <span className={styles.quickCardValue}>
-                    <a href="mailto:grandmastercreativehub@gmail.com">grandmastercreativehub@gmail.com</a>
-                  </span>
+
+                <div className={styles.infoCol}>
+                  <span className={styles.infoLabel}>STUDIO LOCATION</span>
+                  <p className={styles.infoVal}>
+                    'Manjusha' TC 23/1777, Kowdiar, Trivandrum
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Form and Campus Details Grid */}
+        {/* 2. Split Form Section */}
         <section className={styles.formSection}>
           <div className="pv-container">
-            <div className={styles.mainGrid}>
-              {/* Form Card */}
-              <div id="partner" className={styles.formCard}>
-                <h2 className={styles.sectionTitle}>Send A Direct Message</h2>
-                <p className={styles.sectionDesc}>
-                  Select your inquiry type and fill out the details below. Our team responds within 24 business hours.
-                </p>
-
-                {submitted ? (
-                  <div className={styles.successBox}>
-                    Thank you for reaching out! Your message has been sent to our team.
-                  </div>
-                ) : (
-                  <form onSubmit={handleSubmit}>
-                    {/* Inquiry Type Pills */}
-                    <div className={styles.inquiryTypeGroup}>
-                      <span className={styles.inquiryLabel}>Inquiry Type:</span>
-                      <div className={styles.pillGrid}>
-                        {inquiryTypes.map((type) => (
-                          <button
-                            key={type}
-                            type="button"
-                            className={`${styles.pillBtn} ${
-                              inquiryType === type ? styles.activePill : ''
-                            }`}
-                            onClick={() => setInquiryType(type)}
-                          >
-                            {type}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className={styles.formRow}>
-                      <div className={styles.inputGroup}>
-                        <label htmlFor="name">Full Name *</label>
-                        <input
-                          id="name"
-                          type="text"
-                          required
-                          placeholder="Your full name"
-                          className={styles.input}
-                          value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        />
-                      </div>
-
-                      <div className={styles.inputGroup}>
-                        <label htmlFor="email">Email Address *</label>
-                        <input
-                          id="email"
-                          type="email"
-                          required
-                          placeholder="name@company.com"
-                          className={styles.input}
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        />
-                      </div>
-                    </div>
-
-                    <div className={styles.formRow}>
-                      <div className={styles.inputGroup}>
-                        <label htmlFor="phone">Phone Number</label>
-                        <input
-                          id="phone"
-                          type="tel"
-                          placeholder="+91 98765 43210"
-                          className={styles.input}
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        />
-                      </div>
-
-                      <div className={styles.inputGroup}>
-                        <label htmlFor="subject">Subject</label>
-                        <input
-                          id="subject"
-                          type="text"
-                          placeholder="Brief topic"
-                          className={styles.input}
-                          value={formData.subject}
-                          onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                        />
-                      </div>
-                    </div>
-
-                    <div className={styles.inputGroup}>
-                      <label htmlFor="message">Message *</label>
-                      <textarea
-                        id="message"
-                        required
-                        placeholder="Write your message or partnership details here..."
-                        className={styles.textarea}
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      />
-                    </div>
-
-                    <button type="submit" className={styles.submitBtn}>
-                      <Send size={16} /> Send Message
-                    </button>
-                  </form>
-                )}
-              </div>
-
-              {/* Side Campus Info Card */}
-              <div className={styles.campusCard}>
+            <div className={styles.formGrid}>
+              {/* Left Info Column */}
+              <div className={styles.leftInfoCol}>
                 <div>
-                  <div className={styles.campusImgWrapper}>
-                    <img
-                      src="https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg"
-                      alt="Insight Media City Campus"
-                    />
-                  </div>
+                  <span className={styles.emailSubLabel}>GENERAL INQUIRIES</span>
+                  <a
+                    href="mailto:grandmastercreativehub@gmail.com"
+                    className={styles.mainEmail}
+                  >
+                    grandmastercreativehub@gmail.com
+                  </a>
 
-                  <h3 style={{ fontSize: '20px', fontWeight: 800, color: '#ffffff', marginBottom: '8px' }}>
-                    Grandmaster's Creative Hub
-                  </h3>
-                  <p style={{ fontSize: '13.5px', color: '#9ca3af', lineHeight: 1.6 }}>
-                    'Manjusha' TC 23/1777, OD4, Jawaharnagar, Kowdiar PO, Trivandrum. Creative headquarters for Flowers TV and NAMMAL Media.
-                  </p>
+                  <div style={{ marginTop: '24px' }}>
+                    <span className={styles.emailSubLabel}>PHONE HOTLINE</span>
+                    <a
+                      href="tel:+917907760700"
+                      style={{ fontSize: '18px', fontWeight: 800, color: '#ffffff', textDecoration: 'none' }}
+                    >
+                      +91 7907760700
+                    </a>
+                  </div>
                 </div>
 
                 <div className={styles.hoursBox}>
-                  <div className={styles.hoursTitle}>
-                    <Clock size={14} style={{ display: 'inline', marginRight: '6px' }} />
-                    Operating Hours
-                  </div>
+                  <div className={styles.hoursTitle}>OPERATING HOURS</div>
                   <p className={styles.hoursText}>
                     Monday – Saturday: 9:00 AM – 7:00 PM IST<br />
                     Broadcast Operations: 24 Hours / 7 Days
                   </p>
                 </div>
               </div>
+
+              {/* Right Minimal Inputs Form */}
+              <form
+                className={styles.rightFormCol}
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  alert('Thank you for contacting NAMMAL Media! We will respond shortly.');
+                }}
+              >
+                <div className={styles.inputRow}>
+                  <div className={styles.formGroup}>
+                    <label>FIRST NAME</label>
+                    <input type="text" placeholder="Your first name" required />
+                  </div>
+                  <div className={styles.formGroup}>
+                    <label>LAST NAME</label>
+                    <input type="text" placeholder="Your last name" required />
+                  </div>
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label>EMAIL ADDRESS</label>
+                  <input type="email" placeholder="name@company.com" required />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label>WHERE ARE YOU LOCATED?</label>
+                  <input type="text" placeholder="City, Country" />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label>COMPANY NAME</label>
+                  <input type="text" placeholder="Your brand / organization" />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label>HOW CAN WE HELP?</label>
+                  <textarea
+                    placeholder="Tell us about your campaign, partnership, or show inquiry..."
+                    required
+                  />
+                </div>
+
+                <button type="submit" className={styles.submitBtn}>
+                  SUBMIT INQUIRY
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. FAQ Accordion Section */}
+        <section className={styles.faqSection}>
+          <div className="pv-container">
+            <div className={styles.faqHeader}>
+              <h2 className={styles.faqTitle}>
+                CLARITY IN <span>conversation</span> AND DIALOGUE
+              </h2>
+            </div>
+
+            <div className={styles.faqList}>
+              {faqs.map((faq, idx) => (
+                <div
+                  key={idx}
+                  className={`${styles.faqItem} ${
+                    openFaq === idx ? styles.openItem : ''
+                  }`}
+                >
+                  <button
+                    className={styles.faqQuestion}
+                    onClick={() => setOpenFaq(openFaq === idx ? -1 : idx)}
+                  >
+                    <span>{faq.q}</span>
+                    <span className={styles.plusMinus}>
+                      {openFaq === idx ? '−' : '+'}
+                    </span>
+                  </button>
+                  {openFaq === idx && (
+                    <div className={styles.faqAnswer}>{faq.a}</div>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
         </section>

@@ -1,0 +1,392 @@
+.wrapper {
+  background-color: #0b0c10;
+  color: #ffffff;
+  min-height: 100vh;
+  padding-top: 60px;
+  font-family: var(--pv-font-sans);
+  overflow-x: hidden;
+}
+
+/* 1. Services Hero & Bento Grid Section */
+.heroSection {
+  padding: 60px 0 80px;
+  text-align: center;
+}
+
+.topSubHeader {
+  font-size: 12px;
+  font-weight: 800;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+}
+
+.heroTitle {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin-bottom: 50px;
+}
+
+/* Bento Grid */
+.bentoGrid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.1fr;
+  gap: 20px;
+  text-align: left;
+}
+
+.leftCol,
+.rightCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bentoCard {
+  background: #111319;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(50, 160, 223, 0.4);
+    transform: translateY(-4px);
+
+    .cardIcon {
+      color: #fff263;
+      background: rgba(255, 242, 99, 0.15);
+    }
+  }
+}
+
+.middleCard {
+  background: #111319;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  min-height: 480px;
+
+  .middleImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  &:hover .middleImg {
+    transform: scale(1.05);
+  }
+
+  .middleOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(11, 12, 16, 0.95) 0%, transparent 60%);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+}
+
+.cardIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: rgba(50, 160, 223, 0.12);
+  color: #32a0df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.cardDesc {
+  font-size: 13.5px;
+  color: #9ca3af;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.graphicPreview {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* 2. Marquee Ticker Banner */
+.marqueeBar {
+  background: #32a0df;
+  color: #0b0c10;
+  padding: 16px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 900;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 40px 0 80px;
+}
+
+.marqueeContent {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+
+  span {
+    margin: 0 24px;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 3. Selected Works Section */
+.worksSection {
+  padding: 40px 0 80px;
+}
+
+.worksHeader {
+  margin-bottom: 40px;
+}
+
+.sectionLabel {
+  font-size: 12px;
+  font-weight: 800;
+  color: #9ca3af;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.sectionTitle {
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  max-width: 800px;
+}
+
+.worksGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.workCard {
+  background: #111319;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba(50, 160, 223, 0.4);
+
+    .workImg {
+      transform: scale(1.06);
+    }
+  }
+}
+
+.workImgWrapper {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  position: relative;
+}
+
+.workImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.workTag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(11, 12, 16, 0.85);
+  backdrop-filter: blur(8px);
+  color: #fff263;
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.workMeta {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.workName {
+  font-size: 16px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 4px 0;
+}
+
+.workCategory {
+  font-size: 12.5px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.arrowCircle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(50, 160, 223, 0.15);
+  color: #32a0df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 4. Process Accordion Section */
+.processSection {
+  padding: 40px 0 100px;
+}
+
+.processGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.activeProcessCard {
+  background: #32a0df;
+  color: #0b0c10;
+  border-radius: 16px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 240px 1fr 1.2fr;
+  gap: 32px;
+  align-items: center;
+
+  .processNum {
+    font-size: 14px;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    span {
+      font-size: 28px;
+      font-weight: 900;
+      margin-right: 12px;
+    }
+  }
+
+  .processTitle {
+    font-size: 32px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #0b0c10;
+    margin: 0;
+  }
+
+  .processText {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #012a68;
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+.processCard {
+  background: #111319;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 80px 200px 1fr;
+  gap: 32px;
+  align-items: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: rgba(50, 160, 223, 0.3);
+    background: #161922;
+  }
+
+  .processNum {
+    font-size: 22px;
+    font-weight: 900;
+    color: #6b7280;
+  }
+
+  .processTitle {
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .processText {
+    font-size: 13.5px;
+    color: #9ca3af;
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .middleCard {
+    min-height: 320px;
+  }
+
+  .worksGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .activeProcessCard,
+  .processCard {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
