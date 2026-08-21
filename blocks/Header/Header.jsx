@@ -13,7 +13,7 @@ export default function Header() {
           {/* Logo Group */}
           <Link href="/" className={styles.logoGroup}>
             <img
-              src="/assets/nammal-logo.png"
+              src="/assets/nammal-media.png"
               alt="NAMMAL Media Logo"
               className={styles.logoImg}
             />

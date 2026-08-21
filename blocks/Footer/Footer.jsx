@@ -11,7 +11,7 @@ export default function Footer() {
           <div className={styles.brandCol}>
             <Link href="/" className={styles.logoLink}>
               <img
-                src="/assets/nammal-logo.png"
+                src="/assets/nammal-media.png"
                 alt="NAMMAL Media Logo"
                 className={styles.logoImg}
               />

@@ -153,7 +153,6 @@ export default function StreamingHome() {
         <section className={styles.showCategorySection}>
           <div className="pv-container">
             <div className={styles.categoryHeader}>
-              <span className={styles.bulletDot}>·</span>
               <h2 className={styles.categoryTitle}>{originalsData.title}</h2>
             </div>
             <div className={styles.rowGridPortrait}>
