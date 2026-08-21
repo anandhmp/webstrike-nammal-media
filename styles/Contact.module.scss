@@ -257,12 +257,12 @@
 }
 
 .submitBtn {
-  background: linear-gradient(135deg, var(--pv-gold), var(--pv-yellow));
+  background: #fff263;
   color: #0b0c10;
-  padding: 14px 28px;
-  border-radius: 10px;
-  font-size: 14px;
-  font-weight: 900;
+  padding: 11px 22px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 800;
   border: none;
   cursor: pointer;
   width: 100%;
@@ -270,13 +270,13 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: all 0.25s ease;
-  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.35);
+  transition: all 0.2s ease;
+  box-shadow: none;
 
   &:hover {
     background: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(255, 215, 0, 0.5);
+    transform: translateY(-1px);
+    box-shadow: none;
   }
 }
 

@@ -1,34 +1,34 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-  /* Official NAMMAL Brand Colors */
+  /* Official NAMMAL Brand Colors for CTAs & Accents */
   --pv-blue-lite: #32a0df;
   --pv-blue-dark: #012a68;
   --pv-yellow: #fff263;
   --pv-yellow-variant: #e3ae62;
 
-  --pv-gold: #e3ae62;
+  --pv-gold: #fff263;
   --pv-gold-light: #fff263;
-  --pv-bg-warm: #012a68;
-  --pv-bg-card: #071938;
+  --pv-bg-warm: #0b0c10;
+  --pv-bg-card: #111622;
   --pv-lime-badge: #fff263;
-  --pv-dark: #012a68;
-  --pv-dark-subtle: #081b3d;
-  --pv-gray-text: #93b3e6;
-  --pv-gray-light: #183e78;
+  --pv-dark: #0b0c10;
+  --pv-dark-subtle: #111622;
+  --pv-gray-text: #9ca3af;
+  --pv-gray-light: #1f2937;
   --pv-white: #ffffff;
 
-  --pv-font-serif: 'Playfair Display', Georgia, serif;
-  --pv-font-sans: 'Plus Jakarta Sans', sans-serif;
+  --pv-font-serif: 'Lato', sans-serif;
+  --pv-font-sans: 'Lato', sans-serif;
 
   --pv-radius-sm: 6px;
   --pv-radius-md: 12px;
   --pv-radius-lg: 20px;
   --pv-radius-full: 9999px;
 
-  --pv-transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  --pv-shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.2);
-  --pv-shadow-md: 0 12px 32px rgba(0, 0, 0, 0.4);
+  --pv-transition: all 0.25s ease;
+  --pv-shadow-sm: none;
+  --pv-shadow-md: none;
 }
 
 * {
@@ -43,16 +43,16 @@ body {
   overflow-x: hidden;
   font-family: var(--pv-font-sans);
   background-color: var(--pv-bg-warm);
-  color: var(--pv-dark);
+  color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--pv-font-serif);
-  font-weight: 500;
-  color: var(--pv-dark);
+  font-family: var(--pv-font-sans);
+  font-weight: 700;
+  color: #ffffff;
   letter-spacing: -0.01em;
 }
 
