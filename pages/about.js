@@ -117,11 +117,19 @@ export default function AboutPage() {
   return (
     <>
       <Head>
-        <title>About Us | NAMMAL & Flowers TV Network</title>
+        <title>About Us | NAMMAL MEDIA - Malayaliyude Manasakshi</title>
         <meta
           name="description"
-          content="Learn about Flowers TV & NAMMAL Media — pioneering Malayalam infotainment, stage productions, news, and broadcast excellence."
+          content="Learn about NAMMAL MEDIA (നമ്മള് - മലയാളിയുടെ മനസ്സാക്ഷി), Kerala's premier digital media network, our leadership team, founding story, awards, and approach."
         />
+        <link rel="canonical" href="https://nammalmedia.com/about" />
+        <meta property="og:title" content="About Us | NAMMAL MEDIA" />
+        <meta
+          property="og:description"
+          content="NAMMAL MEDIA - Malayaliyude Manasakshi. Founding story, production vision, leadership, and accolades."
+        />
+        <meta property="og:url" content="https://nammalmedia.com/about" />
+        <meta property="og:image" content="https://nammalmedia.com/assets/og-image.png" />
       </Head>
 
       <main className={styles.wrapper}>
@@ -130,7 +138,7 @@ export default function AboutPage() {
           <div className="pv-container">
             <h1 className={styles.heroTitle}>ABOUT US</h1>
             <p className={styles.heroDesc}>
-              Welcome to Flowers TV & NAMMAL Media, where storytelling meets innovation, and visual narratives come to life. As a pioneering force in the world of cinematic production and broadcasting, NAMMAL Media is dedicated to pushing the boundaries of creativity, technology, and storytelling. Our passion lies in crafting compelling visual experiences that captivate, inspire, and leave a lasting impact.
+              Welcome to NAMMAL MEDIA, where storytelling meets innovation, and visual narratives come to life. As a pioneering force in the world of cinematic production and broadcasting, NAMMAL Media is dedicated to pushing the boundaries of creativity, technology, and storytelling. Our passion lies in crafting compelling visual experiences that captivate, inspire, and leave a lasting impact.
             </p>
 
             <div className={styles.playRingWrapper}>
@@ -160,7 +168,7 @@ export default function AboutPage() {
                   OUR CINEMATIC<br />MANIFESTO
                 </h2>
                 <p className={styles.sectionText}>
-                  At Flowers TV & NAMMAL Media, we are not merely storytellers; we are architects of visual narratives, weaving tales that transcend the ordinary.
+                  At NAMMAL MEDIA, we are not merely storytellers; we are architects of visual narratives, weaving tales that transcend the ordinary.
                 </p>
                 <p className={styles.sectionText}>
                   Our mission is to redefine cinematic excellence, leveraging innovation, creativity, and cutting-edge technology to craft immersive experiences that linger in the hearts of audiences.
@@ -183,7 +191,7 @@ export default function AboutPage() {
               <div className={styles.textCol}>
                 <h2 className={styles.sectionTitle}>FOUNDING STORY</h2>
                 <p className={styles.sectionText}>
-                  In the genesis of Flowers TV & NAMMAL, our narrative unfolded with a profound passion for storytelling and a shared vision among a group of cinematic enthusiasts.
+                  In the genesis of NAMMAL MEDIA, our narrative unfolded with a profound passion for storytelling and a shared vision among a group of cinematic enthusiasts.
                 </p>
                 <p className={styles.sectionText}>
                   Founded on the principles of artistic integrity and a commitment to pushing the envelope, our journey began with the belief that each frame has the power to resonate and etch itself into the tapestry of cinematic history.
@@ -384,7 +392,7 @@ export default function AboutPage() {
               CELEBRATED
             </h2>
             <p className={styles.awardsSubTitle}>
-              A world of cinematic brilliance as we proudly showcase the many awards Flowers TV & NAMMAL Media has earned
+              A world of cinematic brilliance as we proudly showcase the many awards NAMMAL MEDIA has earned
             </p>
 
             <div className={styles.awardsList}>

@@ -1,6 +1,32 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "TelevisionStation",
+    "name": "NAMMAL MEDIA",
+    "alternateName": "നമ്മള് - മലയാളിയുടെ മനസ്സാക്ഷി",
+    "url": "https://nammalmedia.com",
+    "logo": "https://nammalmedia.com/assets/nammal-media.png",
+    "image": "https://nammalmedia.com/assets/og-image.png",
+    "description": "NAMMAL MEDIA (നമ്മള് - മലയാളിയുടെ മനസ്സാക്ഷി) is a leading digital media platform and entertainment channel from Kerala, India. Featuring Malayalam cinema updates, G. S. Pradeep’s Aswamedham, cultural events, interviews, and stage shows.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Grandmaster's creative hub, 'Manjusha' TC 23/1777, OD4, Jawaharnagar",
+      "addressLocality": "Trivandrum",
+      "addressRegion": "Kerala",
+      "postalCode": "695003",
+      "addressCountry": "IN"
+    },
+    "telephone": "+91-7907760700",
+    "email": "grandmastercreativehub@gmail.com",
+    "sameAs": [
+      "https://www.instagram.com/nammal__media/",
+      "https://www.facebook.com/61590600346051/videos/aswamedham25-the-grand-launch-of-nammal-media-an-evening-dedicated-to-the-celebr/2023134008294949/",
+      "https://www.youtube.com/watch?v=GE1M8YzjxII"
+    ]
+  };
+
   return (
     <Html lang="en">
       <Head>
@@ -16,6 +42,10 @@ export default function Document() {
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
       </Head>
       <body className="antialiased">

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { Facebook, Instagram, Youtube } from 'lucide-react';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
@@ -17,8 +18,37 @@ export default function Footer() {
               />
             </Link>
             <p className={styles.brandDesc}>
-              A film production and media network specializing in creating visually stunning and impactful content.
+              നമ്മള് - മലയാളിയുടെ മനസ്സാക്ഷി (Nammal - The Conscience of the Malayalee). Digital media platform and entertainment channel from Kerala, India.
             </p>
+            <div style={{ display: 'flex', gap: '14px', marginTop: '12px' }}>
+              <a
+                href="https://www.facebook.com/61590600346051/videos/aswamedham25-the-grand-launch-of-nammal-media-an-evening-dedicated-to-the-celebr/2023134008294949/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+                style={{ color: '#9ca3af', transition: 'color 0.2s' }}
+              >
+                <Facebook size={18} />
+              </a>
+              <a
+                href="https://www.instagram.com/nammal__media/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                style={{ color: '#9ca3af', transition: 'color 0.2s' }}
+              >
+                <Instagram size={18} />
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=GE1M8YzjxII"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                style={{ color: '#9ca3af', transition: 'color 0.2s' }}
+              >
+                <Youtube size={18} />
+              </a>
+            </div>
           </div>
 
           {/* Column 2: MENU */}
@@ -62,9 +92,9 @@ export default function Footer() {
                 <Link href="/services">Film Distributor</Link>
               </li>
               <li>
-                <a href="https://flowersoriginals.com/" target="_blank" rel="noreferrer">
-                  Flowers Originals
-                </a>
+                <Link href="/shows">
+                  NAMMAL Originals
+                </Link>
               </li>
               <li>
                 <Link href="/services">Pay TV</Link>
@@ -117,7 +147,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className={styles.bottomBar}>
           <p className={styles.copyrightText}>
-            © 2026 NAMMAL & Flowers TV Network. All rights reserved.
+            © 2026 NAMMAL MEDIA. All rights reserved.
           </p>
         </div>
       </div>

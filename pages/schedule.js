@@ -73,7 +73,7 @@ export default function SchedulePage() {
     {
       id: 5,
       time: '09:30 PM',
-      title: 'Flowers Oru Kodi',
+      title: 'NAMMAL Oru Kodi',
       category: 'Reality Shows',
       isPrimetime: true,
       isLive: false,
@@ -103,11 +103,19 @@ export default function SchedulePage() {
   return (
     <>
       <Head>
-        <title>Program Schedule | Flowers TV & NAMMAL</title>
+        <title>Program Schedule | NAMMAL MEDIA - Malayaliyude Manasakshi</title>
         <meta
           name="description"
-          content="Daily TV schedule, show timings, live broadcasts, and episode reminders for Flowers TV and NAMMAL."
+          content="Daily TV schedule, show timings, live broadcasts, and episode reminders for NAMMAL MEDIA Network."
         />
+        <link rel="canonical" href="https://nammalmedia.com/schedule" />
+        <meta property="og:title" content="Program Schedule | NAMMAL MEDIA" />
+        <meta
+          property="og:description"
+          content="Check daily program schedule and timings for NAMMAL MEDIA shows including Aswamedham."
+        />
+        <meta property="og:url" content="https://nammalmedia.com/schedule" />
+        <meta property="og:image" content="https://nammalmedia.com/assets/og-image.png" />
       </Head>
 
       <main className={styles.wrapper}>

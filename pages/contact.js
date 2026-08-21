@@ -7,11 +7,19 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>Contact Us | NAMMAL & Flowers TV Network</title>
+        <title>Contact Us | NAMMAL MEDIA - Malayaliyude Manasakshi</title>
         <meta
           name="description"
-          content="Get in touch with Flowers TV & NAMMAL Media at Grandmaster's Creative Hub, Kowdiar PO, Trivandrum."
+          content="Get in touch with NAMMAL MEDIA in Trivandrum, Kerala. Phone: +91 7907760700, Email: grandmastercreativehub@gmail.com. Explore collaboration opportunities & global branches."
         />
+        <link rel="canonical" href="https://nammalmedia.com/contact" />
+        <meta property="og:title" content="Contact Us | NAMMAL MEDIA" />
+        <meta
+          property="og:description"
+          content="Contact NAMMAL MEDIA headquarters in Kowdiar, Trivandrum. Inquire about shows, collaborations, and media network partnerships."
+        />
+        <meta property="og:url" content="https://nammalmedia.com/contact" />
+        <meta property="og:image" content="https://nammalmedia.com/assets/og-image.png" />
       </Head>
 
       <main className={styles.wrapper}>
@@ -61,16 +69,31 @@ export default function ContactPage() {
                   <div>
                     <div className={styles.bottomDivider} />
                     <div className={styles.socialRow}>
-                      <a href="#" className={styles.socialCircle} aria-label="Facebook">
+                      <a
+                        href="https://www.facebook.com/61590600346051/videos/aswamedham25-the-grand-launch-of-nammal-media-an-evening-dedicated-to-the-celebr/2023134008294949/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.socialCircle}
+                        aria-label="Facebook"
+                      >
                         <Facebook size={18} />
                       </a>
-                      <a href="#" className={styles.socialCircle} aria-label="Twitter">
-                        <Twitter size={18} />
-                      </a>
-                      <a href="#" className={styles.socialCircle} aria-label="Instagram">
+                      <a
+                        href="https://www.instagram.com/nammal__media/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.socialCircle}
+                        aria-label="Instagram"
+                      >
                         <Instagram size={18} />
                       </a>
-                      <a href="#" className={styles.socialCircle} aria-label="YouTube">
+                      <a
+                        href="https://www.youtube.com/watch?v=GE1M8YzjxII"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.socialCircle}
+                        aria-label="YouTube"
+                      >
                         <Youtube size={18} />
                       </a>
                     </div>

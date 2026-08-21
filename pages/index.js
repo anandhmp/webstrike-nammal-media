@@ -61,11 +61,40 @@ export default function StreamingHome() {
   return (
     <>
       <Head>
-        <title>Home | NAMMAL & Flowers TV Network</title>
+        <title>NAMMAL MEDIA - Malayaliyude Manasakshi | Official Digital Channel</title>
         <meta
           name="description"
-          content="Watch NAMMAL & Flowers TV official infotainment shows, English serials, short films, and special programs."
+          content="NAMMAL MEDIA (നമ്മള് - മലയാളിയുടെ മനസ്സാക്ഷി) is a premier digital media platform and entertainment channel from Kerala, India. Featuring Malayalam cinema updates, G. S. Pradeep’s Aswamedham, cultural events, interviews, stage shows, and regional news."
         />
+        <meta
+          name="keywords"
+          content="NAMMAL Media, Malayaliyude Manasakshi, Aswamedham, GS Pradeep, Malayalam Cinema, Kerala Entertainment, Malayalam Shows, Nammal TV, Malayalam Digital Channel"
+        />
+        <link rel="canonical" href="https://nammalmedia.com/" />
+
+        {/* OpenGraph Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="NAMMAL MEDIA - Malayaliyude Manasakshi" />
+        <meta
+          property="og:description"
+          content="Digital media platform and entertainment channel from Kerala, India. Tagline: നമ്മള് - മലയാളിയുടെ മനസ്സാക്ഷി (Nammal - The Conscience of the Malayalee). Featuring G. S. Pradeep’s Aswamedham, Malayalam cinema updates, interviews, and stage shows."
+        />
+        <meta property="og:url" content="https://nammalmedia.com/" />
+        <meta property="og:site_name" content="NAMMAL MEDIA" />
+        <meta property="og:image" content="https://nammalmedia.com/assets/og-image.png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="ml_IN" />
+        <meta property="og:locale:alternate" content="en_US" />
+
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="NAMMAL MEDIA - Malayaliyude Manasakshi" />
+        <meta
+          name="twitter:description"
+          content="Digital media platform and entertainment channel from Kerala, India. Tagline: നമ്മള് - മലയാളിയുടെ മനസ്സാക്ഷി"
+        />
+        <meta name="twitter:image" content="https://nammalmedia.com/assets/og-image.png" />
       </Head>
 
       <main className={styles.wrapper}>

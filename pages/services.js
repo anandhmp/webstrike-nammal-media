@@ -72,11 +72,19 @@ export default function ServicesPage() {
   return (
     <>
       <Head>
-        <title>Services | NAMMAL & Flowers TV Network</title>
+        <title>Services & Business Verticals | NAMMAL MEDIA - Malayaliyude Manasakshi</title>
         <meta
           name="description"
-          content="Explore Core Business of NAMMAL Media including Film Production, Web Series, Cinema, and Distribution."
+          content="Explore Core Business Verticals of NAMMAL MEDIA including Film Production, Film Distribution, Free to Air Production, Web Series, Cinema, and Pay TV."
         />
+        <link rel="canonical" href="https://nammalmedia.com/services" />
+        <meta property="og:title" content="Services & Business Verticals | NAMMAL MEDIA" />
+        <meta
+          property="og:description"
+          content="Film production, web series, cinema distribution, and broadcast media services from NAMMAL MEDIA."
+        />
+        <meta property="og:url" content="https://nammalmedia.com/services" />
+        <meta property="og:image" content="https://nammalmedia.com/assets/og-image.png" />
       </Head>
 
       <main className={styles.wrapper}>

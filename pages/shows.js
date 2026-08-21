@@ -101,11 +101,19 @@ export default function ShowsPage() {
   return (
     <>
       <Head>
-        <title>SHOWS | NAMMAL & Flowers TV</title>
+        <title>Shows & Programs | NAMMAL MEDIA - Malayaliyude Manasakshi</title>
         <meta
           name="description"
-          content="Browse official Malayalam infotainment, music, drama, short films, and special programs on NAMMAL."
+          content="Explore official Malayalam television shows, infotainment series, G. S. Pradeep’s Aswamedham, sitcoms, and stage events on NAMMAL MEDIA."
         />
+        <link rel="canonical" href="https://nammalmedia.com/shows" />
+        <meta property="og:title" content="Shows & Programs | NAMMAL MEDIA" />
+        <meta
+          property="og:description"
+          content="Watch official infotainment shows, Aswamedham, sitcoms, and stage events from NAMMAL MEDIA."
+        />
+        <meta property="og:url" content="https://nammalmedia.com/shows" />
+        <meta property="og:image" content="https://nammalmedia.com/assets/og-image.png" />
       </Head>
 
       <main className={styles.wrapper}>
