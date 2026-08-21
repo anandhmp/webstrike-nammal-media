@@ -59,14 +59,13 @@ export default function ShowsPage() {
       id: 7,
       title: 'Special Programs',
       category: 'Specials',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/KUTTY-KALVARA-1400x800.jpg',
+      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg',
     },
     {
       id: 8,
       title: 'Pusthakomania',
       category: 'Literature',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/chapter-13-V-700x800.jpg',
-      isPortrait: true,
+      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg',
     },
     {
       id: 9,
@@ -91,7 +90,6 @@ export default function ShowsPage() {
       title: 'Mahabharatham Quoted by Murukan Kattakkada',
       category: 'Literature',
       image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/sathyamyittum-V-700x880.jpg',
-      isPortrait: true,
     },
   ];
 
@@ -123,9 +121,8 @@ export default function ShowsPage() {
               {categories.map((cat) => (
                 <button
                   key={cat}
-                  className={`${styles.filterTab} ${
-                    activeCategory === cat ? styles.active : ''
-                  }`}
+                  className={`${styles.filterTab} ${activeCategory === cat ? styles.active : ''
+                    }`}
                   onClick={() => setActiveCategory(cat)}
                 >
                   {cat}

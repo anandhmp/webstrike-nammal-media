@@ -2,16 +2,18 @@
   background-color: #0b0c10;
   color: #ffffff;
   min-height: 100vh;
-  padding-top: 72px;
+  padding-top: 60px;
 }
 
 /* Hero Section */
 .hero {
   position: relative;
-  height: 240px;
-  background-image: linear-gradient(180deg,
+  height: 220px;
+  background-image: linear-gradient(
+      180deg,
       rgba(11, 14, 18, 0.65) 0%,
-      rgba(11, 14, 18, 0.98) 100%),
+      rgba(11, 14, 18, 0.98) 100%
+    ),
     url('https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg');
   background-size: cover;
   background-position: center;
@@ -24,9 +26,11 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(11, 14, 18, 0.85) 100%);
+    background: radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(11, 14, 18, 0.85) 100%
+    );
     z-index: 1;
   }
 }
@@ -35,22 +39,24 @@
   position: relative;
   z-index: 10;
   font-family: var(--pv-font-sans);
-  font-size: 48px;
+  font-size: clamp(28px, 6vw, 46px);
   font-weight: 900;
   letter-spacing: 0.05em;
   color: #ffffff;
   text-transform: uppercase;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  margin: 0;
+  text-align: center;
 }
 
 /* Horizontal Date Pills Bar */
 .dateBar {
   background: #11141a;
-  border-y: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   position: sticky;
   top: 60px;
   z-index: 100;
-  padding: 16px 0;
+  padding: 14px 0;
 }
 
 .dateScroll {
@@ -60,6 +66,7 @@
   overflow-x: auto;
   scrollbar-width: none;
   padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar {
     display: none;
@@ -70,9 +77,9 @@
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #9ca3af;
-  padding: 10px 20px;
+  padding: 9px 18px;
   border-radius: 30px;
-  font-size: 13.5px;
+  font-size: 13px;
   font-weight: 700;
   white-space: nowrap;
   cursor: pointer;
@@ -85,19 +92,19 @@
   }
 
   &.activePill {
-    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    background: #e11d48;
     color: #ffffff;
-    border-color: #dc2626;
-    box-shadow: 0 4px 16px rgba(220, 38, 38, 0.4);
+    border-color: #e11d48;
+    box-shadow: 0 4px 16px rgba(225, 29, 72, 0.4);
   }
 }
 
 /* Category Filter Chips */
 .categoryFilterBar {
-  padding: 24px 0 12px;
+  padding: 20px 0 12px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
@@ -118,15 +125,15 @@
   }
 
   &.activeChip {
-    color: var(--pv-gold);
-    background: rgba(212, 175, 55, 0.12);
+    color: #e11d48;
+    background: rgba(225, 29, 72, 0.12);
     font-weight: 800;
   }
 }
 
 /* Main Timeline Section */
 .scheduleSection {
-  padding: 20px 0 80px;
+  padding: 16px 0 80px;
 }
 
 .timelineContainer {
@@ -142,7 +149,11 @@
     top: 20px;
     bottom: 20px;
     width: 2px;
-    background: linear-gradient(180deg, var(--pv-gold) 0%, rgba(255, 255, 255, 0.1) 100%);
+    background: linear-gradient(
+      180deg,
+      #e11d48 0%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
   }
 }
 
@@ -166,7 +177,7 @@
 .timeText {
   font-size: 18px;
   font-weight: 900;
-  color: var(--pv-gold);
+  color: #e11d48;
   letter-spacing: -0.01em;
 }
 
@@ -184,27 +195,28 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--pv-gold);
+  background: #e11d48;
   border: 3px solid #0b0c10;
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 10px rgba(225, 29, 72, 0.6);
 }
 
 /* Show Details Card */
 .showCard {
   display: grid;
-  grid-template-columns: 320px 1fr;
+  grid-template-columns: 300px 1fr;
   gap: 24px;
   background: #111622;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
   padding: 16px;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s ease, border-color 0.3s ease;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
-    border-color: rgba(212, 175, 55, 0.4);
+    border-color: rgba(225, 29, 72, 0.4);
 
     .thumbImg {
       transform: scale(1.06);
@@ -214,7 +226,7 @@
 
 .thumbWrapper {
   position: relative;
-  border-radius: 10px;
+  border-radius: 8px;
   overflow: hidden;
   aspect-ratio: 16 / 9;
   background: #1f2937;
@@ -231,7 +243,7 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  background: #dc2626;
+  background: #e11d48;
   color: #ffffff;
   font-size: 10px;
   font-weight: 900;
@@ -239,7 +251,7 @@
   border-radius: 4px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.5);
+  box-shadow: 0 2px 8px rgba(225, 29, 72, 0.5);
   display: flex;
   align-items: center;
   gap: 6px;
@@ -257,11 +269,9 @@
   0% {
     opacity: 0.4;
   }
-
   50% {
     opacity: 1;
   }
-
   100% {
     opacity: 0.4;
   }
@@ -271,7 +281,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 6px 0;
+  padding: 4px 0;
 }
 
 .metaRow {
@@ -282,8 +292,8 @@
 }
 
 .categoryTag {
-  background: rgba(212, 175, 55, 0.15);
-  color: var(--pv-gold);
+  background: rgba(225, 29, 72, 0.15);
+  color: #e11d48;
   font-size: 11px;
   font-weight: 800;
   padding: 4px 10px;
@@ -299,7 +309,7 @@
 
 .showTitle {
   font-family: var(--pv-font-sans);
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 900;
   color: #ffffff;
   margin: 0 0 6px;
@@ -316,28 +326,30 @@
 .actionRow {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .watchBtn {
-  background: #fff263;
-  color: #0b0c10;
+  background: #e11d48;
+  color: #ffffff;
   border: none;
-  padding: 7px 16px;
-  border-radius: 6px;
+  padding: 8px 18px;
+  border-radius: 0;
   font-size: 12px;
   font-weight: 800;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   transition: all 0.2s ease;
-  box-shadow: none;
 
   &:hover {
-    transform: translateY(-1px);
     background: #ffffff;
-    box-shadow: none;
+    color: #0b0c10;
+    transform: translateY(-1px);
   }
 }
 
@@ -345,8 +357,8 @@
   background: rgba(255, 255, 255, 0.06);
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 7px 14px;
-  border-radius: 6px;
+  padding: 8px 16px;
+  border-radius: 0;
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
@@ -362,27 +374,34 @@
 }
 
 @media (max-width: 992px) {
-  .showCard {
-    grid-template-columns: 240px 1fr;
+  .hero {
+    height: 170px;
   }
 
-  .heroTitle {
-    font-size: 38px;
+  .showCard {
+    grid-template-columns: 240px 1fr;
+    gap: 16px;
   }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    height: 140px;
+  }
+
   .timelineContainer::before {
     display: none;
   }
 
   .timelineItem {
     grid-template-columns: 1fr;
-    gap: 12px;
+    gap: 10px;
   }
 
   .timeMarker {
     align-items: flex-start;
+    flex-direction: row;
+    gap: 8px;
     padding-top: 0;
   }
 
@@ -392,5 +411,31 @@
 
   .showCard {
     grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .dateScroll {
+    padding: 0 16px;
+  }
+
+  .showTitle {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .datePill {
+    padding: 7px 14px;
+    font-size: 12px;
+  }
+
+  .actionRow {
+    gap: 8px;
+  }
+
+  .watchBtn,
+  .remindBtn {
+    padding: 7px 14px;
+    font-size: 11.5px;
   }
 }

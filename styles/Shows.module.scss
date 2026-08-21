@@ -2,16 +2,18 @@
   background-color: #0b0c10;
   color: #ffffff;
   min-height: 100vh;
-  padding-top: 72px;
+  padding-top: 60px;
 }
 
 /* Hero Section with Rich Show Backdrop Image */
 .hero {
   position: relative;
-  height: 280px;
-  background-image: linear-gradient(180deg,
+  height: 240px;
+  background-image: linear-gradient(
+      180deg,
       rgba(11, 14, 18, 0.6) 0%,
-      rgba(11, 14, 18, 0.95) 100%),
+      rgba(11, 14, 18, 0.95) 100%
+    ),
     url('https://www.flowerstv.in/wp-content/uploads/2022/05/DESIGN_SM-1.jpg');
   background-size: cover;
   background-position: center center;
@@ -20,15 +22,16 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  // border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
   &::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center,
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(11, 14, 18, 0.85) 100%);
+    background: radial-gradient(
+      circle at center,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(11, 14, 18, 0.85) 100%
+    );
     z-index: 1;
   }
 }
@@ -37,12 +40,14 @@
   position: relative;
   z-index: 10;
   font-family: var(--pv-font-sans);
-  font-size: 52px;
+  font-size: clamp(28px, 6vw, 48px);
   font-weight: 900;
   letter-spacing: 0.08em;
   color: #ffffff;
   text-transform: uppercase;
   text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+  margin: 0;
+  text-align: center;
 }
 
 /* Category Filter Tabs Bar */
@@ -59,9 +64,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
+  gap: 24px;
   overflow-x: auto;
   scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
 
   &::-webkit-scrollbar {
     display: none;
@@ -95,16 +101,16 @@
       left: 0;
       right: 0;
       height: 3px;
-      background: #fff263; /* Brand Yellow active indicator */
+      background: #e11d48;
       border-radius: 2px 2px 0 0;
-      box-shadow: 0 0 10px rgba(255, 242, 99, 0.6);
+      box-shadow: 0 0 10px rgba(225, 29, 72, 0.6);
     }
   }
 }
 
 /* Shows Grid Section */
 .showsSection {
-  padding: 48px 0 80px;
+  padding: 40px 0 80px;
   background: #0b0c10;
 }
 
@@ -128,7 +134,7 @@
   &:hover {
     transform: translateY(-4px);
     box-shadow: none;
-    border-color: rgba(255, 242, 99, 0.4);
+    border-color: rgba(225, 29, 72, 0.4);
 
     .cardImg {
       transform: scale(1.05);
@@ -155,7 +161,12 @@
 .cardOverlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    transparent 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -187,12 +198,12 @@
 
 .showTitle {
   font-family: var(--pv-font-sans);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 800;
   color: #ffffff;
   margin: 0;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 /* Load More Section */
@@ -203,52 +214,82 @@
 }
 
 .loadMoreBtn {
-  background: #fff263;
-  color: #0b0c10;
+  background: #e11d48;
+  color: #ffffff;
   border: none;
-  padding: 9px 22px;
-  border-radius: 8px;
+  padding: 11px 26px;
+  border-radius: 0;
   font-size: 13px;
   font-weight: 800;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  transition: all 0.2s ease;
-  box-shadow: none;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  transition: all 0.25s ease;
 
   &:hover {
     background: #ffffff;
-    transform: translateY(-1px);
-    box-shadow: none;
+    color: #0b0c10;
+    transform: translateY(-2px);
   }
 }
 
 @media (max-width: 992px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .heroTitle {
-    font-size: 40px;
-  }
-
   .hero {
     height: 180px;
   }
-}
 
-@media (max-width: 640px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-  }
-
-  .heroTitle {
-    font-size: 32px;
   }
 
   .filterScroll {
     justify-content: flex-start;
+    padding: 0 16px;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    height: 140px;
+  }
+
+  .showsSection {
+    padding: 28px 0 60px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .showTitle {
+    font-size: 15px;
+  }
+
+  .playOverlay {
+    .playIcon {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  .loadMoreWrapper {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    letter-spacing: 0.04em;
+  }
+
+  .filterTab {
+    font-size: 12px;
+    padding: 6px 2px;
   }
 }

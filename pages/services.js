@@ -152,7 +152,7 @@ export default function ServicesPage() {
         </section>
 
         {/* 2. Core Business Header & Infinite Auto Slider Section (Middle) */}
-        <section style={{ padding: '80px 0 60px' }}>
+        <section style={{ padding: '60px 0 40px' }}>
           <div className="pv-container">
             <div className={styles.sliderHeader}>
               <h2 className={styles.title}>
@@ -164,7 +164,7 @@ export default function ServicesPage() {
               <div
                 className={styles.sliderTrack}
                 style={{
-                  transform: `translateX(calc(40% - ${activeIndex * 20}%))`,
+                  '--active-idx': activeIndex,
                 }}
               >
                 {loopedServices.map((service, idx) => {
@@ -205,8 +205,9 @@ export default function ServicesPage() {
                   return (
                     <button
                       key={idx}
-                      className={`${styles.dotBtn} ${realIndex === idx ? styles.activeDot : ''
-                        }`}
+                      className={`${styles.dotBtn} ${
+                        realIndex === idx ? styles.activeDot : ''
+                      }`}
                       onClick={() => setActiveIndex(coreServices.length * 2 + idx)}
                       aria-label={`Go to slide ${idx + 1}`}
                     />
@@ -216,7 +217,6 @@ export default function ServicesPage() {
             </div>
           </div>
         </section>
-
 
       </main>
     </>

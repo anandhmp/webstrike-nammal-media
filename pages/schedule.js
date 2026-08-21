@@ -90,7 +90,7 @@ export default function SchedulePage() {
       isLive: false,
       duration: '30 mins',
       desc: 'Delightful culinary competition show showcasing senior chefs and youth talent in the kitchen.',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/KUTTY-KALVARA-956x538-1.jpg',
+      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/SEETHAPENNNU.jpg',
     },
   ];
 
@@ -123,9 +123,8 @@ export default function SchedulePage() {
               {datePills.map((p) => (
                 <button
                   key={p.label}
-                  className={`${styles.datePill} ${
-                    activeDate === p.label ? styles.activePill : ''
-                  }`}
+                  className={`${styles.datePill} ${activeDate === p.label ? styles.activePill : ''
+                    }`}
                   onClick={() => setActiveDate(p.label)}
                 >
                   {p.label} <span style={{ opacity: 0.75, fontSize: '11px', marginLeft: '4px' }}>({p.date})</span>
@@ -146,9 +145,8 @@ export default function SchedulePage() {
               {categoryChips.map((chip) => (
                 <button
                   key={chip}
-                  className={`${styles.filterChip} ${
-                    activeFilter === chip ? styles.activeChip : ''
-                  }`}
+                  className={`${styles.filterChip} ${activeFilter === chip ? styles.activeChip : ''
+                    }`}
                   onClick={() => setActiveFilter(chip)}
                 >
                   {chip}
