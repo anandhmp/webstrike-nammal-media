@@ -10,14 +10,16 @@
 /* 1. Hero Section - Single Image with Black Gradient Overlay */
 .hero {
   position: relative;
-  min-height: 680px;
-  padding: 100px 0 120px;
+  min-height: 600px;
+  padding: 80px 0 100px;
   text-align: center;
-  background-image: linear-gradient(180deg,
+  background-image: linear-gradient(
+      180deg,
       #0b0c10 0%,
       rgba(11, 12, 16, 0.92) 20%,
       rgba(11, 12, 16, 0.45) 50%,
-      #0b0c10 100%),
+      #0b0c10 100%
+    ),
     url('https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg');
   background-size: cover;
   background-position: center top;
@@ -28,7 +30,7 @@
 }
 
 .heroTitle {
-  font-size: clamp(40px, 6vw, 64px);
+  font-size: clamp(32px, 6vw, 60px);
   font-weight: 900;
   color: #ffffff;
   text-transform: uppercase;
@@ -42,7 +44,7 @@
   font-size: 15px;
   color: #d1d5db;
   max-width: 740px;
-  margin: 0 auto 60px;
+  margin: 0 auto 40px;
   line-height: 1.75;
   position: relative;
   z-index: 10;
@@ -94,7 +96,7 @@
 
 /* 2. Manifesto & Founding Story Split Sections */
 .storySection {
-  padding: 90px 0;
+  padding: 80px 0;
 }
 
 .splitRow {
@@ -102,7 +104,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
-  margin-bottom: 100px;
+  margin-bottom: 80px;
 
   &.reverse {
     .imgCol {
@@ -116,7 +118,7 @@
 }
 
 .imgCol {
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
   aspect-ratio: 1 / 1;
@@ -142,20 +144,20 @@
 }
 
 .sectionTitle {
-  font-size: clamp(32px, 4.5vw, 44px);
+  font-size: clamp(28px, 4.5vw, 44px);
   font-weight: 900;
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: -0.02em;
   line-height: 1.08;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .sectionText {
-  font-size: 15px;
+  font-size: 14.5px;
   color: #9ca3af;
-  line-height: 1.75;
-  margin-bottom: 20px;
+  line-height: 1.7;
+  margin-bottom: 18px;
 
   &:last-child {
     margin-bottom: 0;
@@ -172,8 +174,8 @@
 .statBox {
   background: #141620;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 14px;
-  padding: 24px 20px;
+  border-radius: 12px;
+  padding: 20px 16px;
   text-align: center;
   transition: transform 0.3s ease, border-color 0.3s ease;
 
@@ -183,16 +185,16 @@
   }
 
   .statVal {
-    font-size: 34px;
+    font-size: 32px;
     font-weight: 900;
     color: #ffffff;
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     letter-spacing: -0.01em;
   }
 
   .statLabel {
-    font-size: 13px;
+    font-size: 12.5px;
     color: #9ca3af;
     font-weight: 500;
     display: block;
@@ -201,18 +203,18 @@
 
 /* 3. Meet Team Leadership Section */
 .teamSection {
-  padding: 80px 0 100px;
+  padding: 60px 0 80px;
   text-align: center;
 }
 
 .teamHeaderTitle {
-  font-size: clamp(32px, 5vw, 44px);
+  font-size: clamp(28px, 5vw, 44px);
   font-weight: 900;
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: -0.02em;
   line-height: 1.1;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 
   span {
     color: #e11d48;
@@ -223,7 +225,7 @@
 .teamGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  gap: 28px;
 }
 
 .teamCard {
@@ -241,7 +243,7 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
   background: radial-gradient(circle at center, #261624 0%, #121017 100%);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   transition: transform 0.3s ease, border-color 0.3s ease;
 
   .teamCard:hover & {
@@ -259,10 +261,10 @@
 
 .linkedinBadge {
   position: absolute;
-  top: 12px;
-  right: 12px;
-  width: 22px;
-  height: 22px;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -284,7 +286,7 @@
 }
 
 .memberName {
-  font-size: 18px;
+  font-size: 17px;
   font-weight: 800;
   color: #ffffff;
   margin: 0;
@@ -293,26 +295,26 @@
 
 /* 4. Crafting Excellence Frame Showcase Grid */
 .frameSection {
-  padding: 90px 0 100px;
+  padding: 70px 0 80px;
   text-align: center;
 }
 
 .frameTitleHeader {
-  font-size: clamp(32px, 5vw, 44px);
+  font-size: clamp(28px, 5vw, 44px);
   font-weight: 900;
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: -0.02em;
   line-height: 1.1;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .frameSubTitle {
   font-size: 14px;
   color: #9ca3af;
   max-width: 680px;
-  margin: 0 auto 48px;
-  line-height: 1.7;
+  margin: 0 auto 36px;
+  line-height: 1.65;
 }
 
 .featuredFrame {
@@ -342,16 +344,21 @@
     left: 0;
     right: 0;
     height: 50%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      transparent 100%
+    );
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding: 24px 20px;
+    padding: 20px 16px;
     text-align: center;
 
     .frameTitle {
-      font-size: 17px;
+      font-size: 16px;
       font-weight: 800;
       color: #ffffff;
       text-transform: uppercase;
@@ -360,7 +367,7 @@
     }
 
     .frameYear {
-      font-size: 13px;
+      font-size: 12.5px;
       color: #9ca3af;
       font-weight: 500;
     }
@@ -370,7 +377,7 @@
 .smallFramesGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 20px;
   width: 100%;
 }
 
@@ -400,16 +407,21 @@
     left: 0;
     right: 0;
     height: 55%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.5) 50%,
+      transparent 100%
+    );
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding: 20px 16px;
+    padding: 16px 12px;
     text-align: center;
 
     .smallTitle {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 800;
       color: #ffffff;
       text-transform: uppercase;
@@ -418,7 +430,7 @@
     }
 
     .smallYear {
-      font-size: 12.5px;
+      font-size: 12px;
       color: #9ca3af;
       font-weight: 500;
     }
@@ -427,20 +439,20 @@
 
 /* 5. Our Approach Horizontal Cards Slider */
 .approachSection {
-  padding: 90px 0 100px;
+  padding: 70px 0 80px;
 }
 
 .approachHeaderRow {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 
   .headerText {
     max-width: 680px;
 
     .approachTitle {
-      font-size: clamp(32px, 5vw, 44px);
+      font-size: clamp(28px, 5vw, 44px);
       font-weight: 900;
       color: #ffffff;
       text-transform: uppercase;
@@ -450,9 +462,9 @@
     }
 
     .approachDesc {
-      font-size: 14.5px;
+      font-size: 14px;
       color: #9ca3af;
-      line-height: 1.7;
+      line-height: 1.65;
       margin: 0;
     }
   }
@@ -490,7 +502,7 @@
   width: 100%;
   height: 2px;
   background: rgba(255, 255, 255, 0.15);
-  margin-bottom: 40px;
+  margin-bottom: 36px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -507,56 +519,71 @@
   .timelineDot {
     position: relative;
     z-index: 10;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background: #0b0c10;
     border: 2px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
     transition: all 0.3s ease;
 
     &.activeDot {
       border-color: #e11d48;
       background: #e11d48;
       box-shadow: 0 0 12px rgba(225, 29, 72, 0.6);
+      transform: scale(1.2);
     }
   }
 }
 
-.approachGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+.approachSliderContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px 0 20px;
+}
+
+.approachSliderTrack {
+  display: flex;
+  gap: 24px;
+  transform: translateX(calc(-1 * var(--active-step, 0) * (100% / 3 + 8px)));
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
 }
 
 .approachCard {
+  flex: 0 0 calc(33.333% - 16px);
+  box-sizing: border-box;
   background: #12141d;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 20px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   transition: all 0.4s ease;
 
   .approachImgWrapper {
     width: 100%;
     aspect-ratio: 16 / 10.5;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 
     .approachImg {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
+      transition: transform 0.4s ease;
     }
   }
 
   .approachCardTitle {
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 800;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 0.03em;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
   }
 
   .approachList {
@@ -565,12 +592,12 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 
     li {
       font-size: 13px;
       color: #9ca3af;
-      line-height: 1.6;
+      line-height: 1.55;
       display: flex;
       gap: 6px;
 
@@ -581,9 +608,16 @@
     }
   }
 
+  &:hover {
+    .approachImg {
+      transform: scale(1.05);
+    }
+  }
+
   &.activeApproach {
     background: #e11d48;
     border-color: #e11d48;
+    box-shadow: 0 12px 30px rgba(225, 29, 72, 0.35);
 
     .approachCardTitle {
       color: #ffffff;
@@ -601,17 +635,17 @@
 
 /* 6. Awards & Accolades List */
 .awardsSection {
-  padding: 90px 0 100px;
+  padding: 70px 0 80px;
 }
 
 .awardsHeaderTitle {
-  font-size: clamp(32px, 5vw, 44px);
+  font-size: clamp(28px, 5vw, 44px);
   font-weight: 900;
   color: #ffffff;
   text-transform: uppercase;
   letter-spacing: -0.02em;
   line-height: 1.1;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   text-align: center;
 }
 
@@ -619,7 +653,7 @@
   font-size: 14px;
   color: #9ca3af;
   max-width: 640px;
-  margin: 0 auto 56px;
+  margin: 0 auto 40px;
   line-height: 1.6;
   text-align: center;
 }
@@ -632,27 +666,27 @@
 
 .awardItem {
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 32px 0;
+  padding: 24px 0;
   display: flex;
   align-items: flex-start;
-  gap: 32px;
+  gap: 24px;
 
   &:first-child {
     border-top: 1px solid rgba(255, 255, 255, 0.12);
   }
 
   .awardNum {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 900;
     color: #ffffff;
-    min-width: 48px;
+    min-width: 40px;
     flex-shrink: 0;
-    margin-top: 4px;
+    margin-top: 2px;
   }
 
   .awardBadgeIcon {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -665,17 +699,17 @@
     flex-direction: column;
 
     .awardTitle {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 800;
       color: #ffffff;
-      margin: 0 0 8px 0;
+      margin: 0 0 6px 0;
       letter-spacing: -0.01em;
     }
 
     .awardDesc {
-      font-size: 14px;
+      font-size: 13.5px;
       color: #9ca3af;
-      line-height: 1.65;
+      line-height: 1.6;
       margin: 0;
     }
   }
@@ -685,7 +719,7 @@
 .bottomCtaWrapper {
   position: relative;
   width: 100%;
-  margin: 60px 0 100px;
+  margin: 50px 0 60px;
   padding-bottom: 40px;
 }
 
@@ -794,6 +828,11 @@
 }
 
 @media (max-width: 992px) {
+  .hero {
+    min-height: 480px;
+    padding: 60px 0 60px;
+  }
+
   .splitRow {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -810,8 +849,113 @@
   }
 
   .teamGrid,
-  .smallFramesGrid,
-  .approachGrid {
+  .smallFramesGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .approachCard {
+    flex: 0 0 calc(50% - 10px);
+  }
+
+  .approachSliderTrack {
+    gap: 20px;
+    transform: translateX(calc(-1 * var(--active-step, 0) * (50% + 10px)));
+  }
+}
+
+@media (max-width: 640px) {
+  .wrapper {
+    padding-top: 40px;
+  }
+
+  .hero {
+    min-height: 360px;
+    padding: 44px 0 36px;
+  }
+
+  .heroDesc {
+    font-size: 13.5px;
+    margin-bottom: 24px;
+  }
+
+  .playRing {
+    width: 64px;
+    height: 64px;
+
+    .playCircle {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .storySection,
+  .teamSection,
+  .frameSection,
+  .approachSection,
+  .awardsSection {
+    padding: 50px 0;
+  }
+
+  .teamGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .smallFramesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .approachCard {
+    flex: 0 0 100%;
+  }
+
+  .approachSliderTrack {
+    gap: 0;
+    transform: translateX(calc(-1 * var(--active-step, 0) * 100%));
+  }
+
+  .approachHeaderRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .awardItem {
+    gap: 16px;
+    padding: 18px 0;
+
+    .awardTitle {
+      font-size: 17px;
+    }
+  }
+
+  .ctaBgBanner {
+    height: 180px;
+  }
+
+  .ctaCardOverlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: -40px;
+    padding: 24px 18px;
+  }
+
+  .ctaBottomRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .statsRow {
     grid-template-columns: 1fr;
   }
 }

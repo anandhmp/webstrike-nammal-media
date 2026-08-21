@@ -47,7 +47,7 @@ export default function AboutPage() {
       image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/FOK-1400x800.jpg',
       points: [
         'Collaborative brainstorming for unique and compelling storylines.',
-        'Emphasis on originality and innovation for the project.',
+        'Emphasis on originality and innovation for every project.',
       ],
     },
     {
@@ -65,7 +65,25 @@ export default function AboutPage() {
       image: 'https://www.flowerstv.in/wp-content/uploads/2023/02/SUSU-1400-x-800-1-1.jpg',
       points: [
         'Embrace the latest cinematic technologies to enhance storytelling.',
-        'Integrate virtual production, augmented reality, and advanced cinematography tools.',
+        'Integrate virtual production and advanced cinematography tools.',
+      ],
+    },
+    {
+      id: 3,
+      title: 'PRODUCTION & CINEMATOGRAPHY',
+      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/DESIGN_SM2.jpg',
+      points: [
+        'State-of-the-art camera setups and multi-angle set direction.',
+        'Capturing high dynamic range cinematic visuals.',
+      ],
+    },
+    {
+      id: 4,
+      title: 'POST-PRODUCTION & DISTRIBUTION',
+      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg',
+      points: [
+        'Precision color grading, sound design, and master editing.',
+        'Global theatrical, OTT, and broadcast delivery.',
       ],
     },
   ];
@@ -323,31 +341,37 @@ export default function AboutPage() {
               ))}
             </div>
 
-            <div className={styles.approachGrid}>
-              {approachSteps.map((step, idx) => (
-                <div
-                  key={step.id}
-                  className={`${styles.approachCard} ${
-                    activeStep === idx ? styles.activeApproach : ''
-                  }`}
-                  onClick={() => setActiveStep(idx)}
-                  style={{ cursor: 'pointer' }}
-                >
-                  <div className={styles.approachImgWrapper}>
-                    <img
-                      src={step.image}
-                      alt={step.title}
-                      className={styles.approachImg}
-                    />
+            <div className={styles.approachSliderContainer}>
+              <div
+                className={styles.approachSliderTrack}
+                style={{
+                  '--active-step': activeStep,
+                }}
+              >
+                {approachSteps.map((step, idx) => (
+                  <div
+                    key={step.id}
+                    className={`${styles.approachCard} ${
+                      activeStep === idx ? styles.activeApproach : ''
+                    }`}
+                    onClick={() => setActiveStep(idx)}
+                  >
+                    <div className={styles.approachImgWrapper}>
+                      <img
+                        src={step.image}
+                        alt={step.title}
+                        className={styles.approachImg}
+                      />
+                    </div>
+                    <h3 className={styles.approachCardTitle}>{step.title}</h3>
+                    <ul className={styles.approachList}>
+                      {step.points.map((pt, i) => (
+                        <li key={i}>{pt}</li>
+                      ))}
+                    </ul>
                   </div>
-                  <h3 className={styles.approachCardTitle}>{step.title}</h3>
-                  <ul className={styles.approachList}>
-                    {step.points.map((pt, i) => (
-                      <li key={i}>{pt}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>

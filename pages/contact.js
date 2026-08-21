@@ -39,6 +39,14 @@ export default function ContactPage() {
                     <p className={styles.talkSub}>Ask us anything or just say hi 👋</p>
 
                     <div className={styles.contactBadges}>
+                      <div className={styles.badgeItem} style={{ alignItems: 'flex-start', width: '100%', marginBottom: '4px' }}>
+                        <MapPin size={18} className={styles.icon} style={{ flexShrink: 0, marginTop: '3px' }} />
+                        <span style={{ lineHeight: '1.5' }}>
+                          Grandmaster's creative hub<br />
+                          'Manjusha' TC 23/1777, OD4<br />
+                          Jawaharnagar, Kowdiar PO, Trivandrum
+                        </span>
+                      </div>
                       <a href="tel:+917907760700" className={styles.badgeItem}>
                         <Phone size={18} className={styles.icon} />
                         +91 7907760700

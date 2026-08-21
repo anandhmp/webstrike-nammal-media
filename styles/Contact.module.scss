@@ -27,7 +27,7 @@
   margin-bottom: 48px;
 
   .title {
-    font-size: clamp(32px, 5vw, 44px);
+    font-size: clamp(28px, 5vw, 44px);
     font-weight: 900;
     color: #ffffff;
     text-transform: uppercase;
@@ -75,7 +75,7 @@
   justify-content: space-between;
 
   .talkHead {
-    font-size: 32px;
+    font-size: clamp(24px, 4vw, 32px);
     font-weight: 900;
     color: #ffffff;
     text-transform: uppercase;
@@ -84,7 +84,7 @@
   }
 
   .talkSub {
-    font-size: 15px;
+    font-size: 14.5px;
     color: #d1d5db;
     margin-bottom: 28px;
   }
@@ -253,29 +253,9 @@
   }
 }
 
-@media (max-width: 868px) {
-  .contactCard {
-    padding: 28px;
-  }
-
-  .cardGrid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .bottomInfoSection {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .vertDivider {
-    display: none;
-  }
-}
-
 /* 4. Collaboration Opportunities Section */
 .collabSection {
-  padding: 90px 0 100px;
+  padding: 80px 0 90px;
   background-color: #0b0c10;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -285,7 +265,7 @@
   margin-bottom: 48px;
 
   .collabTitle {
-    font-size: clamp(32px, 5vw, 44px);
+    font-size: clamp(28px, 5vw, 44px);
     font-weight: 900;
     color: #ffffff;
     text-transform: uppercase;
@@ -392,25 +372,9 @@
   }
 }
 
-@media (max-width: 992px) {
-  .collabGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .collabGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .collabBoxContainer {
-    padding: 24px;
-  }
-}
-
 /* 5. Global Branches Dotted Map Section */
 .branchesSection {
-  padding: 90px 0 100px;
+  padding: 80px 0 90px;
   background-color: #0b0c10;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
@@ -422,7 +386,7 @@
   margin-bottom: 48px;
 
   .branchesTitle {
-    font-size: clamp(32px, 5vw, 44px);
+    font-size: clamp(28px, 5vw, 44px);
     font-weight: 900;
     color: #ffffff;
     text-transform: uppercase;
@@ -596,6 +560,15 @@
 }
 
 @media (max-width: 992px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .collabGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .branchesHeaderRow {
     flex-direction: column;
     align-items: flex-start;
@@ -603,6 +576,54 @@
   }
 
   .mapContainer {
-    min-height: 300px;
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroBgSection {
+    padding: 50px 0 40px;
+  }
+
+  .contactCard {
+    padding: 28px 20px;
+  }
+
+  .bottomInfoContainer {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .vertDivider {
+    display: none;
+  }
+
+  .collabBoxContainer {
+    padding: 24px 18px;
+  }
+
+  .pinPopupCard {
+    width: 200px;
+    left: -80px;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 640px) {
+  .collabGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .mapContainer {
+    min-height: 260px;
+  }
+
+  .pinPopupCard {
+    width: 180px;
+    left: -70px;
+
+    .popupThumb {
+      display: none;
+    }
   }
 }
