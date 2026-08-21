@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Menu, X } from 'lucide-react';
 import styles from './Header.module.scss';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
+  const currentPath = router.pathname;
+
+  const isActive = (path) => {
+    if (path === '/') {
+      return currentPath === '/' || currentPath === '/home';
+    }
+    return currentPath === path;
+  };
 
   return (
     <header className={styles.header}>
@@ -21,22 +31,40 @@ export default function Header() {
 
           {/* Center Navigation Links */}
           <nav className={styles.centerNav}>
-            <Link href="/" className={styles.navLink}>
+            <Link
+              href="/"
+              className={`${styles.navLink} ${isActive('/') ? styles.activeLink : ''}`}
+            >
               HOME
             </Link>
-            <Link href="/shows" className={styles.navLink}>
+            <Link
+              href="/shows"
+              className={`${styles.navLink} ${isActive('/shows') ? styles.activeLink : ''}`}
+            >
               SHOWS
             </Link>
-            <Link href="/schedule" className={styles.navLink}>
+            <Link
+              href="/schedule"
+              className={`${styles.navLink} ${isActive('/schedule') ? styles.activeLink : ''}`}
+            >
               SCHEDULE
             </Link>
-            <Link href="/services" className={styles.navLink}>
+            <Link
+              href="/services"
+              className={`${styles.navLink} ${isActive('/services') ? styles.activeLink : ''}`}
+            >
               SERVICES
             </Link>
-            <Link href="/about" className={styles.navLink}>
+            <Link
+              href="/about"
+              className={`${styles.navLink} ${isActive('/about') ? styles.activeLink : ''}`}
+            >
               ABOUT
             </Link>
-            <Link href="/contact" className={`${styles.navLink} ${styles.contactHighlight}`}>
+            <Link
+              href="/contact"
+              className={`${styles.navLink} ${isActive('/contact') ? styles.activeLink : ''}`}
+            >
               CONTACT
             </Link>
           </nav>
@@ -61,22 +89,46 @@ export default function Header() {
         {/* Mobile Dropdown Menu */}
         {mobileMenuOpen && (
           <div className={styles.mobileDropdown}>
-            <Link href="/home" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+            <Link
+              href="/"
+              className={`${styles.mobileNavLink} ${isActive('/') ? styles.activeLink : ''}`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
               HOME
             </Link>
-            <Link href="/shows" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+            <Link
+              href="/shows"
+              className={`${styles.mobileNavLink} ${isActive('/shows') ? styles.activeLink : ''}`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
               SHOWS
             </Link>
-            <Link href="/schedule" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+            <Link
+              href="/schedule"
+              className={`${styles.mobileNavLink} ${isActive('/schedule') ? styles.activeLink : ''}`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
               SCHEDULE
             </Link>
-            <Link href="/services" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+            <Link
+              href="/services"
+              className={`${styles.mobileNavLink} ${isActive('/services') ? styles.activeLink : ''}`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
               SERVICES
             </Link>
-            <Link href="/about" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+            <Link
+              href="/about"
+              className={`${styles.mobileNavLink} ${isActive('/about') ? styles.activeLink : ''}`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
               ABOUT
             </Link>
-            <Link href="/contact" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+            <Link
+              href="/contact"
+              className={`${styles.mobileNavLink} ${isActive('/contact') ? styles.activeLink : ''}`}
+              onClick={() => setMobileMenuOpen(false)}
+            >
               CONTACT
             </Link>
             <Link

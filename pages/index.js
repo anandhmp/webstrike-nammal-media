@@ -11,27 +11,26 @@ export default function StreamingHome() {
     {
       id: 1,
       title: 'Island of Knowledge',
-      tag: 'INFOTAINMENT',
       image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg',
     },
     {
       id: 2,
       title: 'Thriller Junction',
-      tag: 'DRAMA & THRILLER',
       image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/Priyangri.jpg',
     },
     {
       id: 3,
       title: 'Under the Song Tree',
-      tag: 'MUSIC SPECIAL',
       image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/DESIGN_SM-1.jpg',
     },
   ];
 
+  // Auto Slider Effect (cycles every 4 seconds)
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 5000);
+    }, 4000);
+
     return () => clearInterval(timer);
   }, [heroSlides.length]);
 
@@ -62,7 +61,7 @@ export default function StreamingHome() {
   return (
     <>
       <Head>
-        <title>Home | NAMMAL & Flowers TV Streaming</title>
+        <title>Home | NAMMAL & Flowers TV Network</title>
         <meta
           name="description"
           content="Watch NAMMAL & Flowers TV official infotainment shows, English serials, short films, and special programs."
@@ -70,51 +69,96 @@ export default function StreamingHome() {
       </Head>
 
       <main className={styles.wrapper}>
-        {/* Main Featured Hero Slider */}
-        <div className={styles.heroSlider}>
-          {heroSlides.map((slide, idx) => (
-            <div
-              key={slide.id}
-              className={styles.slideBackground}
-              style={{
-                backgroundImage: `url('${slide.image}')`,
-                opacity: currentSlide === idx ? 1 : 0,
-              }}
-            >
-              {currentSlide === idx && (
-                <div className={styles.slideOverlay}>
-                  <div className={styles.slideContent}>
-                    <span className={styles.sliderTag}>{slide.tag}</span>
-                    <h1 className={styles.sliderTitle}>{slide.title}</h1>
-                    <div className={styles.sliderBtns}>
-                      <Link href="/shows" className={styles.watchNowBtn}>
-                        <Play size={18} fill="#0b0c10" /> Watch Now
-                      </Link>
-                    </div>
+        {/* 1. Hero Section matching reference screenshot */}
+        <section className={styles.heroSection}>
+          <div className="pv-container">
+            {/* Top Centered Header & Subtitle */}
+            <div className={styles.heroHeader}>
+              <h1 className={styles.title}>
+                BRING YOUR PEACEFUL STORIES<br />
+                TO LIFE WITH NAMMAL MEDIA<span>+</span>
+              </h1>
+              <p className={styles.subtitle}>
+                Our expertise lies in transforming your narratives into vivid experiences, backed by a demonstrated history of crafting top-notch movies that engage, motivate, and enchant global audiences.
+              </p>
+            </div>
+
+            {/* Cinematic Banner Image Slider Frame with Centered Concentric Play Button */}
+            <div className={styles.heroMediaFrame}>
+              {heroSlides.map((slide, idx) => (
+                <img
+                  key={slide.id}
+                  src={slide.image}
+                  alt={slide.title}
+                  className={styles.frameImg}
+                  style={{
+                    position: 'absolute',
+                    inset: 0,
+                    opacity: currentSlide === idx ? 1 : 0,
+                    transition: 'opacity 0.8s ease-in-out',
+                  }}
+                />
+              ))}
+
+              <div className={styles.frameOverlay}>
+                <div className={styles.playRing}>
+                  <div className={styles.playCircle}>
+                    <Play size={24} fill="#0b0c10" style={{ marginLeft: '2px' }} />
                   </div>
                 </div>
-              )}
+              </div>
+
+              {/* Slider Dots Indicator Overlay */}
+              <div className={styles.heroDotNav}>
+                {heroSlides.map((_, idx) => (
+                  <button
+                    key={idx}
+                    className={`${styles.frameDot} ${currentSlide === idx ? styles.activeFrameDot : ''
+                      }`}
+                    onClick={() => setCurrentSlide(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
+              </div>
             </div>
-          ))}
 
-          <div className={styles.sliderNavDots}>
-            {heroSlides.map((_, idx) => (
-              <button
-                key={idx}
-                className={`${styles.dot} ${currentSlide === idx ? styles.activeDot : ''
-                  }`}
-                onClick={() => setCurrentSlide(idx)}
-                aria-label={`Go to slide ${idx + 1}`}
-              />
-            ))}
+            {/* 4 Key Stat Metrics Columns */}
+            <div className={styles.statsGrid}>
+              <div className={styles.statCol}>
+                <span className={styles.statVal}>500</span>
+                <span className={styles.statLabel}>
+                  Total Employees<br />NAMMAL Media
+                </span>
+              </div>
+
+              <div className={styles.statCol}>
+                <span className={styles.statVal}>&gt; 20,000</span>
+                <span className={styles.statLabel}>
+                  Total Number of TV Series<br />Hours Produced
+                </span>
+              </div>
+
+              <div className={styles.statCol}>
+                <span className={styles.statVal}>6</span>
+                <span className={styles.statLabel}>
+                  Total Location Cinema<br />in The World
+                </span>
+              </div>
+
+              <div className={styles.statCol}>
+                <span className={styles.statVal}>500+</span>
+                <span className={styles.statLabel}>
+                  Total Film Collection of<br />NAMMAL Media
+                </span>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
 
-        {/* Programs Section - All 10 Shows in English */}
+        {/* 2. Programs Section - All 10 Shows in English */}
         <section className={styles.showCategorySection}>
           <div className="pv-container">
             <div className={styles.categoryHeader}>
-              <span className={styles.bulletDot}>·</span>
               <h2 className={styles.categoryTitle}>Programs & Shows</h2>
             </div>
             <div className={styles.rowGrid}>
@@ -135,7 +179,7 @@ export default function StreamingHome() {
           </div>
         </section>
 
-        {/* Video Teaser Filler Banner */}
+        {/* 3. Video Teaser Filler Banner */}
         <section className="pv-container">
           <div className={styles.videoTeaserSection}>
             <video
@@ -149,7 +193,7 @@ export default function StreamingHome() {
           </div>
         </section>
 
-        {/* Originals (Portrait Cards Section) */}
+        {/* 4. Originals (Portrait Cards Section) */}
         <section className={styles.showCategorySection}>
           <div className="pv-container">
             <div className={styles.categoryHeader}>

@@ -28,9 +28,10 @@
 }
 
 .logoImg {
-  height: 52px;
+  height: 48px;
   width: auto;
   object-fit: contain;
+  display: block;
 }
 
 .brandTitle {
@@ -65,18 +66,22 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  position: relative;
   transition: color 0.2s ease;
   white-space: nowrap;
 
-  &:hover {
-    color: #e11d48;
-  }
-
-  &.contactHighlight {
+  &:hover,
+  &.activeLink {
     color: #e11d48;
 
-    &:hover {
-      color: #ffffff;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #e11d48;
     }
   }
 }
