@@ -1,5 +1,5 @@
 .wrapper {
-  background-color: #0b0c10;
+  background-color: #012a68;
   color: #ffffff;
   min-height: 100vh;
   padding-top: 72px;
@@ -95,9 +95,9 @@
       left: 0;
       right: 0;
       height: 3px;
-      background: #dc2626;
-      /* Red active tab line matching screenshot */
+      background: #fff263; /* Brand Yellow active indicator */
       border-radius: 2px 2px 0 0;
+      box-shadow: 0 0 10px rgba(255, 242, 99, 0.6);
     }
   }
 }

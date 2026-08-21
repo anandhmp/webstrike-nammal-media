@@ -5,10 +5,10 @@
   right: 0;
   width: 100%;
   z-index: 9999;
-  background: rgba(11, 14, 18, 0.9);
+  background: rgba(1, 42, 104, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(50, 160, 223, 0.2);
   padding: 10px 0;
   transition: background 0.3s ease, backdrop-filter 0.3s ease;
 }
@@ -29,7 +29,6 @@
 
 .logoImg {
   height: 38px;
-  /* Make logo smaller as requested */
   width: auto;
   object-fit: contain;
 }
@@ -50,10 +49,10 @@
 }
 
 .tagline {
-  font-family: var(--pv-font-malayalam);
+  font-family: var(--pv-font-sans);
   font-size: 10px;
   font-weight: 700;
-  color: var(--pv-gold);
+  color: #fff263;
   line-height: 1.1;
 }
 
@@ -73,18 +72,17 @@
   white-space: nowrap;
 
   &:hover {
-    color: var(--pv-gold);
+    color: #fff263;
   }
 }
 
 .joinBtn {
-  background: linear-gradient(135deg, #ffd700 0%, #d4af37 100%);
-  color: #0b0c10 !important;
+  background: linear-gradient(135deg, #fff263 0%, #e3ae62 100%);
+  color: #012a68 !important;
   padding: 10px 22px;
   border-radius: 12px !important;
-  /* Border radius 12px as requested */
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.02em;
   text-decoration: none;
   white-space: nowrap;
@@ -92,14 +90,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  // box-shadow: 0 4px 16px rgba(255, 215, 0, 0.4);
-  // border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 14px rgba(255, 242, 99, 0.3);
 
   &:hover {
-    // transform: translateY(-2px);
-    // box-shadow: 0 8px 22px rgba(255, 215, 0, 0.6);
     background: #ffffff;
-    color: #000000 !important;
+    color: #012a68 !important;
+    box-shadow: 0 6px 20px rgba(255, 242, 99, 0.5);
   }
 }
 
