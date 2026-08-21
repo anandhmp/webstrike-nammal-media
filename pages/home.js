@@ -10,20 +10,20 @@ export default function StreamingHome() {
   const heroSlides = [
     {
       id: 1,
-      title: 'Flowers Top Singer',
-      tag: 'NOW STREAMING',
+      title: 'Island of Knowledge',
+      tag: 'INFOTAINMENT',
       image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg',
     },
     {
       id: 2,
-      title: 'Uppum Mulakum',
-      tag: 'FAMILY SITCOM',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/UM-1400x800.jpg',
+      title: 'Thriller Junction',
+      tag: 'DRAMA & THRILLER',
+      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/Priyangri.jpg',
     },
     {
       id: 3,
-      title: 'Star Magic',
-      tag: 'GAME & ENTERTAINMENT',
+      title: 'Under the Song Tree',
+      tag: 'MUSIC SPECIAL',
       image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/DESIGN_SM-1.jpg',
     },
   ];
@@ -35,88 +35,37 @@ export default function StreamingHome() {
     return () => clearInterval(timer);
   }, [heroSlides.length]);
 
-  const sectionsData = [
-    {
-      title: 'Now Showing',
-      items: [
-        { title: 'Uppum Mulakum 2', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/UPPUM-MULAKUM-2_NOw-showig.jpg' },
-        { title: 'Su Su', image: 'https://www.flowerstv.in/wp-content/uploads/2023/02/SUSU-1400-x-800-1-1.jpg' },
-      ],
-    },
-    {
-      title: 'Game Shows',
-      items: [
-        { title: 'Flowers Oru Kodi', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/FOK-1400x800.jpg' },
-        { title: 'Star Magic', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/DESIGN_SM2.jpg' },
-        { title: 'Tammaar Padaar', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TAMAAR-PADAR-1400x800.jpg' },
-        { title: 'Adichu Mone', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/ADICHU-MONE-1400x800.jpg' },
-        { title: 'Kuttikalavara Seniors', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/KUTTY-KALVARA-1400x800-1.jpg' },
-      ],
-    },
-    {
-      title: 'Reality Shows',
-      items: [
-        { title: 'Ammayum Kunjum', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/AMMAYUM-KUNJUM.jpg' },
-        { title: 'Flowers Top Singer', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg' },
-        { title: 'IOBB', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/IOBB-1400x800.jpg' },
-        { title: 'Flowers Top Singer 2', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/Top-singer-1400x800.jpg' },
-      ],
-    },
-    {
-      title: 'Sitcom',
-      items: [
-        { title: 'Namaskaram Flowers', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/NAMASKARAM-FLOWERS-1400x800.jpg' },
-        { title: 'Uppum Mulakum 2', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/UPPUM-MULAKUM-2_NOw-showig.jpg' },
-        { title: 'Chakkappazam', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/CHAKKAPAZHAM.jpg' },
-        { title: 'Su Su', image: 'https://www.flowerstv.in/wp-content/uploads/2023/02/SUSU-1400-x-800-1-1.jpg' },
-        { title: 'Uppum Mulakum', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/UPPUM-MULAKUM-1400x800.jpg' },
-      ],
-    },
-    {
-      title: 'Talent Shows',
-      items: [
-        { title: 'Utsavam Super Star', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/US-1.jpg' },
-        { title: 'Katturumbu', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/KATTURUMBU-1400x800.jpg' },
-        { title: 'Midumidukki', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/MIDUMIDIKKI-1400x800.jpg' },
-      ],
-    },
-    {
-      title: 'Comedy Show',
-      items: [
-        { title: 'Comedy Kondattom', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/COMEDY-KONDATTOM-1.jpg' },
-        { title: 'Comedy Utsavam', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/Comedy-Utsavam-1-1400x800.jpg' },
-        { title: 'Comedy Super Nite', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/CSN-1400x800.jpg' },
-      ],
-    },
-    {
-      title: 'Fiction',
-      items: [
-        { title: 'Seetha', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/SEETHA-1400x800.jpg' },
-        { title: 'Priyankari', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/Priyangri.jpg' },
-        { title: 'Arayannangalude Veedu', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/ARAYANGALUDE-VEEDU-1400x800.jpg' },
-        { title: 'Nandanam', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/NANDANAM-3.jpg' },
-        { title: 'Seethapennu', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/SEETHA-1-1-1400x800.jpg' },
-      ],
-    },
+  // All 10 official shows in English only
+  const allPrograms = [
+    { title: 'Island of Knowledge', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg' },
+    { title: 'Under the Song Tree', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/DESIGN_SM2.jpg' },
+    { title: 'Thriller Junction', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/Priyangri.jpg' },
+    { title: 'If You Were Near', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/SEETHA-1-1-1400x800.jpg' },
+    { title: 'Fun Fact', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/FOK-1.jpg' },
+    { title: 'Vox Pop', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/AMMAYUM-KUNJUM.jpg' },
+    { title: 'Special Programs', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/DESIGN_SM2.jpg' },
+    { title: 'Pusthakomania', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/chapter-13-V-700x800.jpg' },
+    { title: 'Short Films', image: 'https://www.flowerstv.in/wp-content/uploads/2023/02/SUSU-1400-x-800-1-1.jpg' },
+    { title: 'Sitcoms', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/UPPUM-MULAKUM-2_NOw-showig.jpg' },
   ];
 
   const originalsData = {
-    title: 'Flowers Originals',
+    title: 'NAMMAL Originals',
     items: [
-      { title: 'Chapter XIII', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/chapter-13-V-700x880.jpg' },
-      { title: 'Beloved', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/BELOVED-H-700x880.jpg' },
-      { title: 'Sathyamayittum', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/sathyamyittum-V-700x880.jpg' },
-      { title: 'Poison', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/POISON-V-700x880.jpg' },
+      { title: 'Fun Fact', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/chapter-13-V-700x880.jpg' },
+      { title: 'Aswamedham', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/BELOVED-H-700x880.jpg' },
+      { title: 'Mahabharatham Quoted by Murukan Kattakkada', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/sathyamyittum-V-700x880.jpg' },
+      { title: 'Island of Knowledge', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/POISON-V-700x880.jpg' },
     ],
   };
 
   return (
     <>
       <Head>
-        <title>Home | Flowers TV & NAMMAL Streaming</title>
+        <title>Home | NAMMAL & Flowers TV Streaming</title>
         <meta
           name="description"
-          content="Watch Flowers TV and NAMMAL Malayalam entertainment shows, serials, game shows, sitcoms, and reality shows."
+          content="Watch NAMMAL & Flowers TV official infotainment shows, English serials, short films, and special programs."
         />
       </Head>
 
@@ -152,9 +101,8 @@ export default function StreamingHome() {
             {heroSlides.map((_, idx) => (
               <button
                 key={idx}
-                className={`${styles.dot} ${
-                  currentSlide === idx ? styles.activeDot : ''
-                }`}
+                className={`${styles.dot} ${currentSlide === idx ? styles.activeDot : ''
+                  }`}
                 onClick={() => setCurrentSlide(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
               />
@@ -162,39 +110,36 @@ export default function StreamingHome() {
           </div>
         </div>
 
-        {/* Section 1 & 2: Now Showing & Game Shows */}
-        {sectionsData.slice(0, 2).map((sec, sIdx) => (
-          <section key={sIdx} className={styles.showCategorySection}>
-            <div className="pv-container">
-              <div className={styles.categoryHeader}>
-                <span className={styles.bulletDot}>·</span>
-                <h2 className={styles.categoryTitle}>{sec.title}</h2>
-              </div>
-              <div className={styles.rowGrid}>
-                {sec.items.map((item, idx) => (
-                  <div key={idx} className={styles.card}>
-                    <img src={item.image} alt={item.title} className={styles.cardImg} />
-                    <div className={styles.playOverlay}>
-                      <div className={styles.playIcon}>
-                        <Play size={24} fill="#0b0c10" />
-                      </div>
-                    </div>
-                    <div className={styles.cardOverlay}>
-                      <h3 className={styles.cardTitle}>{item.title}</h3>
+        {/* Programs Section - All 10 Shows in English */}
+        <section className={styles.showCategorySection}>
+          <div className="pv-container">
+            <div className={styles.categoryHeader}>
+              <span className={styles.bulletDot}>·</span>
+              <h2 className={styles.categoryTitle}>Programs & Shows</h2>
+            </div>
+            <div className={styles.rowGrid}>
+              {allPrograms.map((item, idx) => (
+                <div key={idx} className={styles.card}>
+                  <img src={item.image} alt={item.title} className={styles.cardImg} />
+                  <div className={styles.playOverlay}>
+                    <div className={styles.playIcon}>
+                      <Play size={24} fill="#0b0c10" />
                     </div>
                   </div>
-                ))}
-              </div>
+                  <div className={styles.cardOverlay}>
+                    <h3 className={styles.cardTitle}>{item.title}</h3>
+                  </div>
+                </div>
+              ))}
             </div>
-          </section>
-        ))}
+          </div>
+        </section>
 
         {/* Video Teaser Filler Banner */}
         <section className="pv-container">
           <div className={styles.videoTeaserSection}>
             <video
-              src="https://www.flowerstv.in/Videos/FILLER%2001.mp4"
-              poster="https://www.flowerstv.in/wp-content/uploads/2021/08/IMAGE-1-scaled.jpg"
+              src="/assets/video/nammal.mp4"
               controls
               autoPlay
               muted
@@ -204,34 +149,7 @@ export default function StreamingHome() {
           </div>
         </section>
 
-        {/* Remaining Sections: Reality Shows, Sitcom, Talent Shows, Comedy Show, Fiction */}
-        {sectionsData.slice(2).map((sec, sIdx) => (
-          <section key={sIdx} className={styles.showCategorySection}>
-            <div className="pv-container">
-              <div className={styles.categoryHeader}>
-                <span className={styles.bulletDot}>·</span>
-                <h2 className={styles.categoryTitle}>{sec.title}</h2>
-              </div>
-              <div className={styles.rowGrid}>
-                {sec.items.map((item, idx) => (
-                  <div key={idx} className={styles.card}>
-                    <img src={item.image} alt={item.title} className={styles.cardImg} />
-                    <div className={styles.playOverlay}>
-                      <div className={styles.playIcon}>
-                        <Play size={24} fill="#0b0c10" />
-                      </div>
-                    </div>
-                    <div className={styles.cardOverlay}>
-                      <h3 className={styles.cardTitle}>{item.title}</h3>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        ))}
-
-        {/* Flowers Originals (Portrait Cards Section) */}
+        {/* Originals (Portrait Cards Section) */}
         <section className={styles.showCategorySection}>
           <div className="pv-container">
             <div className={styles.categoryHeader}>

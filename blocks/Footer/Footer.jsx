@@ -112,14 +112,20 @@ export default function Footer() {
                 <div className={styles.addressBox}>
                   <MapPin size={18} className={styles.icon} />
                   <div>
-                    <strong>Insight media City</strong>
+                    <strong>Grandmaster's creative hub</strong>
                     <br />
-                    Puthiya Road, Chakkaraparambu, Vennala, Kochi, Ernakulam, Kerala 682028
+                    'Manjusha' TC 23/1777, OD4, Jawaharnagar, Kowdiar PO, Trivandrum
                   </div>
                 </div>
                 <div className={styles.phoneBox}>
                   <Phone size={18} className={styles.icon} />
-                  <span>04842203544 / 7907760700</span>
+                  <a href="tel:+917907760700">+91 7907760700</a>
+                </div>
+                <div className={styles.phoneBox}>
+                  <Mail size={18} className={styles.icon} />
+                  <a href="mailto:grandmastercreativehub@gmail.com" style={{ wordBreak: 'break-all' }}>
+                    grandmastercreativehub@gmail.com
+                  </a>
                 </div>
               </div>
             </div>

@@ -54,7 +54,7 @@ export default function ContactPage() {
                 <div className={styles.quickCardBody}>
                   <span className={styles.quickCardTitle}>Headquarters</span>
                   <span className={styles.quickCardValue}>
-                    Insight Media City, Chakkaraparambu, Vennala, Kochi, Kerala 682028
+                    Grandmaster's creative hub, 'Manjusha' TC 23/1777, OD4, Jawaharnagar, Kowdiar PO, Trivandrum
                   </span>
                 </div>
               </div>
@@ -66,7 +66,7 @@ export default function ContactPage() {
                 <div className={styles.quickCardBody}>
                   <span className={styles.quickCardTitle}>Hotline & Support</span>
                   <span className={styles.quickCardValue}>
-                    <a href="tel:04842203544">04842203544</a> / <a href="tel:+917907760700">+91 7907760700</a>
+                    <a href="tel:+917907760700">+91 7907760700</a>
                   </span>
                 </div>
               </div>
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 <div className={styles.quickCardBody}>
                   <span className={styles.quickCardTitle}>Official Email</span>
                   <span className={styles.quickCardValue}>
-                    <a href="mailto:info@flowerstv.in">info@flowerstv.in</a>
+                    <a href="mailto:grandmastercreativehub@gmail.com">grandmastercreativehub@gmail.com</a>
                   </span>
                 </div>
               </div>
@@ -206,10 +206,10 @@ export default function ContactPage() {
                   </div>
 
                   <h3 style={{ fontSize: '20px', fontWeight: 800, color: '#ffffff', marginBottom: '8px' }}>
-                    Insight Media City
+                    Grandmaster's Creative Hub
                   </h3>
                   <p style={{ fontSize: '13.5px', color: '#9ca3af', lineHeight: 1.6 }}>
-                    State-of-the-art broadcasting studios and corporate facilities located in Kochi, Kerala. Home to Flowers TV, Twenty Four News, and NAMMAL Media.
+                    'Manjusha' TC 23/1777, OD4, Jawaharnagar, Kowdiar PO, Trivandrum. Creative headquarters for Flowers TV and NAMMAL Media.
                   </p>
                 </div>
 

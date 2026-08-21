@@ -8,89 +8,90 @@ export default function ShowsPage() {
 
   const categories = [
     'All',
-    'Comedy Show',
-    'Events',
-    'Fiction',
-    'Flowers Originals',
-    'Game Shows',
-    'Movies',
-    'Reality Shows',
-    'Sitcom',
+    'Infotainment',
+    'Music & Culture',
+    'Drama & Fiction',
+    'Youth & Trends',
+    'Specials',
+    'Literature',
+    'Cinema',
+    'Sitcoms',
   ];
 
   const shows = [
     {
       id: 1,
-      title: 'Su Su',
-      category: 'Sitcom',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2023/02/SUSU-1400-x-800-1-1.jpg',
+      title: 'Island of Knowledge',
+      category: 'Infotainment',
+      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg',
     },
     {
       id: 2,
-      title: 'Kuttikalavara Seniors',
-      category: 'Game Shows',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/KUTTY-KALVARA-1400x800-1.jpg',
-    },
-    {
-      id: 3,
-      title: 'Star Magic',
-      category: 'Game Shows',
+      title: 'Under the Song Tree',
+      category: 'Music & Culture',
       image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/DESIGN_SM2.jpg',
     },
     {
-      id: 4,
-      title: 'Uppum Mulakum 2',
-      category: 'Sitcom',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/UPPUM-MULAKUM-2_NOw-showig.jpg',
-    },
-    {
-      id: 5,
-      title: 'Priyankari',
-      category: 'Fiction',
+      id: 3,
+      title: 'Thriller Junction',
+      category: 'Drama & Fiction',
       image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/Priyangri.jpg',
     },
     {
+      id: 4,
+      title: 'If You Were Near',
+      category: 'Drama & Fiction',
+      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/SEETHA-1-1-1400x800.jpg',
+    },
+    {
+      id: 5,
+      title: 'Fun Fact',
+      category: 'Infotainment',
+      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/FOK-1.jpg',
+    },
+    {
       id: 6,
-      title: 'Ammayum Kunjum',
-      category: 'Reality Shows',
+      title: 'Vox Pop',
+      category: 'Youth & Trends',
       image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/AMMAYUM-KUNJUM.jpg',
     },
     {
       id: 7,
-      title: 'Chakkappazam',
-      category: 'Sitcom',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/CHAKKAPAZHAM.jpg',
+      title: 'Special Programs',
+      category: 'Specials',
+      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/KUTTY-KALVARA-1400x800.jpg',
     },
     {
       id: 8,
-      title: 'Comedy Kondattom',
-      category: 'Comedy Show',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/COMEDY-KONDATTOM-1.jpg',
+      title: 'Pusthakomania',
+      category: 'Literature',
+      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/chapter-13-V-700x800.jpg',
+      isPortrait: true,
     },
     {
       id: 9,
-      title: 'Comedy Utsavam',
-      category: 'Comedy Show',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/Comedy-Utsavam-1-1400x800.jpg',
+      title: 'Short Films',
+      category: 'Cinema',
+      image: 'https://www.flowerstv.in/wp-content/uploads/2023/02/SUSU-1400-x-800-1-1.jpg',
     },
     {
       id: 10,
-      title: 'Seethapennu',
-      category: 'Fiction',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/SEETHA-1-1-1400x800.jpg',
+      title: 'Sitcoms',
+      category: 'Sitcoms',
+      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/UPPUM-MULAKUM-2_NOw-showig.jpg',
     },
     {
       id: 11,
-      title: 'Flowers Top Singer',
-      category: 'Reality Shows',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg',
+      title: 'Aswamedham',
+      category: 'Infotainment',
+      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/BELOVED-H-700x880.jpg',
     },
     {
       id: 12,
-      title: 'Chapter XIII',
-      category: 'Flowers Originals',
+      title: 'Mahabharatham Quoted by Murukan Kattakkada',
+      category: 'Literature',
+      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/sathyamyittum-V-700x880.jpg',
       isPortrait: true,
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/chapter-13-V-700x800.jpg',
     },
   ];
 
@@ -102,17 +103,17 @@ export default function ShowsPage() {
   return (
     <>
       <Head>
-        <title>SHOWS | Flowers TV</title>
+        <title>SHOWS | NAMMAL & Flowers TV</title>
         <meta
           name="description"
-          content="Browse all popular Malayalam infotainment shows, reality series, comedy shows, fiction, game shows, and Flowers Originals."
+          content="Browse official Malayalam infotainment, music, drama, short films, and special programs on NAMMAL."
         />
       </Head>
 
       <main className={styles.wrapper}>
         {/* Banner Header */}
         <section className={styles.hero}>
-          <h1 className={styles.heroTitle}>SHOWS</h1>
+          <h1 className={styles.heroTitle}>SHOWS & PROGRAMS</h1>
         </section>
 
         {/* Category Filter Bar */}
