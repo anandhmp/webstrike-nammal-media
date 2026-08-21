@@ -10,43 +10,46 @@ export default function Header() {
     <header className={styles.header}>
       <div className="pv-container">
         <div className={styles.inner}>
-          {/* Original NAMMAL Logo with Tagline */}
+          {/* Logo Group */}
           <Link href="/home" className={styles.logoGroup}>
             <img
-              src="/assets/nammal-logo.png"
-              alt="NAMMAL Logo"
+              src="https://www.flowerstv.in/wp-content/uploads/2021/08/cropped-Flowers-Logo-alpha-1.png"
+              alt="Flowers TV Logo"
               className={styles.logoImg}
             />
-            <div className={styles.logoTextWrapper}>
-              <span className={styles.brandTitle}>NAMMAL</span>
-              <span className={styles.tagline}>മലയാളിയുടെ മനസ്സാക്ഷി</span>
-            </div>
+            <span className={styles.brandTitle}>
+              NAMMAL<span>+</span>
+            </span>
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <nav className={styles.rightGroup}>
+          {/* Center Navigation Links */}
+          <nav className={styles.centerNav}>
             <Link href="/home" className={styles.navLink}>
-              Home
+              HOME
             </Link>
             <Link href="/shows" className={styles.navLink}>
-              Shows
+              SHOWS
             </Link>
             <Link href="/schedule" className={styles.navLink}>
-              Schedules
-            </Link>
-            <Link href="/about" className={styles.navLink}>
-              About
+              SCHEDULE
             </Link>
             <Link href="/services" className={styles.navLink}>
-              Services
+              SERVICES
             </Link>
-            <Link href="/contact" className={styles.navLink}>
-              Contact
+            <Link href="/about" className={styles.navLink}>
+              ABOUT
             </Link>
-            <Link href="/contact#partner" className={styles.joinBtn}>
-              Partner With Us
+            <Link href="/contact" className={`${styles.navLink} ${styles.contactHighlight}`}>
+              CONTACT
             </Link>
           </nav>
+
+          {/* Right Utilities: LIVE CTA */}
+          <div className={styles.rightUtils}>
+            <Link href="/shows" className={styles.liveCtaBtn}>
+              <span className={styles.liveDot} /> LIVE TV
+            </Link>
+          </div>
 
           {/* Mobile Menu Toggle Button */}
           <button
@@ -62,29 +65,30 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className={styles.mobileDropdown}>
             <Link href="/home" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
-              Home
+              HOME
             </Link>
             <Link href="/shows" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
-              Shows (ഷോകൾ)
+              SHOWS
             </Link>
             <Link href="/schedule" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
-              Schedules (ഷെഡ്യൂളുകൾ)
-            </Link>
-            <Link href="/about" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
-              About Us
+              SCHEDULE
             </Link>
             <Link href="/services" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
-              Services
+              SERVICES
+            </Link>
+            <Link href="/about" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+              ABOUT
             </Link>
             <Link href="/contact" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
-              Contact Us
+              CONTACT
             </Link>
             <Link
-              href="/contact#partner"
-              className={styles.mobileJoinBtn}
+              href="/shows"
+              className={styles.liveCtaBtn}
+              style={{ justifyContent: 'center', marginTop: '8px' }}
               onClick={() => setMobileMenuOpen(false)}
             >
-              Partner With Us
+              <span className={styles.liveDot} /> LIVE TV
             </Link>
           </div>
         )}
@@ -92,4 +96,3 @@ export default function Header() {
     </header>
   );
 }
-

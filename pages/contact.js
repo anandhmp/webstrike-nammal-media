@@ -1,208 +1,289 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
+import { Phone, Mail, Facebook, Twitter, Instagram, Youtube, MapPin } from 'lucide-react';
 import styles from '@/styles/Contact.module.scss';
 
 export default function ContactPage() {
-  const [openFaq, setOpenFaq] = useState(0);
-
-  const faqs = [
-    {
-      q: 'HOW SOON WILL I RECEIVE A REPLY?',
-      a: 'We usually respond within 24–48 business hours. Whether you have a question about show partnerships, event sponsorships, or brand advertising, our team will prioritize your inquiry and provide custom media support.',
-    },
-    {
-      q: 'CAN I VISIT THE NAMMAL CREATIVE HUB STUDIO?',
-      a: 'Yes! Our studio doors at Grandmaster\'s Creative Hub, Kowdiar PO, Trivandrum remain open for scheduled partner meetings, creative discussions, and broadcast collaborations.',
-    },
-    {
-      q: 'HOW DO I SPONSOR OR PARTNER FOR SHOWS & EVENTS?',
-      a: 'Simply fill out the inquiry form above or reach out directly to grandmastercreativehub@gmail.com or hotline +91 7907760700. Our media strategy team will share tailor-made broadcast & digital package options.',
-    },
-  ];
-
   return (
     <>
       <Head>
         <title>Contact Us | NAMMAL & Flowers TV Network</title>
         <meta
           name="description"
-          content="Get in touch with Flowers TV and NAMMAL Media at Grandmaster's Creative Hub, Kowdiar PO, Trivandrum."
+          content="Get in touch with Flowers TV & NAMMAL Media at Grandmaster's Creative Hub, Kowdiar PO, Trivandrum."
         />
       </Head>
 
       <main className={styles.wrapper}>
-        {/* 1. Hero Section with Giant Typography */}
-        <section className={styles.hero}>
+        {/* Top Hero & Card Section with Background Image & Gradient */}
+        <section className={styles.heroBgSection}>
           <div className="pv-container">
-            <h1 className={styles.giantTitle}>
-              GET IN TOUCH <span className={styles.accentScript}>the dialogue</span>
-            </h1>
+            {/* 1. Header & Subtitle */}
+            <div className={styles.contactHeader}>
+              <h1 className={styles.title}>
+                LET'S WORK TOGETHER<br />
+                WITH NAMMAL MEDIA<span>+</span>
+              </h1>
+              <p className={styles.subtitle}>
+                We're always happy to hear from our viewers, brand partners, investors, and film enthusiasts.
+              </p>
+            </div>
 
-            <div className={styles.heroBottomRow}>
-              {/* Left Subtitle & Paragraph */}
-              <div className={styles.heroLeftDesc}>
-                <span className={styles.subLabel}>LET'S CREATE</span>
-                <h2 className={styles.dialogueHead}>
-                  IN <span>dialogue</span> WITH NAMMAL
-                </h2>
-                <p className={styles.pText}>
-                  OUR STUDIO DOORS REMAIN OPEN FOR INQUIRIES, PARTNERSHIPS, BROADCAST ADVERTISING, AND NEW IDEAS.
+            {/* 2. Main Contact Card Box */}
+            <div className={styles.contactCard}>
+              <div className={styles.cardGrid}>
+                {/* Left Column */}
+                <div className={styles.leftTalkCol}>
+                  <div>
+                    <h2 className={styles.talkHead}>LET'S TALK</h2>
+                    <p className={styles.talkSub}>Ask us anything or just say hi 👋</p>
+
+                    <div className={styles.contactBadges}>
+                      <a href="tel:+917907760700" className={styles.badgeItem}>
+                        <Phone size={18} className={styles.icon} />
+                        +91 7907760700
+                      </a>
+                      <a href="mailto:grandmastercreativehub@gmail.com" className={styles.badgeItem}>
+                        <Mail size={18} className={styles.icon} />
+                        grandmastercreativehub@gmail.com
+                      </a>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className={styles.bottomDivider} />
+                    <div className={styles.socialRow}>
+                      <a href="#" className={styles.socialCircle} aria-label="Facebook">
+                        <Facebook size={18} />
+                      </a>
+                      <a href="#" className={styles.socialCircle} aria-label="Twitter">
+                        <Twitter size={18} />
+                      </a>
+                      <a href="#" className={styles.socialCircle} aria-label="Instagram">
+                        <Instagram size={18} />
+                      </a>
+                      <a href="#" className={styles.socialCircle} aria-label="YouTube">
+                        <Youtube size={18} />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right Form Column */}
+                <form
+                  className={styles.rightFormCol}
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    alert('Thank you for your message! Our team will get back to you shortly.');
+                  }}
+                >
+                  <div className={styles.formGroup}>
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Your name" required />
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label>Email</label>
+                    <input type="email" placeholder="you@company.com" required />
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label>Phone number</label>
+                    <input type="tel" placeholder="+91 7907760700" />
+                  </div>
+
+                  <div className={styles.formGroup}>
+                    <label>Message</label>
+                    <textarea placeholder="Write your message here" required />
+                  </div>
+
+                  <button type="submit" className={styles.sendBtn}>
+                    SEND MESSAGE
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. Bottom Info Split Row (Opening Hours & Address) - Separate Solid Dark Section */}
+        <section className={styles.bottomInfoSection}>
+          <div className="pv-container">
+            <div className={styles.bottomInfoContainer}>
+              <div className={styles.infoBlock}>
+                <h3 className={styles.infoHead}>OPENING HOURS</h3>
+                <p className={styles.infoText}>
+                  Monday - Saturday<br />
+                  9am - 7pm IST
                 </p>
               </div>
 
-              {/* Right Contact Quick Grid */}
-              <div className={styles.heroContactGrid}>
-                <div className={styles.infoCol}>
-                  <span className={styles.infoLabel}>GENERAL INQUIRIES</span>
-                  <p className={styles.infoVal}>
+              <div className={styles.vertDivider} />
+
+              <div className={styles.infoBlock}>
+                <h3 className={styles.infoHead}>ADDRESS</h3>
+                <p className={styles.infoText}>
+                  Grandmaster's creative hub, 'Manjusha' TC 23/1777,<br />
+                  OD4, Jawaharnagar, Kowdiar PO, Trivandrum
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 5. Global Branches Dotted Map Section */}
+        <section className={styles.branchesSection}>
+          <div className="pv-container">
+            <div className={styles.branchesHeaderRow}>
+              <h2 className={styles.branchesTitle}>
+                WE HAVE MANY<br />
+                GLOBAL BRANCHES
+              </h2>
+              <div className={styles.branchesRight}>
+                <p className={styles.branchesDesc}>
+                  We have network hubs and broadcast facilities spread all over the world, so you can flexibly connect with our regional media studios.
+                </p>
+                <button className={styles.moreDetailsBtn}>
+                  More Details
+                </button>
+              </div>
+            </div>
+
+            <div className={styles.mapWrapperRelative}>
+              <div className={styles.mapContainer} />
+
+              <div className={styles.pinContainerLayer}>
+                {/* 1. Trivandrum Headquarters (Active Red Pin) */}
+                <div className={`${styles.mapPin} ${styles.activePin}`} style={{ top: '64%', left: '68.5%' }}>
+                  <div className={styles.dotPulse} />
+
+                  {/* Popup Card */}
+                  <div className={styles.pinPopupCard}>
+                    <img
+                      src="https://www.flowerstv.in/wp-content/uploads/2021/08/cropped-Flowers-Logo-alpha-1.png"
+                      alt="Trivandrum Headquarters"
+                      className={styles.popupThumb}
+                    />
+                    <div className={styles.popupInfo}>
+                      <span className={styles.popupTitle}>
+                        <MapPin size={12} color="#e11d48" /> Trivandrum, India
+                      </span>
+                      <span className={styles.popupAddress}>
+                        Grandmaster's creative hub, Kowdiar PO
+                      </span>
+                      <a href="#maps" className={styles.popupBtn}>
+                        See On Maps
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 2. Dubai UAE Studio */}
+                <div className={styles.mapPin} style={{ top: '56%', left: '62%' }}>
+                  <div className={styles.dotPulse} />
+                </div>
+
+                {/* 3. London UK Studio */}
+                <div className={styles.mapPin} style={{ top: '34%', left: '48.5%' }}>
+                  <div className={styles.dotPulse} />
+                </div>
+
+                {/* 4. New York USA Studio */}
+                <div className={styles.mapPin} style={{ top: '40%', left: '26%' }}>
+                  <div className={styles.dotPulse} />
+                </div>
+
+                {/* 5. Singapore Studio */}
+                <div className={styles.mapPin} style={{ top: '65%', left: '76%' }}>
+                  <div className={styles.dotPulse} />
+                </div>
+
+                {/* 6. Sydney Australia Studio */}
+                <div className={styles.mapPin} style={{ top: '80%', left: '86%' }}>
+                  <div className={styles.dotPulse} />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 4. Collaboration Opportunities Block Section */}
+        <section className={styles.collabSection}>
+          <div className="pv-container">
+            <div className={styles.collabHeader}>
+              <h2 className={styles.collabTitle}>
+                NAMMAL MEDIA<span>+</span><br />
+                COLLABORATION OPPORTUNITIES
+              </h2>
+              <p className={styles.collabSubtitle}>
+                Fueling our creativity, we're excited to partner with dedicated filmmakers, producers, and industry professionals. If your project aligns with our vision, feel free to submit it for review. Here's the process:
+              </p>
+            </div>
+
+            <div className={styles.collabBoxContainer}>
+              <div className={styles.collabGrid}>
+                {/* Card 1: Featured Active Card */}
+                <div className={`${styles.collabCard} ${styles.activeCollabCard}`}>
+                  <div className={styles.numBadge}>1</div>
+                  <h3 className={styles.stepTitle}>SUBMIT YOUR PROJECT</h3>
+                  <p className={styles.stepDesc}>
+                    Connect with NAMMAL Media by emailing your project to{' '}
                     <a href="mailto:grandmastercreativehub@gmail.com">
                       grandmastercreativehub@gmail.com
-                    </a>
+                    </a>. Make it a catchy title, such as "Collaboration Opportunity: [Your Project Title]".
                   </p>
                 </div>
 
-                <div className={styles.infoCol}>
-                  <span className={styles.infoLabel}>HOTLINE & SUPPORT</span>
-                  <p className={styles.infoVal}>
-                    <a href="tel:+917907760700">+91 7907760700</a>
+                {/* Card 2 */}
+                <div className={styles.collabCard}>
+                  <div className={styles.numBadge}>2</div>
+                  <h3 className={styles.stepTitle}>GUIDELINES</h3>
+                  <p className={styles.stepDesc}>
+                    Include a comprehensive project overview, specifying the genre, providing a synopsis, detailing your team. Attach supporting materials, whether it's a script and portfolio.
                   </p>
                 </div>
 
-                <div className={styles.infoCol}>
-                  <span className={styles.infoLabel}>HEADQUARTERS</span>
-                  <p className={styles.infoVal}>Grandmaster's creative hub</p>
-                </div>
-
-                <div className={styles.infoCol}>
-                  <span className={styles.infoLabel}>STUDIO LOCATION</span>
-                  <p className={styles.infoVal}>
-                    'Manjusha' TC 23/1777, Kowdiar, Trivandrum
+                {/* Card 3 */}
+                <div className={styles.collabCard}>
+                  <div className={styles.numBadge}>3</div>
+                  <h3 className={styles.stepTitle}>INTRODUCE YOURSELF</h3>
+                  <p className={styles.stepDesc}>
+                    Take a moment to introduce yourself and your team briefly. Share key highlights that showcase your experience and passion for filmmaking.
                   </p>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* 2. Split Form Section */}
-        <section className={styles.formSection}>
-          <div className="pv-container">
-            <div className={styles.formGrid}>
-              {/* Left Info Column */}
-              <div className={styles.leftInfoCol}>
-                <div>
-                  <span className={styles.emailSubLabel}>GENERAL INQUIRIES</span>
-                  <a
-                    href="mailto:grandmastercreativehub@gmail.com"
-                    className={styles.mainEmail}
-                  >
-                    grandmastercreativehub@gmail.com
-                  </a>
-
-                  <div style={{ marginTop: '24px' }}>
-                    <span className={styles.emailSubLabel}>PHONE HOTLINE</span>
-                    <a
-                      href="tel:+917907760700"
-                      style={{ fontSize: '18px', fontWeight: 800, color: '#ffffff', textDecoration: 'none' }}
-                    >
-                      +91 7907760700
-                    </a>
-                  </div>
+                {/* Card 4 */}
+                <div className={styles.collabCard}>
+                  <div className={styles.numBadge}>4</div>
+                  <h3 className={styles.stepTitle}>WHY NAMMAL MEDIA+</h3>
+                  <p className={styles.stepDesc}>
+                    Articulate why NAMMAL Media is the ideal home for your project. Highlight how your project aligns with NAMMAL Media's values and storytelling ethos.
+                  </p>
                 </div>
 
-                <div className={styles.hoursBox}>
-                  <div className={styles.hoursTitle}>OPERATING HOURS</div>
-                  <p className={styles.hoursText}>
-                    Monday – Saturday: 9:00 AM – 7:00 PM IST<br />
-                    Broadcast Operations: 24 Hours / 7 Days
+                {/* Card 5 */}
+                <div className={styles.collabCard}>
+                  <div className={styles.numBadge}>5</div>
+                  <h3 className={styles.stepTitle}>REVIEW PROCESS</h3>
+                  <p className={styles.stepDesc}>
+                    Your submission undergoes meticulous review by our dedicated team. While we can't select every project, we deeply value and appreciate your creativity.
+                  </p>
+                </div>
+
+                {/* Card 6 */}
+                <div className={styles.collabCard}>
+                  <div className={styles.numBadge}>6</div>
+                  <h3 className={styles.stepTitle}>PREPARE COLLABORATION</h3>
+                  <p className={styles.stepDesc}>
+                    Following your submission, anticipate a confirmation or further communication regarding the acceptance of your collaboration with NAMMAL Media.
                   </p>
                 </div>
               </div>
-
-              {/* Right Minimal Inputs Form */}
-              <form
-                className={styles.rightFormCol}
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  alert('Thank you for contacting NAMMAL Media! We will respond shortly.');
-                }}
-              >
-                <div className={styles.inputRow}>
-                  <div className={styles.formGroup}>
-                    <label>FIRST NAME</label>
-                    <input type="text" placeholder="Your first name" required />
-                  </div>
-                  <div className={styles.formGroup}>
-                    <label>LAST NAME</label>
-                    <input type="text" placeholder="Your last name" required />
-                  </div>
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label>EMAIL ADDRESS</label>
-                  <input type="email" placeholder="name@company.com" required />
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label>WHERE ARE YOU LOCATED?</label>
-                  <input type="text" placeholder="City, Country" />
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label>COMPANY NAME</label>
-                  <input type="text" placeholder="Your brand / organization" />
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label>HOW CAN WE HELP?</label>
-                  <textarea
-                    placeholder="Tell us about your campaign, partnership, or show inquiry..."
-                    required
-                  />
-                </div>
-
-                <button type="submit" className={styles.submitBtn}>
-                  SUBMIT INQUIRY
-                </button>
-              </form>
             </div>
           </div>
         </section>
 
-        {/* 3. FAQ Accordion Section */}
-        <section className={styles.faqSection}>
-          <div className="pv-container">
-            <div className={styles.faqHeader}>
-              <h2 className={styles.faqTitle}>
-                CLARITY IN <span>conversation</span> AND DIALOGUE
-              </h2>
-            </div>
 
-            <div className={styles.faqList}>
-              {faqs.map((faq, idx) => (
-                <div
-                  key={idx}
-                  className={`${styles.faqItem} ${
-                    openFaq === idx ? styles.openItem : ''
-                  }`}
-                >
-                  <button
-                    className={styles.faqQuestion}
-                    onClick={() => setOpenFaq(openFaq === idx ? -1 : idx)}
-                  >
-                    <span>{faq.q}</span>
-                    <span className={styles.plusMinus}>
-                      {openFaq === idx ? '−' : '+'}
-                    </span>
-                  </button>
-                  {openFaq === idx && (
-                    <div className={styles.faqAnswer}>{faq.a}</div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
       </main>
     </>
   );

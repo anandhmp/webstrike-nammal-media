@@ -1,184 +1,127 @@
 import React from 'react';
 import Link from 'next/link';
-import {
-  Handshake,
-  Radio,
-  Briefcase,
-  BookOpen,
-  Newspaper,
-  Heart,
-  GraduationCap,
-  Users,
-  MapPin,
-  Phone,
-  Twitter,
-  Facebook,
-  Youtube,
-  Instagram,
-  Mail,
-} from 'lucide-react';
 import styles from './Footer.module.scss';
 
 export default function Footer() {
   return (
     <footer className={styles.footerWrapper}>
-      <div className={styles.topSection}>
-        <div className="pv-container">
-          <div className={styles.grid}>
-            {/* Column 1: Brand Logo & Description */}
-            <div className={styles.brandCol}>
-              <Link href="/home">
-                <img
-                  src="https://www.flowerstv.in/wp-content/uploads/2021/08/cropped-Flowers-Logo-alpha-1.png"
-                  alt="Flowers TV Logo"
-                  className={styles.logoImg}
-                />
-              </Link>
-              <p className={styles.brandDesc}>
-                Flowers & NAMMAL, a 24 hour Malayalam entertainment television channel offering shows, serials, movies, music, infotainment and much more !
-              </p>
-            </div>
+      <div className="pv-container">
+        <div className={styles.grid}>
+          {/* Column 1: Brand Info */}
+          <div className={styles.brandCol}>
+            <Link href="/home" className={styles.logoLink}>
+              <img
+                src="https://www.flowerstv.in/wp-content/uploads/2021/08/cropped-Flowers-Logo-alpha-1.png"
+                alt="Flowers TV Logo"
+                className={styles.logoImg}
+              />
+              <span className={styles.logoText}>
+                NAMMAL<span>+</span>
+              </span>
+            </Link>
+            <p className={styles.brandDesc}>
+              A film production and media network specializing in creating visually stunning and impactful content.
+            </p>
+          </div>
 
-            {/* Column 2: Explore */}
-            <div>
-              <h3 className={styles.colHeader}>Explore</h3>
-              <ul className={styles.linkList}>
-                <li>
-                  <Link href="/contact#partner">
-                    <Handshake size={16} className={styles.linkIcon} />
-                    <span>Get Connected</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services">
-                    <Radio size={16} className={styles.linkIcon} />
-                    <span>Distribution</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about">
-                    <Briefcase size={16} className={styles.linkIcon} />
-                    <span>Careers</span>
-                  </Link>
-                </li>
-                <li>
-                  <a
-                    href="https://www.flowerstv.in/magazine/Kudumbam%20Magazine.pdf"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <BookOpen size={16} className={styles.linkIcon} />
-                    <span>Kudumbam Magazine</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+          {/* Column 2: MENU */}
+          <div>
+            <h3 className={styles.colHeader}>MENU</h3>
+            <ul className={styles.linkList}>
+              <li>
+                <Link href="/home">Home</Link>
+              </li>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
+              <li>
+                <Link href="/shows">Shows</Link>
+              </li>
+              <li>
+                <Link href="/services">Services</Link>
+              </li>
+              <li>
+                <Link href="/contact">Contact</Link>
+              </li>
+            </ul>
+          </div>
 
-            {/* Column 3: Our Joint Ventures */}
-            <div>
-              <h3 className={styles.colHeader}>Our Joint Ventures</h3>
-              <ul className={styles.linkList}>
-                <li>
-                  <a href="https://www.twentyfournews.com/" target="_blank" rel="noreferrer">
-                    <Newspaper size={16} className={styles.linkIcon} />
-                    <span>Twenty Four News</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://flowersoriginals.com/" target="_blank" rel="noreferrer">
-                    <Heart size={16} className={styles.linkIcon} />
-                    <span>Flowers Originals</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.flowersacademy.in/" target="_blank" rel="noreferrer">
-                    <GraduationCap size={16} className={styles.linkIcon} />
-                    <span>Flowers Academy</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="http://flowersfamily.in/" target="_blank" rel="noreferrer">
-                    <Users size={16} className={styles.linkIcon} />
-                    <span>Flowers Family Club</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
+          {/* Column 3: BUSINESS */}
+          <div>
+            <h3 className={styles.colHeader}>BUSINESS</h3>
+            <ul className={styles.linkList}>
+              <li>
+                <Link href="/shows">Movies</Link>
+              </li>
+              <li>
+                <Link href="/shows">Web Series</Link>
+              </li>
+              <li>
+                <a href="https://www.twentyfournews.com/" target="_blank" rel="noreferrer">
+                  Twenty Four News
+                </a>
+              </li>
+              <li>
+                <Link href="/services">Film Distributor</Link>
+              </li>
+              <li>
+                <a href="https://flowersoriginals.com/" target="_blank" rel="noreferrer">
+                  Flowers Originals
+                </a>
+              </li>
+              <li>
+                <Link href="/services">Pay TV</Link>
+              </li>
+            </ul>
+          </div>
 
-            {/* Column 4: Contact Us */}
-            <div>
-              <h3 className={styles.colHeader}>Contact Us</h3>
-              <div className={styles.contactInfo}>
-                <div className={styles.addressBox}>
-                  <MapPin size={18} className={styles.icon} />
-                  <div>
-                    <strong>Grandmaster's creative hub</strong>
-                    <br />
-                    'Manjusha' TC 23/1777, OD4, Jawaharnagar, Kowdiar PO, Trivandrum
-                  </div>
-                </div>
-                <div className={styles.phoneBox}>
-                  <Phone size={18} className={styles.icon} />
-                  <a href="tel:+917907760700">+91 7907760700</a>
-                </div>
-                <div className={styles.phoneBox}>
-                  <Mail size={18} className={styles.icon} />
-                  <a href="mailto:grandmastercreativehub@gmail.com" style={{ wordBreak: 'break-all' }}>
-                    grandmastercreativehub@gmail.com
-                  </a>
-                </div>
-              </div>
-            </div>
+          {/* Column 4: INVESTORS */}
+          <div>
+            <h3 className={styles.colHeader}>INVESTORS</h3>
+            <ul className={styles.linkList}>
+              <li>
+                <a href="#">Stock</a>
+              </li>
+              <li>
+                <a href="#">Prospectus</a>
+              </li>
+              <li>
+                <a href="#">Financials</a>
+              </li>
+              <li>
+                <a href="#">Annual Report</a>
+              </li>
+              <li>
+                <a href="#">GMS</a>
+              </li>
+              <li>
+                <a href="#">Press Release</a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Column 5: GOVERNANCE */}
+          <div>
+            <h3 className={styles.colHeader}>GOVERNANCE</h3>
+            <ul className={styles.linkList}>
+              <li>
+                <a href="#">Articles of Association</a>
+              </li>
+              <li>
+                <a href="#">Internal & External Audit</a>
+              </li>
+              <li>
+                <a href="#">Code of Conduct</a>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
 
-      {/* Bottom Footer Bar */}
-      <div className={styles.bottomBar}>
-        <div className="pv-container">
-          <div className={styles.bottomInner}>
-            <p className={styles.copyrightText}>
-              © Copyright 2026 – Insight Media City (India) Pvt Ltd & NAMMAL
-            </p>
-
-            <div className={styles.socialIcons}>
-              <a
-                href="https://twitter.com/flowersonair"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Twitter"
-              >
-                <Twitter size={16} />
-              </a>
-              <a
-                href="https://www.facebook.com/flowersonair/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Facebook"
-              >
-                <Facebook size={16} />
-              </a>
-              <a
-                href="https://www.youtube.com/@NAMMAL-MalayaliyudeManasakshi"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="YouTube"
-              >
-                <Youtube size={16} />
-              </a>
-              <a
-                href="https://www.instagram.com/nammal__media/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram"
-              >
-                <Instagram size={16} />
-              </a>
-              <a href="mailto:grandmastercreativehub@gmail.com" aria-label="Email">
-                <Mail size={16} />
-              </a>
-            </div>
-          </div>
+        {/* Bottom Bar */}
+        <div className={styles.bottomBar}>
+          <p className={styles.copyrightText}>
+            © 2026 NAMMAL & Flowers TV Network. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

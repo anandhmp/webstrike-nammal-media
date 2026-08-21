@@ -5,12 +5,12 @@
   right: 0;
   width: 100%;
   z-index: 9999;
-  background: rgba(11, 14, 18, 0.92);
+  background: rgba(11, 12, 16, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 10px 0;
-  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+  padding: 14px 0;
+  transition: background 0.3s ease;
 }
 
 .inner {
@@ -19,7 +19,7 @@
   justify-content: space-between;
 }
 
-/* Logo Group - Smaller Logo */
+/* Logo Group */
 .logoGroup {
   display: flex;
   align-items: center;
@@ -28,82 +28,187 @@
 }
 
 .logoImg {
-  height: 38px;
+  height: 34px;
   width: auto;
   object-fit: contain;
 }
 
-.logoTextWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 .brandTitle {
   font-family: var(--pv-font-sans);
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 900;
   color: #ffffff;
-  letter-spacing: 0.04em;
-  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  line-height: 1;
+
+  span {
+    color: #e11d48;
+    font-weight: 900;
+  }
 }
 
-.tagline {
-  font-family: var(--pv-font-sans);
-  font-size: 10px;
-  font-weight: 700;
-  color: #fff263;
-  line-height: 1.1;
-}
-
-/* Desktop Navigation */
-.rightGroup {
+/* Center Navigation Links */
+.centerNav {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 32px;
 }
 
 .navLink {
-  font-size: 13.5px;
-  font-weight: 700;
-  color: #e2e8f0;
+  font-size: 13px;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
   transition: color 0.2s ease;
   white-space: nowrap;
 
   &:hover {
-    color: #fff263;
+    color: #e11d48;
+  }
+
+  &.contactHighlight {
+    color: #e11d48;
+
+    &:hover {
+      color: #ffffff;
+    }
   }
 }
 
-.joinBtn {
-  background: #fff263;
-  color: #0b0c10 !important;
-  padding: 8px 18px;
-  border-radius: 12px !important;
-  font-size: 12px;
+/* Dropdown Container */
+.dropdownWrapper {
+  position: relative;
+
+  &:hover .dropdownMenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding-top: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.25s ease;
+  z-index: 100;
+}
+
+.dropdownInner {
+  background: #12141d;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  padding: 8px 0;
+  min-width: 170px;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+
+  a {
+    display: block;
+    padding: 8px 16px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #d1d5db;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      background: rgba(225, 29, 72, 0.15);
+      color: #ffffff;
+    }
+  }
+}
+
+/* Right Utilities: Language Switcher & LIVE CTA */
+.rightUtils {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.langBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
   font-weight: 800;
-  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+
+  .flagIcon {
+    font-size: 15px;
+  }
+
+  &:hover {
+    color: #e11d48;
+  }
+}
+
+.liveCtaBtn {
+  background: #e11d48;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   text-decoration: none;
-  white-space: nowrap;
-  transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  box-shadow: none;
-  border: none;
+  gap: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.4);
 
   &:hover {
     background: #ffffff;
-    color: #000000 !important;
-    box-shadow: none;
+    color: #0b0c10;
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
+  }
+
+  .liveDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: inline-block;
+    animation: livePulse 1.5s infinite;
   }
 }
 
-/* Mobile Hamburger Button - HIDDEN on desktop, VISIBLE on mobile */
+@keyframes livePulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Mobile Hamburger Toggle */
 .mobileToggle {
   display: none;
-  /* Hide in desktop */
   background: transparent;
   border: none;
   color: #ffffff;
@@ -111,10 +216,9 @@
   padding: 6px;
   align-items: center;
   justify-content: center;
-  transition: color 0.2s ease;
 
   &:hover {
-    color: var(--pv-gold);
+    color: #e11d48;
   }
 }
 
@@ -127,38 +231,29 @@
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   padding: 20px 16px;
   margin-top: 10px;
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
 }
 
 .mobileNavLink {
   font-size: 14px;
-  font-weight: 700;
-  color: #e2e8f0;
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
   text-decoration: none;
   padding: 6px 0;
 
   &:hover {
-    color: var(--pv-gold);
+    color: #e11d48;
   }
-}
-
-.mobileJoinBtn {
-  composes: joinBtn;
-  text-align: center;
-  margin-top: 8px;
-  width: 100%;
 }
 
 /* Responsive Media Queries */
 @media (max-width: 992px) {
-  .rightGroup {
+  .centerNav,
+  .rightUtils {
     display: none;
-    /* Hide desktop menu on mobile */
   }
 
   .mobileToggle {
     display: flex;
-    /* Show hamburger only on mobile */
   }
 }

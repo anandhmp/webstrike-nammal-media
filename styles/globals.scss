@@ -46,14 +46,21 @@ body {
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  line-height: 1.6;
+  line-height: 1.75;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--pv-font-sans);
-  font-weight: 700;
+  font-weight: 900;
   color: #ffffff;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #9ca3af;
 }
 
 a {
