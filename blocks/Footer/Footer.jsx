@@ -9,15 +9,12 @@ export default function Footer() {
         <div className={styles.grid}>
           {/* Column 1: Brand Info */}
           <div className={styles.brandCol}>
-            <Link href="/home" className={styles.logoLink}>
+            <Link href="/" className={styles.logoLink}>
               <img
-                src="https://www.flowerstv.in/wp-content/uploads/2021/08/cropped-Flowers-Logo-alpha-1.png"
-                alt="Flowers TV Logo"
+                src="/assets/nammal-logo.png"
+                alt="NAMMAL Media Logo"
                 className={styles.logoImg}
               />
-              <span className={styles.logoText}>
-                NAMMAL<span>+</span>
-              </span>
             </Link>
             <p className={styles.brandDesc}>
               A film production and media network specializing in creating visually stunning and impactful content.
@@ -29,7 +26,7 @@ export default function Footer() {
             <h3 className={styles.colHeader}>MENU</h3>
             <ul className={styles.linkList}>
               <li>
-                <Link href="/home">Home</Link>
+                <Link href="/">Home</Link>
               </li>
               <li>
                 <Link href="/about">About</Link>

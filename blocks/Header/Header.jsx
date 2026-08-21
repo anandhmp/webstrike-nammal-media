@@ -11,20 +11,17 @@ export default function Header() {
       <div className="pv-container">
         <div className={styles.inner}>
           {/* Logo Group */}
-          <Link href="/home" className={styles.logoGroup}>
+          <Link href="/" className={styles.logoGroup}>
             <img
-              src="https://www.flowerstv.in/wp-content/uploads/2021/08/cropped-Flowers-Logo-alpha-1.png"
-              alt="Flowers TV Logo"
+              src="/assets/nammal-logo.png"
+              alt="NAMMAL Media Logo"
               className={styles.logoImg}
             />
-            <span className={styles.brandTitle}>
-              NAMMAL<span>+</span>
-            </span>
           </Link>
 
           {/* Center Navigation Links */}
           <nav className={styles.centerNav}>
-            <Link href="/home" className={styles.navLink}>
+            <Link href="/" className={styles.navLink}>
               HOME
             </Link>
             <Link href="/shows" className={styles.navLink}>

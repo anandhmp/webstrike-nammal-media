@@ -160,7 +160,7 @@ export default function ContactPage() {
                   {/* Popup Card */}
                   <div className={styles.pinPopupCard}>
                     <img
-                      src="https://www.flowerstv.in/wp-content/uploads/2021/08/cropped-Flowers-Logo-alpha-1.png"
+                      src="/assets/nammal-logo.png"
                       alt="Trivandrum Headquarters"
                       className={styles.popupThumb}
                     />
