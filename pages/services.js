@@ -5,8 +5,6 @@ import { ArrowRight, Facebook, Twitter, Instagram, Youtube } from 'lucide-react'
 import styles from '@/styles/Services.module.scss';
 
 export default function ServicesPage() {
-  const [activeIndex, setActiveIndex] = useState(2); // Center card default
-
   const coreServices = [
     {
       id: 0,
@@ -45,10 +43,27 @@ export default function ServicesPage() {
     },
   ];
 
-  // Auto Slider Effect (cycles every 3 seconds)
+  // Repeat array 5 times for unending infinite loop
+  const loopedServices = [
+    ...coreServices,
+    ...coreServices,
+    ...coreServices,
+    ...coreServices,
+    ...coreServices,
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(coreServices.length * 2 + 2);
+
+  // Unending Loop Interval
   useEffect(() => {
     const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % coreServices.length);
+      setActiveIndex((prev) => {
+        const next = prev + 1;
+        if (next >= coreServices.length * 4) {
+          return coreServices.length * 2;
+        }
+        return next;
+      });
     }, 3000);
 
     return () => clearInterval(timer);
@@ -136,7 +151,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* 2. Core Business Header & Auto Slider Section (Middle) */}
+        {/* 2. Core Business Header & Infinite Auto Slider Section (Middle) */}
         <section style={{ padding: '80px 0 60px' }}>
           <div className="pv-container">
             <div className={styles.sliderHeader}>
@@ -152,7 +167,7 @@ export default function ServicesPage() {
                   transform: `translateX(calc(40% - ${activeIndex * 20}%))`,
                 }}
               >
-                {coreServices.map((service, idx) => {
+                {loopedServices.map((service, idx) => {
                   const distance = Math.abs(idx - activeIndex);
                   let bulgeClass = styles.outerCard;
                   if (distance === 0) {
@@ -163,7 +178,7 @@ export default function ServicesPage() {
 
                   return (
                     <div
-                      key={service.id}
+                      key={`${service.id}-${idx}`}
                       className={`${styles.posterCard} ${bulgeClass}`}
                       onClick={() => setActiveIndex(idx)}
                     >
@@ -185,19 +200,23 @@ export default function ServicesPage() {
 
               {/* Slider Dots Indicator */}
               <div className={styles.controlsRow}>
-                {coreServices.map((_, idx) => (
-                  <button
-                    key={idx}
-                    className={`${styles.dotBtn} ${activeIndex === idx ? styles.activeDot : ''
-                      }`}
-                    onClick={() => setActiveIndex(idx)}
-                    aria-label={`Go to slide ${idx + 1}`}
-                  />
-                ))}
+                {coreServices.map((_, idx) => {
+                  const realIndex = activeIndex % coreServices.length;
+                  return (
+                    <button
+                      key={idx}
+                      className={`${styles.dotBtn} ${realIndex === idx ? styles.activeDot : ''
+                        }`}
+                      onClick={() => setActiveIndex(coreServices.length * 2 + idx)}
+                      aria-label={`Go to slide ${idx + 1}`}
+                    />
+                  );
+                })}
               </div>
             </div>
           </div>
         </section>
+
 
       </main>
     </>
