@@ -1,0 +1,395 @@
+.wrapper {
+  background-color: #0b0c10;
+  color: #ffffff;
+  min-height: 100vh;
+  padding-top: 72px;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 240px;
+  background-image: linear-gradient(180deg,
+      rgba(11, 14, 18, 0.65) 0%,
+      rgba(11, 14, 18, 0.98) 100%),
+    url('https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(11, 14, 18, 0.85) 100%);
+    z-index: 1;
+  }
+}
+
+.heroTitle {
+  position: relative;
+  z-index: 10;
+  font-family: var(--pv-font-sans);
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Horizontal Date Pills Bar */
+.dateBar {
+  background: #11141a;
+  border-y: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 60px;
+  z-index: 100;
+  padding: 16px 0;
+}
+
+.dateScroll {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.datePill {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #9ca3af;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 13.5px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+
+  &.activePill {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+    color: #ffffff;
+    border-color: #dc2626;
+    box-shadow: 0 4px 16px rgba(220, 38, 38, 0.4);
+  }
+}
+
+/* Category Filter Chips */
+.categoryFilterBar {
+  padding: 24px 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.filterChip {
+  background: none;
+  border: none;
+  color: #9ca3af;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  &.activeChip {
+    color: var(--pv-gold);
+    background: rgba(212, 175, 55, 0.12);
+    font-weight: 800;
+  }
+}
+
+/* Main Timeline Section */
+.scheduleSection {
+  padding: 20px 0 80px;
+}
+
+.timelineContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 110px;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: linear-gradient(180deg, var(--pv-gold) 0%, rgba(255, 255, 255, 0.1) 100%);
+  }
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.timeMarker {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-top: 20px;
+  position: relative;
+  z-index: 5;
+}
+
+.timeText {
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--pv-gold);
+  letter-spacing: -0.01em;
+}
+
+.periodText {
+  font-size: 11px;
+  font-weight: 700;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.timeDot {
+  position: absolute;
+  right: -37px;
+  top: 26px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--pv-gold);
+  border: 3px solid #0b0c10;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+/* Show Details Card */
+.showCard {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  background: #111622;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 16px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+    border-color: rgba(212, 175, 55, 0.4);
+
+    .thumbImg {
+      transform: scale(1.06);
+    }
+  }
+}
+
+.thumbWrapper {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #1f2937;
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.liveBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 900;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  box-shadow: 0 2px 8px rgba(220, 38, 38, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffffff;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 6px 0;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.categoryTag {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--pv-gold);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.duration {
+  font-size: 12px;
+  color: #9ca3af;
+  font-weight: 600;
+}
+
+.showTitle {
+  font-family: var(--pv-font-sans);
+  font-size: 22px;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0 0 6px;
+  line-height: 1.2;
+}
+
+.showDesc {
+  font-size: 13.5px;
+  color: #9ca3af;
+  line-height: 1.5;
+  margin: 0 0 16px;
+}
+
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.watchBtn {
+  background: linear-gradient(135deg, var(--pv-gold), var(--pv-yellow));
+  color: #0b0c10;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: translateY(-1px);
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(255, 215, 0, 0.4);
+  }
+}
+
+.remindBtn {
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (max-width: 992px) {
+  .showCard {
+    grid-template-columns: 240px 1fr;
+  }
+
+  .heroTitle {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timelineContainer::before {
+    display: none;
+  }
+
+  .timelineItem {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .timeMarker {
+    align-items: flex-start;
+    padding-top: 0;
+  }
+
+  .timeDot {
+    display: none;
+  }
+
+  .showCard {
+    grid-template-columns: 1fr;
+  }
+}

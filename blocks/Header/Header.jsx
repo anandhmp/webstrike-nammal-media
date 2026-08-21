@@ -1,46 +1,89 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import { Menu, X } from 'lucide-react';
 import styles from './Header.module.scss';
 
 export default function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
     <header className={styles.header}>
       <div className="pv-container">
         <div className={styles.inner}>
-          {/* Logo with 4-Corner Bracket Icon */}
-          <Link href="/" className={styles.logo}>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="3.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M4 8V4h4M20 8V4h-4M4 16v4h4M20 16v4h-4" />
-            </svg>
-            <span>Prism Vantage</span>
+          {/* Original NAMMAL Logo with Tagline */}
+          <Link href="/home" className={styles.logoGroup}>
+            <img
+              src="/assets/nammal-logo.png"
+              alt="NAMMAL Logo"
+              className={styles.logoImg}
+            />
+            <div className={styles.logoTextWrapper}>
+              <span className={styles.brandTitle}>NAMMAL</span>
+              <span className={styles.tagline}>മലയാളിയുടെ മനസ്സാക്ഷി</span>
+            </div>
           </Link>
 
-          {/* Right Links & Join Button */}
-          <div className={styles.rightGroup}>
+          {/* Desktop Navigation Links */}
+          <nav className={styles.rightGroup}>
+            <Link href="/home" className={styles.navLink}>
+              Home
+            </Link>
+            <Link href="/shows" className={styles.navLink}>
+              Shows
+            </Link>
+            <Link href="/schedule" className={styles.navLink}>
+              Schedules
+            </Link>
             <Link href="/about" className={styles.navLink}>
               About
             </Link>
             <Link href="/contact" className={styles.navLink}>
               Contact
             </Link>
-            <Link href="/blog" className={styles.navLink}>
-              Blog
+            <Link href="/contact#partner" className={styles.joinBtn}>
+              Partner With Us
             </Link>
-            <Link href="#subscribe" className={styles.joinBtn}>
-              Join Community
+          </nav>
+
+          {/* Mobile Menu Toggle Button */}
+          <button
+            className={styles.mobileToggle}
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+          </button>
+        </div>
+
+        {/* Mobile Dropdown Menu */}
+        {mobileMenuOpen && (
+          <div className={styles.mobileDropdown}>
+            <Link href="/home" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+              Home
+            </Link>
+            <Link href="/shows" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+              Shows (ഷോകൾ)
+            </Link>
+            <Link href="/schedule" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+              Schedules (ഷെഡ്യൂളുകൾ)
+            </Link>
+            <Link href="/about" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+              About Us
+            </Link>
+            <Link href="/contact" className={styles.mobileNavLink} onClick={() => setMobileMenuOpen(false)}>
+              Contact Us
+            </Link>
+            <Link
+              href="/contact#partner"
+              className={styles.mobileJoinBtn}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Partner With Us
             </Link>
           </div>
-        </div>
+        )}
       </div>
     </header>
   );
 }
+

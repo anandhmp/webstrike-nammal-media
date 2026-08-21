@@ -1,0 +1,252 @@
+.wrapper {
+  background-color: #0b0c10;
+  color: #ffffff;
+  min-height: 100vh;
+  padding-top: 72px;
+}
+
+/* Hero Section with Rich Show Backdrop Image */
+.hero {
+  position: relative;
+  height: 280px;
+  background-image: linear-gradient(180deg,
+      rgba(11, 14, 18, 0.6) 0%,
+      rgba(11, 14, 18, 0.95) 100%),
+    url('https://www.flowerstv.in/wp-content/uploads/2022/05/DESIGN_SM-1.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  // border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(11, 14, 18, 0.85) 100%);
+    z-index: 1;
+  }
+}
+
+.heroTitle {
+  position: relative;
+  z-index: 10;
+  font-family: var(--pv-font-sans);
+  font-size: 52px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+/* Category Filter Tabs Bar */
+.filterBar {
+  background: #0b0c10;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 60px;
+  z-index: 100;
+  padding: 12px 0;
+}
+
+.filterScroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.filterTab {
+  font-size: 13px;
+  font-weight: 700;
+  color: #9ca3af;
+  white-space: nowrap;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 4px;
+  position: relative;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #ffffff;
+  }
+
+  &.active {
+    color: #ffffff;
+    font-weight: 800;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: #dc2626;
+      /* Red active tab line matching screenshot */
+      border-radius: 2px 2px 0 0;
+    }
+  }
+}
+
+/* Shows Grid Section */
+.showsSection {
+  padding: 48px 0 80px;
+  background: #0b0c10;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  background: #111827;
+
+  &:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7);
+
+    .cardImg {
+      transform: scale(1.08);
+    }
+
+    .playOverlay {
+      opacity: 1;
+    }
+  }
+}
+
+.cardPortrait {
+  composes: card;
+  aspect-ratio: 700 / 880;
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cardOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 16px;
+}
+
+.playOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: rgba(0, 0, 0, 0.3);
+
+  .playIcon {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    color: #0b0c10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.showTitle {
+  font-family: var(--pv-font-sans);
+  font-size: 18px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+  line-height: 1.2;
+}
+
+/* Load More Section */
+.loadMoreWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.loadMoreBtn {
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+
+  &:hover {
+    background: #ef4444;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(220, 38, 38, 0.6);
+  }
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heroTitle {
+    font-size: 40px;
+  }
+
+  .hero {
+    height: 180px;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .heroTitle {
+    font-size: 32px;
+  }
+
+  .filterScroll {
+    justify-content: flex-start;
+  }
+}

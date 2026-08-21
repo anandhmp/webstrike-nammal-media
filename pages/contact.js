@@ -1,133 +1,232 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { Globe, ChevronDown } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, Clock, Building2 } from 'lucide-react';
 import styles from '@/styles/Contact.module.scss';
 
 export default function ContactPage() {
+  const [inquiryType, setInquiryType] = useState('General');
+  const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    name: '',
     email: '',
     phone: '',
+    subject: '',
     message: '',
   });
-  const [submitted, setSubmitted] = useState(false);
+
+  const inquiryTypes = ['General', 'Partnership', 'Distribution', 'Careers'];
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.firstName && formData.email && formData.message) {
-      setSubmitted(true);
-    }
+    setSubmitted(true);
   };
 
   return (
     <>
       <Head>
-        <title>Contact Us | Prism Vantage</title>
+        <title>Contact Us | NAMMAL & Flowers TV</title>
         <meta
           name="description"
-          content="Get in touch with Prism Vantage. Contact details and conversation form."
+          content="Get connected with Flowers TV & NAMMAL Media. Partner with us, inquire about distribution, or reach out to our team."
         />
       </Head>
 
       <main className={styles.wrapper}>
-        <div className="pv-container">
-          <h1 className={styles.title} data-aos="fade-up">
-            Contact Us
-          </h1>
+        {/* Hero Section */}
+        <section className={styles.hero}>
+          <div className={styles.heroContent}>
+            <span className={styles.badge}>REACH OUT TO US</span>
+            <h1 className={styles.heroTitle}>Get Connected</h1>
+            <p className={styles.heroSubtitle}>
+              Whether you want to partner with us, advertise, or inquire about distribution, we'd love to hear from you.
+            </p>
+          </div>
+        </section>
 
-          <div className={styles.card} data-aos="fade-up" data-aos-delay="100">
-            {/* Contact Details */}
-            <h2 className={styles.sectionTitle}>Contact Details</h2>
-            <div className={styles.detailsGrid}>
-              <div>
-                500 Terry Francine St
-                <br />
-                San Francisco, CA 94158
+        {/* Quick Contact Cards */}
+        <section className={styles.quickCardsSection}>
+          <div className="pv-container">
+            <div className={styles.quickGrid}>
+              <div className={styles.quickCard}>
+                <div className={styles.iconCircle}>
+                  <MapPin size={22} />
+                </div>
+                <div className={styles.quickCardBody}>
+                  <span className={styles.quickCardTitle}>Headquarters</span>
+                  <span className={styles.quickCardValue}>
+                    Insight Media City, Chakkaraparambu, Vennala, Kochi, Kerala 682028
+                  </span>
+                </div>
               </div>
-              <div>
-                info@mysite.com
-                <br />
-                123-456-7890
+
+              <div className={styles.quickCard}>
+                <div className={styles.iconCircle}>
+                  <Phone size={22} />
+                </div>
+                <div className={styles.quickCardBody}>
+                  <span className={styles.quickCardTitle}>Hotline & Support</span>
+                  <span className={styles.quickCardValue}>
+                    <a href="tel:04842203544">04842203544</a> / <a href="tel:+917907760700">+91 7907760700</a>
+                  </span>
+                </div>
+              </div>
+
+              <div className={styles.quickCard}>
+                <div className={styles.iconCircle}>
+                  <Mail size={22} />
+                </div>
+                <div className={styles.quickCardBody}>
+                  <span className={styles.quickCardTitle}>Official Email</span>
+                  <span className={styles.quickCardValue}>
+                    <a href="mailto:info@flowerstv.in">info@flowerstv.in</a>
+                  </span>
+                </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Start a Conversation Form */}
-            <h2 className={styles.sectionTitle}>Start a Conversation</h2>
+        {/* Form and Campus Details Grid */}
+        <section className={styles.formSection}>
+          <div className="pv-container">
+            <div className={styles.mainGrid}>
+              {/* Form Card */}
+              <div id="partner" className={styles.formCard}>
+                <h2 className={styles.sectionTitle}>Send A Direct Message</h2>
+                <p className={styles.sectionDesc}>
+                  Select your inquiry type and fill out the details below. Our team responds within 24 business hours.
+                </p>
 
-            {!submitted ? (
-              <form className={styles.form} onSubmit={handleSubmit}>
-                <div className={styles.inputGroup}>
-                  <label>First name *</label>
-                  <input
-                    type="text"
-                    required
-                    className={styles.input}
-                    value={formData.firstName}
-                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                  />
-                </div>
-
-                <div className={styles.inputGroup}>
-                  <label>Last name *</label>
-                  <input
-                    type="text"
-                    required
-                    className={styles.input}
-                    value={formData.lastName}
-                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                  />
-                </div>
-
-                <div className={styles.inputGroup}>
-                  <label>Email *</label>
-                  <input
-                    type="email"
-                    required
-                    className={styles.input}
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  />
-                </div>
-
-                <div className={styles.inputGroup}>
-                  <label>Phone</label>
-                  <div className={styles.phoneGroup}>
-                    <div className={styles.phoneIcon}>
-                      <Globe size={14} />
-                      <ChevronDown size={12} />
+                {submitted ? (
+                  <div className={styles.successBox}>
+                    Thank you for reaching out! Your message has been sent to our team.
+                  </div>
+                ) : (
+                  <form onSubmit={handleSubmit}>
+                    {/* Inquiry Type Pills */}
+                    <div className={styles.inquiryTypeGroup}>
+                      <span className={styles.inquiryLabel}>Inquiry Type:</span>
+                      <div className={styles.pillGrid}>
+                        {inquiryTypes.map((type) => (
+                          <button
+                            key={type}
+                            type="button"
+                            className={`${styles.pillBtn} ${
+                              inquiryType === type ? styles.activePill : ''
+                            }`}
+                            onClick={() => setInquiryType(type)}
+                          >
+                            {type}
+                          </button>
+                        ))}
+                      </div>
                     </div>
-                    <input
-                      type="tel"
-                      className={`${styles.input} ${styles.phoneInput}`}
-                      value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+
+                    <div className={styles.formRow}>
+                      <div className={styles.inputGroup}>
+                        <label htmlFor="name">Full Name *</label>
+                        <input
+                          id="name"
+                          type="text"
+                          required
+                          placeholder="Your full name"
+                          className={styles.input}
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        />
+                      </div>
+
+                      <div className={styles.inputGroup}>
+                        <label htmlFor="email">Email Address *</label>
+                        <input
+                          id="email"
+                          type="email"
+                          required
+                          placeholder="name@company.com"
+                          className={styles.input}
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        />
+                      </div>
+                    </div>
+
+                    <div className={styles.formRow}>
+                      <div className={styles.inputGroup}>
+                        <label htmlFor="phone">Phone Number</label>
+                        <input
+                          id="phone"
+                          type="tel"
+                          placeholder="+91 98765 43210"
+                          className={styles.input}
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        />
+                      </div>
+
+                      <div className={styles.inputGroup}>
+                        <label htmlFor="subject">Subject</label>
+                        <input
+                          id="subject"
+                          type="text"
+                          placeholder="Brief topic"
+                          className={styles.input}
+                          value={formData.subject}
+                          onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                        />
+                      </div>
+                    </div>
+
+                    <div className={styles.inputGroup}>
+                      <label htmlFor="message">Message *</label>
+                      <textarea
+                        id="message"
+                        required
+                        placeholder="Write your message or partnership details here..."
+                        className={styles.textarea}
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      />
+                    </div>
+
+                    <button type="submit" className={styles.submitBtn}>
+                      <Send size={16} /> Send Message
+                    </button>
+                  </form>
+                )}
+              </div>
+
+              {/* Side Campus Info Card */}
+              <div className={styles.campusCard}>
+                <div>
+                  <div className={styles.campusImgWrapper}>
+                    <img
+                      src="https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg"
+                      alt="Insight Media City Campus"
                     />
                   </div>
+
+                  <h3 style={{ fontSize: '20px', fontWeight: 800, color: '#ffffff', marginBottom: '8px' }}>
+                    Insight Media City
+                  </h3>
+                  <p style={{ fontSize: '13.5px', color: '#9ca3af', lineHeight: 1.6 }}>
+                    State-of-the-art broadcasting studios and corporate facilities located in Kochi, Kerala. Home to Flowers TV, Twenty Four News, and NAMMAL Media.
+                  </p>
                 </div>
 
-                <div className={styles.inputGroup}>
-                  <label>Message</label>
-                  <textarea
-                    rows={4}
-                    className={styles.textarea}
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    required
-                  />
+                <div className={styles.hoursBox}>
+                  <div className={styles.hoursTitle}>
+                    <Clock size={14} style={{ display: 'inline', marginRight: '6px' }} />
+                    Operating Hours
+                  </div>
+                  <p className={styles.hoursText}>
+                    Monday – Saturday: 9:00 AM – 7:00 PM IST<br />
+                    Broadcast Operations: 24 Hours / 7 Days
+                  </p>
                 </div>
-
-                <button type="submit" className={styles.submitBtn}>
-                  Submit
-                </button>
-              </form>
-            ) : (
-              <div className={styles.successMsg}>
-                ✓ Thank you, {formData.firstName}! Your message has been sent to our team.
               </div>
-            )}
+            </div>
           </div>
-        </div>
+        </section>
       </main>
     </>
   );
