@@ -22,8 +22,8 @@ export default function Document() {
     "email": "grandmastercreativehub@gmail.com",
     "sameAs": [
       "https://www.instagram.com/nammal__media/",
-      "https://www.facebook.com/61590600346051/videos/aswamedham25-the-grand-launch-of-nammal-media-an-evening-dedicated-to-the-celebr/2023134008294949/",
-      "https://www.youtube.com/watch?v=GE1M8YzjxII"
+      "https://www.facebook.com/profile.php?id=61590600346051",
+      "https://www.youtube.com/@NAMMAL-MalayaliyudeManasakshi"
     ]
   };
 

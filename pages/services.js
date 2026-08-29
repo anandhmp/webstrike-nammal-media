@@ -9,19 +9,18 @@ export default function ServicesPage() {
     {
       id: 0,
       title: 'Advertising',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/chapter-13-V-700x800.jpg',
+      image: '/assets/services/advertising.jpg',
     },
     {
       id: 1,
       title: 'Branding',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/KUTTY-KALVARA-1400x800-1.jpg',
+      image: '/assets/services/branding.jpg',
     },
     {
       id: 2,
-      title: 'Events ',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/FOK-1400x800.jpg',
+      title: 'Events',
+      image: '/assets/services/events.jpg',
     },
-
   ];
 
   // Repeat array 5 times for unending infinite loop

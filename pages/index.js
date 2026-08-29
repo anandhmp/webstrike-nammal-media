@@ -64,10 +64,30 @@ export default function StreamingHome() {
   const originalsData = {
     title: 'NAMMAL Originals',
     items: [
-      { title: 'Fun Fact', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/chapter-13-V-700x880.jpg' },
-      { title: 'Aswamedham', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/BELOVED-H-700x880.jpg' },
-      { title: 'Mahabharatham Quoted by Murukan Kattakkada', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/sathyamyittum-V-700x880.jpg' },
-      { title: 'Island of Knowledge', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/POISON-V-700x880.jpg' },
+      {
+        id: 'RbxUoQFz1Ec',
+        title: 'NAMMAL Original Short 1',
+        embedUrl: 'https://www.youtube.com/embed/RbxUoQFz1Ec',
+        link: 'https://youtube.com/shorts/RbxUoQFz1Ec',
+      },
+      {
+        id: 'rb1--Hfn9h8',
+        title: 'NAMMAL Original Short 2',
+        embedUrl: 'https://www.youtube.com/embed/rb1--Hfn9h8',
+        link: 'https://youtube.com/shorts/rb1--Hfn9h8',
+      },
+      {
+        id: 'TXPG0gdt2qo',
+        title: 'NAMMAL Original Short 3',
+        embedUrl: 'https://www.youtube.com/embed/TXPG0gdt2qo',
+        link: 'https://youtube.com/shorts/TXPG0gdt2qo',
+      },
+      {
+        id: 'TQbAdUiMPB4',
+        title: 'NAMMAL Original Short 4',
+        embedUrl: 'https://www.youtube.com/embed/TQbAdUiMPB4',
+        link: 'https://youtube.com/shorts/TQbAdUiMPB4',
+      },
     ],
   };
 
@@ -235,7 +255,7 @@ export default function StreamingHome() {
           </div>
         </section>
 
-        {/* 4. Originals (Portrait Cards Section) */}
+        {/* 4. Originals (Portrait YouTube Shorts Section) */}
         <section className={styles.showCategorySection}>
           <div className="pv-container">
             <div className={styles.categoryHeader}>
@@ -243,16 +263,28 @@ export default function StreamingHome() {
             </div>
             <div className={styles.rowGridPortrait}>
               {originalsData.items.map((item, idx) => (
-                <div key={idx} className={styles.cardPortrait}>
-                  <img src={item.image} alt={item.title} className={styles.cardImg} />
-                  <div className={styles.playOverlay}>
-                    <div className={styles.playIcon}>
-                      <Play size={24} fill="#0b0c10" />
-                    </div>
-                  </div>
-                  <div className={styles.cardOverlay}>
-                    <h3 className={styles.cardTitle}>{item.title}</h3>
-                  </div>
+                <div
+                  key={idx}
+                  className={styles.cardPortrait}
+                  style={{
+                    aspectRatio: '9 / 16',
+                    overflow: 'hidden',
+                    borderRadius: '12px',
+                    background: '#12141d',
+                  }}
+                >
+                  <iframe
+                    src={item.embedUrl}
+                    title={item.title}
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      border: 'none',
+                      display: 'block',
+                    }}
+                  />
                 </div>
               ))}
             </div>

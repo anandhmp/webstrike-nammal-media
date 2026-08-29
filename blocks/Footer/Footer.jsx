@@ -22,7 +22,7 @@ export default function Footer() {
             </p>
             <div style={{ display: 'flex', gap: '14px', marginTop: '12px' }}>
               <a
-                href="https://www.facebook.com/61590600346051/videos/aswamedham25-the-grand-launch-of-nammal-media-an-evening-dedicated-to-the-celebr/2023134008294949/"
+                href="https://www.facebook.com/profile.php?id=61590600346051"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -40,7 +40,7 @@ export default function Footer() {
                 <Instagram size={18} />
               </a>
               <a
-                href="https://www.youtube.com/watch?v=GE1M8YzjxII"
+                href="https://www.youtube.com/@NAMMAL-MalayaliyudeManasakshi"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
