@@ -1,11 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Play } from 'lucide-react';
+import { Play, X } from 'lucide-react';
 import styles from '@/styles/Home.module.scss';
 
 export default function StreamingHome() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [activeVideoUrl, setActiveVideoUrl] = useState(null);
+
+  const getYouTubeEmbedUrl = (url) => {
+    if (!url) return '';
+    const match = url.match(/(?:v=|\/embed\/|\/shorts\/|youtu\.be\/)([a-zA-Z0-9_-]{11})/);
+    return match ? `https://www.youtube.com/embed/${match[1]}?autoplay=1` : url;
+  };
 
   const heroSlides = [
     {
@@ -138,7 +145,7 @@ export default function StreamingHome() {
             <div className={styles.heroHeader}>
               <h1 className={styles.title}>
                 BRING YOUR PEACEFUL STORIES<br />
-                TO LIFE WITH NAMMAL MEDIA<span>+</span>
+                TO LIFE WITH NAMMAL MEDIA
               </h1>
               <p className={styles.subtitle}>
                 Our expertise lies in transforming your narratives into vivid experiences, backed by a demonstrated history of crafting top-notch movies that engage, motivate, and enchant global audiences.
@@ -163,7 +170,12 @@ export default function StreamingHome() {
               ))}
 
               <div className={styles.frameOverlay}>
-                <div className={styles.playRing}>
+                <div
+                  className={styles.playRing}
+                  onClick={() => setActiveVideoUrl(heroSlides[currentSlide].link)}
+                  style={{ cursor: 'pointer' }}
+                  title="Play Video"
+                >
                   <div className={styles.playCircle}>
                     <Play size={24} fill="#0b0c10" style={{ marginLeft: '2px' }} />
                   </div>
@@ -225,7 +237,12 @@ export default function StreamingHome() {
             </div>
             <div className={styles.rowGrid}>
               {allPrograms.map((item, idx) => (
-                <div key={idx} className={styles.card}>
+                <div
+                  key={idx}
+                  className={styles.card}
+                  onClick={() => item.link && setActiveVideoUrl(item.link)}
+                  style={{ cursor: item.link ? 'pointer' : 'default' }}
+                >
                   <img src={item.image} alt={item.title} className={styles.cardImg} />
                   <div className={styles.playOverlay}>
                     <div className={styles.playIcon}>
@@ -290,6 +307,35 @@ export default function StreamingHome() {
             </div>
           </div>
         </section>
+
+        {/* Video Player Modal Overlay */}
+        {activeVideoUrl && (
+          <div
+            className={styles.videoModalBackdrop}
+            onClick={() => setActiveVideoUrl(null)}
+          >
+            <div
+              className={styles.videoModalContent}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className={styles.closeModalBtn}
+                onClick={() => setActiveVideoUrl(null)}
+                aria-label="Close Video"
+              >
+                <X size={20} />
+              </button>
+              <div className={styles.responsiveIframeWrapper}>
+                <iframe
+                  src={getYouTubeEmbedUrl(activeVideoUrl)}
+                  title="NAMMAL MEDIA Video Player"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        )}
       </main>
     </>
   );
