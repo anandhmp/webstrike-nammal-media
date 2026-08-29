@@ -8,39 +8,20 @@ export default function ServicesPage() {
   const coreServices = [
     {
       id: 0,
-      title: 'FILM PRODUCTION',
+      title: 'Advertising',
       image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/chapter-13-V-700x800.jpg',
     },
     {
       id: 1,
-      title: 'FREE TO AIR PRODUCTION',
+      title: 'Branding',
       image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/KUTTY-KALVARA-1400x800-1.jpg',
     },
     {
       id: 2,
-      title: 'WEB SERIES PRODUCTION',
+      title: 'Events ',
       image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/FOK-1400x800.jpg',
     },
-    {
-      id: 3,
-      title: 'CINEMA',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/DESIGN_SM2.jpg',
-    },
-    {
-      id: 4,
-      title: 'FILM DISTRIBUTION',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg',
-    },
-    {
-      id: 5,
-      title: 'INFOTAINMENT & STAGE EVENTS',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2023/02/SUSU-1400-x-800-1-1.jpg',
-    },
-    {
-      id: 6,
-      title: 'PAY TV BROADCAST',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/DESIGN_SM-1.jpg',
-    },
+
   ];
 
   // Repeat array 5 times for unending infinite loop
@@ -164,7 +145,7 @@ export default function ServicesPage() {
           <div className="pv-container">
             <div className={styles.sliderHeader}>
               <h2 className={styles.title}>
-                CORE BUSINESS OF NAMMAL MEDIA<span>+</span>
+                SERVICES OF NAMMAL MEDIA
               </h2>
             </div>
 
@@ -213,9 +194,8 @@ export default function ServicesPage() {
                   return (
                     <button
                       key={idx}
-                      className={`${styles.dotBtn} ${
-                        realIndex === idx ? styles.activeDot : ''
-                      }`}
+                      className={`${styles.dotBtn} ${realIndex === idx ? styles.activeDot : ''
+                        }`}
                       onClick={() => setActiveIndex(coreServices.length * 2 + idx)}
                       aria-label={`Go to slide ${idx + 1}`}
                     />

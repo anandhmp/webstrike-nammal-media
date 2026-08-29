@@ -44,7 +44,7 @@
   line-height: 1;
 
   span {
-    color: #e11d48;
+    color: #32a0df;
     font-weight: 900;
   }
 }
@@ -72,7 +72,7 @@
 
   &:hover,
   &.activeLink {
-    color: #e11d48;
+    color: #32a0df;
 
     &::after {
       content: '';
@@ -81,7 +81,7 @@
       left: 0;
       right: 0;
       height: 2px;
-      background: #e11d48;
+      background: #32a0df;
     }
   }
 }
@@ -160,12 +160,12 @@
   }
 
   &:hover {
-    color: #e11d48;
+    color: #32a0df;
   }
 }
 
 .liveCtaBtn {
-  background: #e11d48;
+  background: #32a0df;
   color: #ffffff;
   padding: 8px 18px;
   border-radius: 0;
@@ -201,10 +201,12 @@
     opacity: 1;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.4;
     transform: scale(1.3);
   }
+
   100% {
     opacity: 1;
     transform: scale(1);
@@ -223,7 +225,7 @@
   justify-content: center;
 
   &:hover {
-    color: #e11d48;
+    color: #32a0df;
   }
 }
 
@@ -247,12 +249,13 @@
   padding: 6px 0;
 
   &:hover {
-    color: #e11d48;
+    color: #32a0df;
   }
 }
 
 /* Responsive Media Queries */
 @media (max-width: 992px) {
+
   .centerNav,
   .rightUtils {
     display: none;

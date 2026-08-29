@@ -197,7 +197,7 @@ export default function ContactPage() {
                     />
                     <div className={styles.popupInfo}>
                       <span className={styles.popupTitle}>
-                        <MapPin size={12} color="#e11d48" /> Trivandrum, India
+                        <MapPin size={12} color="#32a0df" /> Trivandrum, India
                       </span>
                       <span className={styles.popupAddress}>
                         Grandmaster's creative hub, Kowdiar PO

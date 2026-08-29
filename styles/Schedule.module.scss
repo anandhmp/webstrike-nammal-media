@@ -9,11 +9,9 @@
 .hero {
   position: relative;
   height: 220px;
-  background-image: linear-gradient(
-      180deg,
+  background-image: linear-gradient(180deg,
       rgba(11, 14, 18, 0.65) 0%,
-      rgba(11, 14, 18, 0.98) 100%
-    ),
+      rgba(11, 14, 18, 0.98) 100%),
     url('https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg');
   background-size: cover;
   background-position: center;
@@ -26,11 +24,9 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: radial-gradient(
-      circle at center,
-      rgba(0, 0, 0, 0.2) 0%,
-      rgba(11, 14, 18, 0.85) 100%
-    );
+    background: radial-gradient(circle at center,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(11, 14, 18, 0.85) 100%);
     z-index: 1;
   }
 }
@@ -92,9 +88,9 @@
   }
 
   &.activePill {
-    background: #e11d48;
+    background: #32a0df;
     color: #ffffff;
-    border-color: #e11d48;
+    border-color: #32a0df;
     box-shadow: 0 4px 16px rgba(225, 29, 72, 0.4);
   }
 }
@@ -125,7 +121,7 @@
   }
 
   &.activeChip {
-    color: #e11d48;
+    color: #32a0df;
     background: rgba(225, 29, 72, 0.12);
     font-weight: 800;
   }
@@ -149,11 +145,9 @@
     top: 20px;
     bottom: 20px;
     width: 2px;
-    background: linear-gradient(
-      180deg,
-      #e11d48 0%,
-      rgba(255, 255, 255, 0.1) 100%
-    );
+    background: linear-gradient(180deg,
+        #32a0df 0%,
+        rgba(255, 255, 255, 0.1) 100%);
   }
 }
 
@@ -177,7 +171,7 @@
 .timeText {
   font-size: 18px;
   font-weight: 900;
-  color: #e11d48;
+  color: #32a0df;
   letter-spacing: -0.01em;
 }
 
@@ -195,7 +189,7 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #e11d48;
+  background: #32a0df;
   border: 3px solid #0b0c10;
   box-shadow: 0 0 10px rgba(225, 29, 72, 0.6);
 }
@@ -243,7 +237,7 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  background: #e11d48;
+  background: #32a0df;
   color: #ffffff;
   font-size: 10px;
   font-weight: 900;
@@ -269,9 +263,11 @@
   0% {
     opacity: 0.4;
   }
+
   50% {
     opacity: 1;
   }
+
   100% {
     opacity: 0.4;
   }
@@ -293,7 +289,7 @@
 
 .categoryTag {
   background: rgba(225, 29, 72, 0.15);
-  color: #e11d48;
+  color: #32a0df;
   font-size: 11px;
   font-weight: 800;
   padding: 4px 10px;
@@ -331,7 +327,7 @@
 }
 
 .watchBtn {
-  background: #e11d48;
+  background: #32a0df;
   color: #ffffff;
   border: none;
   padding: 8px 18px;

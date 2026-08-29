@@ -11,17 +11,29 @@ export default function StreamingHome() {
     {
       id: 1,
       title: 'Island of Knowledge',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg',
+      image: 'https://i.ytimg.com/vi/lMFWzbnjdAI/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCCLF-CI_4SCUJTzvuJa_QOh4aAYw',
+      link: 'https://www.youtube.com/watch?v=lMFWzbnjdAI'
     },
     {
       id: 2,
       title: 'Thriller Junction',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/Priyangri.jpg',
+      image: 'https://i.ytimg.com/vi/SCH3cE8s_9M/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAyabhEZ9oD9_Wu_v1U9WgafcgZdQ',
+      link: 'https://www.youtube.com/watch?v=SCH3cE8s_9M'
+
     },
     {
       id: 3,
       title: 'Under the Song Tree',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/DESIGN_SM-1.jpg',
+      image: 'https://i.ytimg.com/vi/anJHnL-hFZ0/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCuqaXC0yrsEmqyNjPcNhvflPHfQg',
+      link: 'https://www.youtube.com/watch?v=anJHnL-hFZ0'
+
+    },
+    {
+      id: 4,
+      title: 'Under the Song Tree',
+      image: 'https://i.ytimg.com/vi/SNs_nRomDWk/hqdefault.jpg?sqp=-oaymwEnCOADEI4CSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBszgmYxBXRQDNLLbfaPaYXB_gtJw',
+      link: 'https://www.youtube.com/watch?v=SNs_nRomDWk'
+
     },
   ];
 
@@ -36,11 +48,12 @@ export default function StreamingHome() {
 
   // All 10 official shows in English only
   const allPrograms = [
-    { title: 'Island of Knowledge', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg' },
+    { title: 'Island of Knowledge', image: 'https://i.ytimg.com/vi/aEsZ31erG6I/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCHLogY9T3rZSRXuD8SfXXUPysBBQ', link: "https://www.youtube.com/watch?v=kkIrq016fn4&list=PLdfL48cte0ro" },
+    { title: 'Aswamedham', image: 'https://i.ytimg.com/vi/KARe0v-1ZrY/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD0mzsu-S5p-T6kOIzBCoF7HFYYxg', link: "https://www.youtube.com/watch?v=p4QP-OTYvMY&list=PLQ8CTlWtt9jM" },
     { title: 'Under the Song Tree', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/DESIGN_SM2.jpg' },
     { title: 'Thriller Junction', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/Priyangri.jpg' },
     { title: 'If You Were Near', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/SEETHA-1-1-1400x800.jpg' },
-    { title: 'Fun Fact', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/FOK-1.jpg' },
+    { title: 'Fun Fact', image: 'https://i.ytimg.com/vi/b6iwVDYvnY0/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAuiQSGPCBLtGkJQyjJt1Gv5W8fVQ', link: 'https://www.youtube.com/watch?v=63otaGghePs&list=PLOsToi2x-Kx8' },
     { title: 'Vox Pop', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/AMMAYUM-KUNJUM.jpg' },
     { title: 'Special Programs', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/DESIGN_SM2.jpg' },
     { title: 'Pusthakomania', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/chapter-13-V-700x800.jpg' },
