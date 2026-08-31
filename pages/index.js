@@ -55,17 +55,18 @@ export default function StreamingHome() {
 
   // All 10 official shows in English only
   const allPrograms = [
-    { title: 'Island of Knowledge', image: 'https://i.ytimg.com/vi/aEsZ31erG6I/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCHLogY9T3rZSRXuD8SfXXUPysBBQ', link: "https://www.youtube.com/watch?v=kkIrq016fn4&list=PLdfL48cte0ro" },
+    { title: 'ARIVINTE ATHBUTHADWEEP', image: 'https://i.ytimg.com/vi/aEsZ31erG6I/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCHLogY9T3rZSRXuD8SfXXUPysBBQ', link: "https://www.youtube.com/watch?v=kkIrq016fn4&list=PLdfL48cte0ro" },
     { title: 'Aswamedham', image: 'https://i.ytimg.com/vi/KARe0v-1ZrY/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD0mzsu-S5p-T6kOIzBCoF7HFYYxg', link: "https://www.youtube.com/watch?v=p4QP-OTYvMY&list=PLQ8CTlWtt9jM" },
-    { title: 'Under the Song Tree', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/DESIGN_SM2.jpg' },
-    { title: 'Thriller Junction', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/Priyangri.jpg' },
-    { title: 'If You Were Near', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/SEETHA-1-1-1400x800.jpg' },
+    { title: 'Mahabharatham uddharichu', image: 'https://i.ytimg.com/vi/b6iwVDYvnY0/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAuiQSGPCBLtGkJQyjJt1Gv5W8fVQ', link: "https://www.youtube.com/watch?v=DBUkRrHX1Fo&list=PLZpx-zLMRdq0" },
+    // { title: 'Paattu Marachottil', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/DESIGN_SM2.jpg' },
+    // { title: 'Thriller Junction', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/Priyangri.jpg' },
+    // { title: 'Arikil nee undayirunnenkil', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/SEETHA-1-1-1400x800.jpg' },
     { title: 'Fun Fact', image: 'https://i.ytimg.com/vi/b6iwVDYvnY0/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAuiQSGPCBLtGkJQyjJt1Gv5W8fVQ', link: 'https://www.youtube.com/watch?v=63otaGghePs&list=PLOsToi2x-Kx8' },
-    { title: 'Vox Pop', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/AMMAYUM-KUNJUM.jpg' },
-    { title: 'Special Programs', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/DESIGN_SM2.jpg' },
-    { title: 'Pusthakomania', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/chapter-13-V-700x800.jpg' },
-    { title: 'Short Films', image: 'https://www.flowerstv.in/wp-content/uploads/2023/02/SUSU-1400-x-800-1-1.jpg' },
-    { title: 'Sitcoms', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/UPPUM-MULAKUM-2_NOw-showig.jpg' },
+    // { title: 'Vox Pop', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/AMMAYUM-KUNJUM.jpg' },
+    // { title: 'Special Programs', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/DESIGN_SM2.jpg' },
+    // { title: 'Pusthakomania', image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/chapter-13-V-700x800.jpg' },
+    // { title: 'Short Films', image: 'https://www.flowerstv.in/wp-content/uploads/2023/02/SUSU-1400-x-800-1-1.jpg' },
+    // { title: 'Sitcoms', image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/UPPUM-MULAKUM-2_NOw-showig.jpg' },
   ];
 
   const originalsData = {
@@ -144,11 +145,11 @@ export default function StreamingHome() {
             {/* Top Centered Header & Subtitle */}
             <div className={styles.heroHeader}>
               <h1 className={styles.title}>
-                BRING YOUR PEACEFUL STORIES<br />
-                TO LIFE WITH NAMMAL MEDIA
+                Nammal Media,
+                <br /> Malayaliyude Manasakshi
               </h1>
               <p className={styles.subtitle}>
-                Our expertise lies in transforming your narratives into vivid experiences, backed by a demonstrated history of crafting top-notch movies that engage, motivate, and enchant global audiences.
+                NAMMAL is a digital media platform built around the curiosity, stories and conversations of Malayalis everywhere. Bringing together knowledge, entertainment, culture, cinema, real-life experiences and contemporary discussions, NAMMAL connects generations through content that informs, entertains and inspires.
               </p>
             </div>
 
@@ -199,30 +200,37 @@ export default function StreamingHome() {
             {/* 4 Key Stat Metrics Columns */}
             <div className={styles.statsGrid}>
               <div className={styles.statCol}>
-                <span className={styles.statVal}>500</span>
+                <span className={styles.statVal}>Nammal </span>
                 <span className={styles.statLabel}>
-                  Total Employees<br />NAMMAL Media
+                  മലയാളിയുടെ മനസ്സാക്ഷി
                 </span>
               </div>
 
               <div className={styles.statCol}>
-                <span className={styles.statVal}>&gt; 20,000</span>
+                <span className={styles.statVal}>WE</span>
                 <span className={styles.statLabel}>
-                  Total Number of TV Series<br />Hours Produced
+                  A powerful expression of togetherness
                 </span>
               </div>
 
               <div className={styles.statCol}>
-                <span className={styles.statVal}>6</span>
+                <span className={styles.statVal}>Across</span>
                 <span className={styles.statLabel}>
-                  Total Location Cinema<br />in The World
+                  Generations
                 </span>
               </div>
 
-              <div className={styles.statCol}>
-                <span className={styles.statVal}>500+</span>
+              {/* <div className={styles.statCol}>
+                <span className={styles.statVal}>4</span>
                 <span className={styles.statLabel}>
-                  Total Film Collection of<br />NAMMAL Media
+                  Major Digital Platforms
+                </span>
+              </div> */}
+
+              <div className={styles.statCol}>
+                <span className={styles.statVal}>Since</span>
+                <span className={styles.statLabel}>
+                  17 JULY 2026
                 </span>
               </div>
             </div>
