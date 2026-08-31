@@ -158,7 +158,7 @@ export default function AboutPage() {
             <div className={styles.splitRow}>
               <div className={styles.imgCol}>
                 <img
-                  src="https://www.flowerstv.in/wp-content/uploads/2022/06/DESIGN_SM2.jpg"
+                  src="/assets/about/GS02.jpeg"
                   alt="Broadcast Manifesto"
                   className={styles.splitImg}
                 />
@@ -183,7 +183,7 @@ export default function AboutPage() {
             <div className={`${styles.splitRow} ${styles.reverse}`}>
               <div className={styles.imgCol}>
                 <img
-                  src="https://www.flowerstv.in/wp-content/uploads/2022/05/FOK-1400x800.jpg"
+                  src="/assets/about/GS03.jpeg"
                   alt="Founding Story"
                   className={styles.splitImg}
                 />
@@ -340,9 +340,8 @@ export default function AboutPage() {
               {approachSteps.map((step, idx) => (
                 <div
                   key={idx}
-                  className={`${styles.timelineDot} ${
-                    activeStep === idx ? styles.activeDot : ''
-                  }`}
+                  className={`${styles.timelineDot} ${activeStep === idx ? styles.activeDot : ''
+                    }`}
                   onClick={() => setActiveStep(idx)}
                   style={{ cursor: 'pointer' }}
                 />
@@ -359,9 +358,8 @@ export default function AboutPage() {
                 {approachSteps.map((step, idx) => (
                   <div
                     key={step.id}
-                    className={`${styles.approachCard} ${
-                      activeStep === idx ? styles.activeApproach : ''
-                    }`}
+                    className={`${styles.approachCard} ${activeStep === idx ? styles.activeApproach : ''
+                      }`}
                     onClick={() => setActiveStep(idx)}
                   >
                     <div className={styles.approachImgWrapper}>

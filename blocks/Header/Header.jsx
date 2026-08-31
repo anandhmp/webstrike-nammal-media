@@ -43,12 +43,14 @@ export default function Header() {
             >
               SHOWS
             </Link>
-            <Link
-              href="/schedule"
+            <a
+              href="https://www.youtube.com/@NAMMAL-MalayaliyudeManasakshi"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`${styles.navLink} ${isActive('/schedule') ? styles.activeLink : ''}`}
             >
-              SCHEDULE
-            </Link>
+              SUBSCRIBE
+            </a>
             <Link
               href="/services"
               className={`${styles.navLink} ${isActive('/services') ? styles.activeLink : ''}`}
@@ -103,13 +105,15 @@ export default function Header() {
             >
               SHOWS
             </Link>
-            <Link
-              href="/schedule"
+            <a
+              href="https://www.youtube.com/@NAMMAL-MalayaliyudeManasakshi"
+              target="_blank"
+              rel="noopener noreferrer"
               className={`${styles.mobileNavLink} ${isActive('/schedule') ? styles.activeLink : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
               SCHEDULE
-            </Link>
+            </a>
             <Link
               href="/services"
               className={`${styles.mobileNavLink} ${isActive('/services') ? styles.activeLink : ''}`}
