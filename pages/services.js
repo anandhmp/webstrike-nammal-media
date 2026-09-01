@@ -68,70 +68,66 @@ export default function ServicesPage() {
       </Head>
 
       <main className={styles.wrapper}>
-        {/* 1. Industry Overview & Growth Chart Block Section (Top) */}
+        {/* 1. Growing Impact & Value Creation Section (Top) */}
         <section className={styles.industryOverviewSection}>
           <div className="pv-container">
             <div className={styles.overviewGrid}>
               {/* Left Column: Headings & Paragraphs */}
               <div className={styles.overviewLeftCol}>
                 <h1 className={styles.overviewTitle}>
-                  OVERVIEW OF THE<br />
-                  WORLD FILM INDUSTRY
+                  Growing Impact.<br />
+                  Creating More Value
                 </h1>
                 <p className={styles.overviewText}>
-                  You can learn about our stock exchange listing, explore historical stock performance data and view financial reports, stay up-to-date with the latest investor-related news and announcements.
-                </p>
-                <p className={styles.overviewText}>
-                  Join us as we continue to create cinematic magic and invest in the future of cinema.
+                  Every story we tell, every brand we build, and every event we create adds to a stronger tomorrow. The journey has begun, and the best is yet to come.
                 </p>
 
-                <Link href="/contact" className={styles.investorBtn}>
-                  Investor Relations
+                <Link href="#services-list" className={styles.investorBtn}>
+                  Explore Our Services
                 </Link>
               </div>
 
-              {/* Right Column: OTT Revenue Growth Bar Chart Graphic */}
+              {/* Right Column: 5 Impact Pillars List Graphic */}
               <div className={styles.overviewRightCol}>
-                <div className={styles.chartMetaHeader}>
-                  <p className={styles.chartSubtitle}>
-                    Over The Top (OTT) Revenue Industry Film in the world
-                  </p>
-                  <div className={styles.cagrBadge}>
-                    <span>CAGR</span>
-                    42.5%
-                  </div>
-                </div>
-
-                <div className={styles.chartBarsWrapper}>
-                  {/* Curved Arrow SVG */}
-                  <svg className={styles.curveArrowSvg} viewBox="0 0 100 100" fill="none">
-                    <path
-                      d="M 5 95 Q 40 95 90 10"
-                      stroke="#ffffff"
-                      strokeWidth="2.5"
-                      strokeDasharray="4 4"
-                    />
-                    <path
-                      d="M 82 12 L 92 8 L 88 18"
-                      stroke="#ffffff"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-
-                  {/* 2019 Red Bar */}
-                  <div className={styles.barRed}>
-                    <span className={styles.barLabel}>OTT revenue</span>
-                    <span className={styles.barVal}>$270 million</span>
-                    <span className={styles.barYear}>2019</span>
+                <div className={styles.impactPillarsContainer}>
+                  <div className={styles.impactItem}>
+                    <span className={styles.impactNum}>01</span>
+                    <div className={styles.impactInfo}>
+                      <h3 className={styles.impactHead}>Ideas</h3>
+                      <p className={styles.impactDesc}>Exploring ideas that inform, entertain and inspire.</p>
+                    </div>
                   </div>
 
-                  {/* 2027 White Pillar Bar */}
-                  <div className={styles.barWhite}>
-                    <span className={styles.barLabel}>OTT revenue</span>
-                    <span className={styles.barVal}>$5.0 billion</span>
-                    <span className={styles.barYear}>2027</span>
+                  <div className={styles.impactItem}>
+                    <span className={styles.impactNum}>02</span>
+                    <div className={styles.impactInfo}>
+                      <h3 className={styles.impactHead}>Engage</h3>
+                      <p className={styles.impactDesc}>Building a community that connects and grows with us.</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.impactItem}>
+                    <span className={styles.impactNum}>03</span>
+                    <div className={styles.impactInfo}>
+                      <h3 className={styles.impactHead}>Create</h3>
+                      <p className={styles.impactDesc}>Delivering quality content across platforms that people love.</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.impactItem}>
+                    <span className={styles.impactNum}>04</span>
+                    <div className={styles.impactInfo}>
+                      <h3 className={styles.impactHead}>Grow</h3>
+                      <p className={styles.impactDesc}>Expanding our reach and impact one step at a time.</p>
+                    </div>
+                  </div>
+
+                  <div className={styles.impactItem}>
+                    <span className={styles.impactNum}>05</span>
+                    <div className={styles.impactInfo}>
+                      <h3 className={styles.impactHead}>Impact</h3>
+                      <p className={styles.impactDesc}>Making a meaningful difference together.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -144,7 +140,7 @@ export default function ServicesPage() {
           <div className="pv-container">
             <div className={styles.sliderHeader}>
               <h2 className={styles.title}>
-                SERVICES OF NAMMAL MEDIA
+                Services of Nammal Media
               </h2>
             </div>
 

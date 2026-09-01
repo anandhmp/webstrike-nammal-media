@@ -29,8 +29,8 @@ export default function ContactPage() {
             {/* 1. Header & Subtitle */}
             <div className={styles.contactHeader}>
               <h1 className={styles.title}>
-                LET'S WORK TOGETHER<br />
-                WITH NAMMAL MEDIA<span>+</span>
+                Let's Work Together<br />
+                With Nammal Media<span>+</span>
               </h1>
               <p className={styles.subtitle}>
                 We're always happy to hear from our viewers, brand partners, investors, and film enthusiasts.
@@ -43,7 +43,7 @@ export default function ContactPage() {
                 {/* Left Column */}
                 <div className={styles.leftTalkCol}>
                   <div>
-                    <h2 className={styles.talkHead}>LET'S TALK</h2>
+                    <h2 className={styles.talkHead}>Let's Talk</h2>
                     <p className={styles.talkSub}>Ask us anything or just say hi 👋</p>
 
                     <div className={styles.contactBadges}>
@@ -142,7 +142,7 @@ export default function ContactPage() {
           <div className="pv-container">
             <div className={styles.bottomInfoContainer}>
               <div className={styles.infoBlock}>
-                <h3 className={styles.infoHead}>OPENING HOURS</h3>
+                <h3 className={styles.infoHead}>Opening Hours</h3>
                 <p className={styles.infoText}>
                   Monday - Saturday<br />
                   9am - 7pm IST
@@ -152,7 +152,7 @@ export default function ContactPage() {
               <div className={styles.vertDivider} />
 
               <div className={styles.infoBlock}>
-                <h3 className={styles.infoHead}>ADDRESS</h3>
+                <h3 className={styles.infoHead}>Address</h3>
                 <p className={styles.infoText}>
                   Grandmaster's creative hub, 'Manjusha' TC 23/1777,<br />
                   OD4, Jawaharnagar, Kowdiar PO, Trivandrum
@@ -167,8 +167,8 @@ export default function ContactPage() {
           <div className="pv-container">
             <div className={styles.branchesHeaderRow}>
               <h2 className={styles.branchesTitle}>
-                WE HAVE MANY<br />
-                GLOBAL BRANCHES
+                We Have Many<br />
+                Global Branches
               </h2>
               <div className={styles.branchesRight}>
                 <p className={styles.branchesDesc}>
@@ -243,8 +243,8 @@ export default function ContactPage() {
           <div className="pv-container">
             <div className={styles.collabHeader}>
               <h2 className={styles.collabTitle}>
-                NAMMAL MEDIA<span>+</span><br />
-                COLLABORATION OPPORTUNITIES
+                Nammal Media<span>+</span><br />
+                Collaboration Opportunities
               </h2>
               <p className={styles.collabSubtitle}>
                 Fueling our creativity, we're excited to partner with dedicated filmmakers, producers, and industry professionals. If your project aligns with our vision, feel free to submit it for review. Here's the process:
@@ -256,7 +256,7 @@ export default function ContactPage() {
                 {/* Card 1: Featured Active Card */}
                 <div className={`${styles.collabCard} ${styles.activeCollabCard}`}>
                   <div className={styles.numBadge}>1</div>
-                  <h3 className={styles.stepTitle}>SUBMIT YOUR PROJECT</h3>
+                  <h3 className={styles.stepTitle}>Submit Your Project</h3>
                   <p className={styles.stepDesc}>
                     Connect with NAMMAL Media by emailing your project to{' '}
                     <a href="mailto:grandmastercreativehub@gmail.com">
@@ -268,7 +268,7 @@ export default function ContactPage() {
                 {/* Card 2 */}
                 <div className={styles.collabCard}>
                   <div className={styles.numBadge}>2</div>
-                  <h3 className={styles.stepTitle}>GUIDELINES</h3>
+                  <h3 className={styles.stepTitle}>Guidelines</h3>
                   <p className={styles.stepDesc}>
                     Include a comprehensive project overview, specifying the genre, providing a synopsis, detailing your team. Attach supporting materials, whether it's a script and portfolio.
                   </p>
@@ -277,7 +277,7 @@ export default function ContactPage() {
                 {/* Card 3 */}
                 <div className={styles.collabCard}>
                   <div className={styles.numBadge}>3</div>
-                  <h3 className={styles.stepTitle}>INTRODUCE YOURSELF</h3>
+                  <h3 className={styles.stepTitle}>Introduce Yourself</h3>
                   <p className={styles.stepDesc}>
                     Take a moment to introduce yourself and your team briefly. Share key highlights that showcase your experience and passion for filmmaking.
                   </p>
@@ -286,7 +286,7 @@ export default function ContactPage() {
                 {/* Card 4 */}
                 <div className={styles.collabCard}>
                   <div className={styles.numBadge}>4</div>
-                  <h3 className={styles.stepTitle}>WHY NAMMAL MEDIA+</h3>
+                  <h3 className={styles.stepTitle}>Why Nammal Media+</h3>
                   <p className={styles.stepDesc}>
                     Articulate why NAMMAL Media is the ideal home for your project. Highlight how your project aligns with NAMMAL Media's values and storytelling ethos.
                   </p>
@@ -295,7 +295,7 @@ export default function ContactPage() {
                 {/* Card 5 */}
                 <div className={styles.collabCard}>
                   <div className={styles.numBadge}>5</div>
-                  <h3 className={styles.stepTitle}>REVIEW PROCESS</h3>
+                  <h3 className={styles.stepTitle}>Review Process</h3>
                   <p className={styles.stepDesc}>
                     Your submission undergoes meticulous review by our dedicated team. While we can't select every project, we deeply value and appreciate your creativity.
                   </p>
@@ -304,7 +304,7 @@ export default function ContactPage() {
                 {/* Card 6 */}
                 <div className={styles.collabCard}>
                   <div className={styles.numBadge}>6</div>
-                  <h3 className={styles.stepTitle}>PREPARE COLLABORATION</h3>
+                  <h3 className={styles.stepTitle}>Prepare Collaboration</h3>
                   <p className={styles.stepDesc}>
                     Following your submission, anticipate a confirmation or further communication regarding the acceptance of your collaboration with NAMMAL Media.
                   </p>

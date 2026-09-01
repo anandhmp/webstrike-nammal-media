@@ -26,7 +26,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                style={{ color: '#9ca3af', transition: 'color 0.2s' }}
+                style={{ color: '#012a68', transition: 'color 0.2s' }}
               >
                 <Facebook size={18} />
               </a>
@@ -35,7 +35,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                style={{ color: '#9ca3af', transition: 'color 0.2s' }}
+                style={{ color: '#012a68', transition: 'color 0.2s' }}
               >
                 <Instagram size={18} />
               </a>
@@ -44,7 +44,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
-                style={{ color: '#9ca3af', transition: 'color 0.2s' }}
+                style={{ color: '#012a68', transition: 'color 0.2s' }}
               >
                 <Youtube size={18} />
               </a>

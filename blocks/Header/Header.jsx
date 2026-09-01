@@ -24,7 +24,7 @@ export default function Header() {
           <Link href="/" className={styles.logoGroup}>
             <img
               src="/assets/nammal-media.png"
-              alt="NAMMAL Media Logo"
+              alt="Nammal Media Logo"
               className={styles.logoImg}
             />
           </Link>
@@ -35,44 +35,44 @@ export default function Header() {
               href="/"
               className={`${styles.navLink} ${isActive('/') ? styles.activeLink : ''}`}
             >
-              HOME
+              Home
             </Link>
             <Link
               href="/shows"
               className={`${styles.navLink} ${isActive('/shows') ? styles.activeLink : ''}`}
             >
-              SHOWS
+              Shows
             </Link>
             <Link
               href="/subscribe"
               className={`${styles.navLink} ${isActive('/subscribe') ? styles.activeLink : ''}`}
             >
-              SUBSCRIBE
+              Subscribe
             </Link>
             <Link
               href="/services"
               className={`${styles.navLink} ${isActive('/services') ? styles.activeLink : ''}`}
             >
-              SERVICES
+              Services
             </Link>
             <Link
               href="/about"
               className={`${styles.navLink} ${isActive('/about') ? styles.activeLink : ''}`}
             >
-              ABOUT
+              About
             </Link>
             <Link
               href="/contact"
               className={`${styles.navLink} ${isActive('/contact') ? styles.activeLink : ''}`}
             >
-              CONTACT
+              Contact
             </Link>
           </nav>
 
           {/* Right Utilities: LIVE CTA */}
           <div className={styles.rightUtils}>
             <Link href="/shows" className={styles.liveCtaBtn}>
-              <span className={styles.liveDot} /> LIVE TV
+              <span className={styles.liveDot} /> Live TV
             </Link>
           </div>
 
@@ -94,42 +94,42 @@ export default function Header() {
               className={`${styles.mobileNavLink} ${isActive('/') ? styles.activeLink : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
-              HOME
+              Home
             </Link>
             <Link
               href="/shows"
               className={`${styles.mobileNavLink} ${isActive('/shows') ? styles.activeLink : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
-              SHOWS
+              Shows
             </Link>
             <Link
               href="/subscribe"
               className={`${styles.mobileNavLink} ${isActive('/subscribe') ? styles.activeLink : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
-              SUBSCRIBE
+              Subscribe
             </Link>
             <Link
               href="/services"
               className={`${styles.mobileNavLink} ${isActive('/services') ? styles.activeLink : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
-              SERVICES
+              Services
             </Link>
             <Link
               href="/about"
               className={`${styles.mobileNavLink} ${isActive('/about') ? styles.activeLink : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
-              ABOUT
+              About
             </Link>
             <Link
               href="/contact"
               className={`${styles.mobileNavLink} ${isActive('/contact') ? styles.activeLink : ''}`}
               onClick={() => setMobileMenuOpen(false)}
             >
-              CONTACT
+              Contact
             </Link>
             <Link
               href="/shows"
@@ -137,7 +137,7 @@ export default function Header() {
               style={{ justifyContent: 'center', marginTop: '8px' }}
               onClick={() => setMobileMenuOpen(false)}
             >
-              <span className={styles.liveDot} /> LIVE TV
+              <span className={styles.liveDot} /> Live TV
             </Link>
           </div>
         )}

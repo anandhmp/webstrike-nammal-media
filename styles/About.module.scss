@@ -1,49 +1,53 @@
 .wrapper {
-  background-color: #0b0c10;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #1f2937;
   min-height: 100vh;
   padding-top: 60px;
   font-family: var(--pv-font-sans);
   overflow-x: hidden;
 }
 
-/* 1. Hero Section - Single Image with Black Gradient Overlay */
+/* 1. Hero Section - A Media Platform Built Around Us */
 .hero {
+  min-height: 500px;
+  padding: 100px 0 80px;
   position: relative;
-  min-height: 600px;
-  padding: 80px 0 100px;
   text-align: center;
-  background-image: linear-gradient(180deg,
-      #0b0c10 0%,
-      rgba(11, 12, 16, 0.92) 20%,
-      rgba(11, 12, 16, 0.45) 50%,
-      #0b0c10 100%),
-    url('../public/assets/about/bg.jpg');
-  background-size: cover;
-  background-position: center top;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  background-color: #ffffff;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(50, 160, 223, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
 }
 
 .heroTitle {
-  font-size: clamp(32px, 6vw, 60px);
-  font-weight: 900;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  margin-bottom: 16px;
+  font-family: var(--pv-font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(38px, 6.5vw, 68px);
+  font-weight: 700;
+  color: #012a68;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-bottom: 20px;
   position: relative;
   z-index: 10;
 }
 
 .heroDesc {
-  font-size: 15px;
-  color: #d1d5db;
-  max-width: 740px;
+  font-size: 16px;
+  color: #4b5563;
+  max-width: 760px;
   margin: 0 auto 40px;
-  line-height: 1.75;
+  line-height: 1.8;
   position: relative;
   z-index: 10;
 }
@@ -58,23 +62,24 @@
   width: 84px;
   height: 84px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(6px);
+  border: 1px solid rgba(50, 160, 223, 0.4);
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(50, 160, 223, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   margin: 0 auto;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: scale(1.1);
-    border-color: #fff263;
+    border-color: #32a0df;
+    box-shadow: 0 14px 40px rgba(50, 160, 223, 0.3);
 
     .playCircle {
-      background: #fff263;
-      color: #0b0c10;
+      background: #012a68;
+      color: #ffffff;
     }
   }
 }
@@ -83,18 +88,19 @@
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: #ffffff;
-  color: #0b0c10;
+  background: #32a0df;
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.6);
-  transition: background 0.2s ease;
+  box-shadow: 0 8px 28px rgba(50, 160, 223, 0.35);
+  transition: background 0.25s ease;
 }
 
-/* 2. Manifesto & Founding Story Split Sections */
+/* 2. Knowledge & Entertainment Section (Split Row) */
 .storySection {
   padding: 80px 0;
+  background-color: #ffffff;
 }
 
 .splitRow {
@@ -102,7 +108,6 @@
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
-  margin-bottom: 80px;
 
   &.reverse {
     .imgCol {
@@ -116,12 +121,13 @@
 }
 
 .imgCol {
-  border-radius: 16px;
+  // border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  // border: 1px solid #e5e7eb;
   aspect-ratio: 1 / 1;
   max-width: 520px;
   width: 100%;
+  // box-shadow: 0 16px 40px rgba(1, 42, 104, 0.08);
 
   .splitImg {
     width: 100%;
@@ -142,690 +148,56 @@
 }
 
 .sectionTitle {
-  font-size: clamp(28px, 4.5vw, 44px);
-  font-weight: 900;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  line-height: 1.08;
+  font-family: var(--pv-font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(32px, 4.5vw, 50px);
+  font-weight: 700;
+  color: #012a68;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  line-height: 1.12;
   margin-bottom: 24px;
 }
 
 .sectionText {
-  font-size: 14.5px;
-  color: #9ca3af;
-  line-height: 1.7;
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.75;
   margin-bottom: 18px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .statsRow {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  margin-top: 28px;
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
 }
 
 .statBox {
-  background: #141620;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
-  padding: 20px 16px;
-  text-align: center;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-
-  &:hover {
-    transform: translateY(-4px);
-    border-color: rgba(50, 160, 223, 0.4);
-  }
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
 
   .statVal {
-    font-size: 32px;
-    font-weight: 900;
-    color: #ffffff;
-    display: block;
-    margin-bottom: 4px;
-    letter-spacing: -0.01em;
+    font-size: 22px;
+    font-weight: 800;
+    color: #012a68;
   }
 
   .statLabel {
-    font-size: 12.5px;
-    color: #9ca3af;
-    font-weight: 500;
-    display: block;
+    font-size: 13px;
+    color: #4b5563;
+    margin-top: 4px;
   }
 }
 
-/* 3. Meet Team Leadership Section */
-.teamSection {
-  padding: 60px 0 80px;
-  text-align: center;
-}
-
-.teamHeaderTitle {
-  font-size: clamp(28px, 5vw, 44px);
-  font-weight: 900;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin-bottom: 40px;
-
-  span {
-    color: #32a0df;
-    font-weight: 900;
-  }
-}
-
-.teamGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-
-.teamCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.avatarWrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: radial-gradient(circle at center, #261624 0%, #121017 100%);
-  margin-bottom: 14px;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-
-  .teamCard:hover & {
-    transform: translateY(-4px);
-    border-color: rgba(225, 29, 72, 0.5);
-  }
-
-  .avatarImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-}
-
-.linkedinBadge {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 20px;
-  height: 20px;
-  border-radius: 4px;
-  background: rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-  font-size: 10px;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  backdrop-filter: blur(4px);
-}
-
-.memberRole {
-  font-size: 12px;
-  font-weight: 700;
-  color: #32a0df;
-  display: block;
-  margin-bottom: 4px;
-}
-
-.memberName {
-  font-size: 17px;
-  font-weight: 800;
-  color: #ffffff;
-  margin: 0;
-  letter-spacing: -0.01em;
-}
-
-/* 4. Crafting Excellence Frame Showcase Grid */
-.frameSection {
-  padding: 70px 0 80px;
-  text-align: center;
-}
-
-.frameTitleHeader {
-  font-size: clamp(28px, 5vw, 44px);
-  font-weight: 900;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin-bottom: 14px;
-}
-
-.frameSubTitle {
-  font-size: 14px;
-  color: #9ca3af;
-  max-width: 680px;
-  margin: 0 auto 36px;
-  line-height: 1.65;
-}
-
-.featuredFrame {
-  position: relative;
-  width: 100%;
-  border-radius: 0;
-  overflow: hidden;
-  aspect-ratio: 16 / 9.5;
-  margin-bottom: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  .frameImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s ease;
-  }
-
-  &:hover .frameImg {
-    transform: scale(1.03);
-  }
-
-  .frameOverlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50%;
-    background: linear-gradient(0deg,
-        rgba(0, 0, 0, 0.95) 0%,
-        rgba(0, 0, 0, 0.5) 50%,
-        transparent 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 20px 16px;
-    text-align: center;
-
-    .frameTitle {
-      font-size: 16px;
-      font-weight: 800;
-      color: #ffffff;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin: 0 0 2px 0;
-    }
-
-    .frameYear {
-      font-size: 12.5px;
-      color: #9ca3af;
-      font-weight: 500;
-    }
-  }
-}
-
-.smallFramesGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  width: 100%;
-}
-
-.smallFrameCard {
-  position: relative;
-  width: 100%;
-  border-radius: 0;
-  overflow: hidden;
-  aspect-ratio: 1 / 1.05;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-
-  .smallImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.4s ease;
-  }
-
-  &:hover .smallImg {
-    transform: scale(1.05);
-  }
-
-  .smallOverlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 55%;
-    background: linear-gradient(0deg,
-        rgba(0, 0, 0, 0.95) 0%,
-        rgba(0, 0, 0, 0.5) 50%,
-        transparent 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 16px 12px;
-    text-align: center;
-
-    .smallTitle {
-      font-size: 14px;
-      font-weight: 800;
-      color: #ffffff;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin: 0 0 2px 0;
-    }
-
-    .smallYear {
-      font-size: 12px;
-      color: #9ca3af;
-      font-weight: 500;
-    }
-  }
-}
-
-/* 5. Our Approach Horizontal Cards Slider */
-.approachSection {
-  padding: 70px 0 80px;
-}
-
-.approachHeaderRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 32px;
-
-  .headerText {
-    max-width: 680px;
-
-    .approachTitle {
-      font-size: clamp(28px, 5vw, 44px);
-      font-weight: 900;
-      color: #ffffff;
-      text-transform: uppercase;
-      letter-spacing: -0.02em;
-      line-height: 1.1;
-      margin-bottom: 12px;
-    }
-
-    .approachDesc {
-      font-size: 14px;
-      color: #9ca3af;
-      line-height: 1.65;
-      margin: 0;
-    }
-  }
-
-  .navButtons {
-    display: flex;
-    gap: 12px;
-
-    .navBtn {
-      width: 44px;
-      height: 44px;
-      border: none;
-      background: #232530;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.25s ease;
-
-      &:hover {
-        background: #32a0df;
-      }
-
-      &.activeBtn {
-        background: #32a0df;
-      }
-    }
-  }
-}
-
-/* Timeline Bar with Nodes */
-.timelineTrack {
-  position: relative;
-  width: 100%;
-  height: 2px;
-  background: rgba(255, 255, 255, 0.15);
-  margin-bottom: 36px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .timelineProgress {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    background: #32a0df;
-    transition: width 0.4s ease;
-  }
-
-  .timelineDot {
-    position: relative;
-    z-index: 10;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #0b0c10;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    &.activeDot {
-      border-color: #32a0df;
-      background: #32a0df;
-      box-shadow: 0 0 12px rgba(225, 29, 72, 0.6);
-      transform: scale(1.2);
-    }
-  }
-}
-
-.approachSliderContainer {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding: 10px 0 20px;
-}
-
-.approachSliderTrack {
-  display: flex;
-  gap: 24px;
-  transform: translateX(calc(-1 * var(--active-step, 0) * (100% / 3 + 8px)));
-  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-  will-change: transform;
-}
-
-.approachCard {
-  flex: 0 0 calc(33.333% - 16px);
-  box-sizing: border-box;
-  background: #12141d;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  transition: all 0.4s ease;
-
-  .approachImgWrapper {
-    width: 100%;
-    aspect-ratio: 16 / 10.5;
-    overflow: hidden;
-    margin-bottom: 16px;
-
-    .approachImg {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.4s ease;
-    }
-  }
-
-  .approachCardTitle {
-    font-size: 15px;
-    font-weight: 800;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    margin-bottom: 12px;
-  }
-
-  .approachList {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-
-    li {
-      font-size: 13px;
-      color: #9ca3af;
-      line-height: 1.55;
-      display: flex;
-      gap: 6px;
-
-      &::before {
-        content: '•';
-        color: #9ca3af;
-      }
-    }
-  }
-
-  &:hover {
-    .approachImg {
-      transform: scale(1.05);
-    }
-  }
-
-  &.activeApproach {
-    background: #32a0df;
-    border-color: #32a0df;
-    box-shadow: 0 12px 30px rgba(225, 29, 72, 0.35);
-
-    .approachCardTitle {
-      color: #ffffff;
-    }
-
-    .approachList li {
-      color: #ffffff;
-
-      &::before {
-        color: #ffffff;
-      }
-    }
-  }
-}
-
-/* 6. Awards & Accolades List */
-.awardsSection {
-  padding: 70px 0 80px;
-}
-
-.awardsHeaderTitle {
-  font-size: clamp(28px, 5vw, 44px);
-  font-weight: 900;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-  margin-bottom: 14px;
-  text-align: center;
-}
-
-.awardsSubTitle {
-  font-size: 14px;
-  color: #9ca3af;
-  max-width: 640px;
-  margin: 0 auto 40px;
-  line-height: 1.6;
-  text-align: center;
-}
-
-.awardsList {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-}
-
-.awardItem {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 24px 0;
-  display: flex;
-  align-items: flex-start;
-  gap: 24px;
-
-  &:first-child {
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-  }
-
-  .awardNum {
-    font-size: 22px;
-    font-weight: 900;
-    color: #ffffff;
-    min-width: 40px;
-    flex-shrink: 0;
-    margin-top: 2px;
-  }
-
-  .awardBadgeIcon {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff263;
-  }
-
-  .awardContent {
-    display: flex;
-    flex-direction: column;
-
-    .awardTitle {
-      font-size: 20px;
-      font-weight: 800;
-      color: #ffffff;
-      margin: 0 0 6px 0;
-      letter-spacing: -0.01em;
-    }
-
-    .awardDesc {
-      font-size: 13.5px;
-      color: #9ca3af;
-      line-height: 1.6;
-      margin: 0;
-    }
-  }
-}
-
-/* 7. Bottom Overlapping CTA Banner */
-.bottomCtaWrapper {
-  position: relative;
-  width: 100%;
-  margin: 50px 0 60px;
-  padding-bottom: 40px;
-}
-
-.ctaBgBanner {
-  width: 100%;
-  height: 280px;
-  border-radius: 0;
-  overflow: hidden;
-  position: relative;
-
-  .ctaImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-}
-
-.ctaCardOverlay {
-  position: absolute;
-  top: 40px;
-  left: 32px;
-  width: clamp(320px, 52vw, 540px);
-  background: #32a0df;
-  padding: 40px 36px 32px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
-  z-index: 20;
-
-  .ctaHead {
-    font-size: clamp(24px, 3.5vw, 36px);
-    font-weight: 900;
-    color: #ffffff;
-    text-transform: uppercase;
-    line-height: 1.15;
-    margin: 0 0 16px 0;
-    letter-spacing: -0.01em;
-
-    span {
-      font-weight: 900;
-    }
-  }
-
-  .ctaSub {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
-    margin: 0 0 32px 0;
-  }
-
-  .ctaDivider {
-    width: 100%;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.25);
-    margin-bottom: 24px;
-  }
-
-  .ctaBottomRow {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-
-    .socialIcons {
-      display: flex;
-      gap: 12px;
-
-      .iconCircle {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.2);
-        color: #ffffff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-decoration: none;
-        transition: background 0.25s ease;
-
-        &:hover {
-          background: #ffffff;
-          color: #32a0df;
-        }
-      }
-    }
-
-    .ctaBtnWhite {
-      background: #ffffff;
-      color: #32a0df;
-      padding: 12px 24px;
-      border-radius: 0;
-      font-size: 13.5px;
-      font-weight: 800;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.25s ease;
-
-      &:hover {
-        background: #0b0c10;
-        color: #ffffff;
-      }
-    }
-  }
-}
-
-/* Pillars / What We Bring Together Section */
+/* 3. Pillars / What We Bring Together Section */
 .pillarsSection {
   padding: 80px 0;
-  background-color: #000000;
+  background-color: #f8fafc;
   position: relative;
+  border-top: 1px solid #e5e7eb;
 }
 
 .pillarsHeader {
@@ -834,17 +206,18 @@
 }
 
 .pillarsTitle {
-  font-size: clamp(28px, 5vw, 44px);
-  font-weight: 900;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
+  font-family: var(--pv-font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  color: #012a68;
+  text-transform: none;
+  letter-spacing: -0.01em;
   margin-bottom: 12px;
 }
 
 .pillarsSubtitle {
   font-size: 15px;
-  color: #9ca3af;
+  color: #4b5563;
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
@@ -857,18 +230,19 @@
 }
 
 .pillarCard {
-  background: #111622;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 14px;
   padding: 32px 24px;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(1, 42, 104, 0.04);
   transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 
   &:hover {
     transform: translateY(-6px);
-    border-color: rgba(50, 160, 223, 0.6);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 25px rgba(50, 160, 223, 0.15);
+    border-color: #32a0df;
+    box-shadow: 0 16px 36px rgba(1, 42, 104, 0.12);
 
     .pillarIconCircle {
       background: #32a0df;
@@ -893,25 +267,27 @@
 }
 
 .pillarCardTitle {
-  font-size: 20px;
-  font-weight: 800;
-  color: #ffffff;
+  font-family: var(--pv-font-serif, 'Cormorant Garamond', serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: #012a68;
   margin: 0 0 10px;
-  text-transform: uppercase;
+  text-transform: none;
   letter-spacing: -0.01em;
 }
 
 .pillarCardDesc {
   font-size: 14px;
-  color: #9ca3af;
+  color: #4b5563;
   line-height: 1.65;
   margin: 0;
 }
 
-/* Leadership Section */
+/* 4. Leadership Section */
 .leadershipSection {
   padding: 80px 0;
-  background: #0b0c10;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
 }
 
 .leaderTag {
@@ -921,7 +297,7 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  background: rgba(50, 160, 223, 0.15);
+  background: rgba(50, 160, 223, 0.12);
   color: #32a0df;
   border: 1px solid rgba(50, 160, 223, 0.3);
   padding: 4px 12px;
@@ -943,7 +319,7 @@
   align-items: flex-start;
   gap: 12px;
   font-size: 14.5px;
-  color: #d1d5db;
+  color: #4b5563;
   line-height: 1.6;
 
   .checkDot {
@@ -956,146 +332,327 @@
   }
 }
 
-@media (max-width: 992px) {
-  .pillarGrid {
-    grid-template-columns: repeat(2, 1fr);
+/* 5. Our Approach Section & Slider */
+.approachSection {
+  padding: 80px 0 100px;
+  background-color: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+}
+
+.approachHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.headerText {
+  max-width: 600px;
+}
+
+.approachTitle {
+  font-family: var(--pv-font-serif, 'Cormorant Garamond', serif);
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  color: #012a68;
+  text-transform: none;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+}
+
+.approachDesc {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.navButtons {
+  display: flex;
+  gap: 12px;
+}
+
+.navBtn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #012a68;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 8px rgba(1, 42, 104, 0.05);
+
+  &:hover,
+  &.activeBtn {
+    background: #32a0df;
+    color: #ffffff;
+    border-color: #32a0df;
+    box-shadow: 0 6px 18px rgba(50, 160, 223, 0.3);
+  }
+}
+
+.timelineTrack {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 9999px;
+  margin-bottom: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.timelineProgress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: #32a0df;
+  border-radius: 9999px;
+  transition: width 0.4s ease;
+}
+
+.timelineDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 3px solid #cbd5e1;
+  z-index: 5;
+  transition: all 0.3s ease;
+
+  &.activeDot {
+    border-color: #32a0df;
+    background: #32a0df;
+    transform: scale(1.3);
+  }
+}
+
+.approachSliderContainer {
+  overflow: hidden;
+  width: 100%;
+}
+
+.approachSliderTrack {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+  transform: translateX(calc(-1 * var(--active-step, 0) * (33.333% + 16px)));
+}
+
+.approachCard {
+  flex: 0 0 calc(33.333% - 16px);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(1, 42, 104, 0.05);
+  transition: all 0.35s ease;
+  cursor: pointer;
+
+  .approachImgWrapper {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    .approachImg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
   }
 
-  .hero {
-    min-height: 480px;
-    padding: 60px 0 60px;
+  .approachCardTitle {
+    font-family: var(--pv-font-serif, 'Cormorant Garamond', serif);
+    font-size: 20px;
+    font-weight: 700;
+    color: #012a68;
+    margin-bottom: 14px;
+    text-transform: none;
   }
 
-  .splitRow {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .approachList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 
-    &.reverse {
-      .imgCol {
-        order: 1;
-      }
+    li {
+      font-size: 13.5px;
+      color: #4b5563;
+      line-height: 1.5;
 
-      .textCol {
-        order: 2;
+      &::before {
+        content: '• ';
+        color: #32a0df;
+        font-weight: 800;
       }
     }
   }
 
-  .teamGrid,
-  .smallFramesGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+  &.activeApproach {
+    border-color: #32a0df;
+    box-shadow: 0 14px 36px rgba(50, 160, 223, 0.2);
+
+    .approachImgWrapper .approachImg {
+      transform: scale(1.06);
+    }
+  }
+}
+
+/* 6. Bottom Overlapping CTA Banner */
+.bottomCtaWrapper {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.ctaBgBanner {
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
+  overflow: hidden;
+
+  .ctaImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.ctaCardOverlay {
+  position: relative;
+  margin-top: -80px;
+  background: #012a68;
+  color: #ffffff;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(1, 42, 104, 0.25);
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .ctaHead {
+    font-family: var(--pv-font-serif, 'Cormorant Garamond', serif);
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: none;
+    line-height: 1.15;
+    margin-bottom: 12px;
+
+    span {
+      color: #32a0df;
+    }
   }
 
-  .approachCard {
-    flex: 0 0 calc(50% - 10px);
+  .ctaSub {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 24px;
+  }
+
+  .ctaDivider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+    margin-bottom: 24px;
+  }
+
+  .ctaBottomRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .socialIcons {
+      display: flex;
+      gap: 12px;
+
+      .iconCircle {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.12);
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: background 0.25s ease;
+
+        &:hover {
+          background: #32a0df;
+        }
+      }
+    }
+
+    .ctaBtnWhite {
+      background: #ffffff;
+      color: #012a68;
+      padding: 12px 24px;
+      border-radius: 9999px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.25s ease, transform 0.25s ease;
+
+      &:hover {
+        background: #32a0df;
+        color: #ffffff;
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .splitRow {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .pillarGrid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .approachSliderTrack {
-    gap: 20px;
-    transform: translateX(calc(-1 * var(--active-step, 0) * (50% + 10px)));
+    transform: translateX(calc(-1 * var(--active-step, 0) * (50% + 12px)));
+  }
+
+  .approachCard {
+    flex: 0 0 calc(50% - 12px);
   }
 }
 
 @media (max-width: 640px) {
-  .wrapper {
-    padding-top: 40px;
-  }
-
-  .hero {
-    min-height: 360px;
-    padding: 44px 0 36px;
-  }
-
-  .heroDesc {
-    font-size: 13.5px;
-    margin-bottom: 24px;
-  }
-
-  .playRing {
-    width: 64px;
-    height: 64px;
-
-    .playCircle {
-      width: 40px;
-      height: 40px;
-    }
-  }
-
   .pillarGrid {
     grid-template-columns: 1fr;
-    gap: 16px;
   }
 
-  .storySection,
-  .pillarsSection,
-  .leadershipSection,
-  .teamSection,
-  .frameSection,
-  .approachSection,
-  .awardsSection {
-    padding: 50px 0;
-  }
-
-  .teamGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-
-  .smallFramesGrid {
-    grid-template-columns: 1fr;
+  .approachSliderTrack {
+    transform: translateX(calc(-1 * var(--active-step, 0) * 100%));
   }
 
   .approachCard {
     flex: 0 0 100%;
   }
 
-  .approachSliderTrack {
-    gap: 0;
-    transform: translateX(calc(-1 * var(--active-step, 0) * 100%));
-  }
-
   .approachHeaderRow {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-  }
-
-  .awardItem {
-    gap: 16px;
-    padding: 18px 0;
-
-    .awardTitle {
-      font-size: 17px;
-    }
-  }
-
-  .ctaBgBanner {
-    height: 180px;
-  }
-
-  .ctaCardOverlay {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-top: -40px;
-    padding: 24px 18px;
-  }
-
-  .ctaBottomRow {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .teamGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .statsRow {
-    grid-template-columns: 1fr;
   }
 }

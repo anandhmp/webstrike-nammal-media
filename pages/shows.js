@@ -1,102 +1,35 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import { Play, ChevronDown } from 'lucide-react';
+import { Play } from 'lucide-react';
 import styles from '@/styles/Shows.module.scss';
 
 export default function ShowsPage() {
-  const [activeCategory, setActiveCategory] = useState('All');
-
-  const categories = [
-    'All',
-    'Infotainment',
-    'Music & Culture',
-    'Drama & Fiction',
-    'Youth & Trends',
-    'Specials',
-    'Literature',
-    'Cinema',
-    'Sitcoms',
-  ];
-
   const shows = [
     {
       id: 1,
-      title: 'Island of Knowledge',
-      category: 'Infotainment',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg',
+      title: 'Arivinte Athbuthadweep',
+      image: 'https://i.ytimg.com/vi/aEsZ31erG6I/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCHLogY9T3rZSRXuD8SfXXUPysBBQ',
+      link: 'https://www.youtube.com/playlist?list=PLdfL48cte0ro',
     },
     {
       id: 2,
-      title: 'Under the Song Tree',
-      category: 'Music & Culture',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/DESIGN_SM2.jpg',
+      title: 'Aswamedham',
+      image: 'https://i.ytimg.com/vi/KARe0v-1ZrY/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD0mzsu-S5p-T6kOIzBCoF7HFYYxg',
+      link: 'https://www.youtube.com/playlist?list=PLQ8CTlWtt9jM',
     },
     {
       id: 3,
-      title: 'Thriller Junction',
-      category: 'Drama & Fiction',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/Priyangri.jpg',
+      title: 'Mahabharatham Uddharichu',
+      image: 'https://i.ytimg.com/vi/b6iwVDYvnY0/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAuiQSGPCBLtGkJQyjJt1Gv5W8fVQ',
+      link: 'https://www.youtube.com/playlist?list=PLZpx-zLMRdq0',
     },
     {
       id: 4,
-      title: 'If You Were Near',
-      category: 'Drama & Fiction',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/SEETHA-1-1-1400x800.jpg',
-    },
-    {
-      id: 5,
       title: 'Fun Fact',
-      category: 'Infotainment',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/FOK-1.jpg',
-    },
-    {
-      id: 6,
-      title: 'Vox Pop',
-      category: 'Youth & Trends',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/AMMAYUM-KUNJUM.jpg',
-    },
-    {
-      id: 7,
-      title: 'Special Programs',
-      category: 'Specials',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg',
-    },
-    {
-      id: 8,
-      title: 'Pusthakomania',
-      category: 'Literature',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/TOP-SINGER-2-1400x800.jpg',
-    },
-    {
-      id: 9,
-      title: 'Short Films',
-      category: 'Cinema',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2023/02/SUSU-1400-x-800-1-1.jpg',
-    },
-    {
-      id: 10,
-      title: 'Sitcoms',
-      category: 'Sitcoms',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/06/UPPUM-MULAKUM-2_NOw-showig.jpg',
-    },
-    {
-      id: 11,
-      title: 'Aswamedham',
-      category: 'Infotainment',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/BELOVED-H-700x880.jpg',
-    },
-    {
-      id: 12,
-      title: 'Mahabharatham Quoted by Murukan Kattakkada',
-      category: 'Literature',
-      image: 'https://www.flowerstv.in/wp-content/uploads/2022/05/sathyamyittum-V-700x880.jpg',
+      image: 'https://i.ytimg.com/vi/b6iwVDYvnY0/hqdefault.jpg?sqp=-oaymwEnCPYBEIoBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAuiQSGPCBLtGkJQyjJt1Gv5W8fVQ',
+      link: 'https://www.youtube.com/playlist?list=PLOsToi2x-Kx8',
     },
   ];
-
-  const filteredShows =
-    activeCategory === 'All'
-      ? shows
-      : shows.filter((show) => show.category === activeCategory);
 
   return (
     <>
@@ -119,35 +52,19 @@ export default function ShowsPage() {
       <main className={styles.wrapper}>
         {/* Banner Header */}
         <section className={styles.hero}>
-          <h1 className={styles.heroTitle}>SHOWS & PROGRAMS</h1>
+          <h1 className={styles.heroTitle}>Shows & Programs</h1>
         </section>
-
-        {/* Category Filter Bar */}
-        <div className={styles.filterBar}>
-          <div className="pv-container">
-            <div className={styles.filterScroll}>
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  className={`${styles.filterTab} ${activeCategory === cat ? styles.active : ''
-                    }`}
-                  onClick={() => setActiveCategory(cat)}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
 
         {/* Shows Grid Catalog */}
         <section className={styles.showsSection}>
           <div className="pv-container">
             <div className={styles.grid}>
-              {filteredShows.map((show) => (
+              {shows.map((show) => (
                 <div
                   key={show.id}
-                  className={show.isPortrait ? styles.cardPortrait : styles.card}
+                  className={styles.card}
+                  onClick={() => window.open(show.link, '_blank', 'noopener,noreferrer')}
+                  style={{ cursor: 'pointer' }}
                 >
                   <img
                     src={show.image}
@@ -157,7 +74,7 @@ export default function ShowsPage() {
 
                   <div className={styles.playOverlay}>
                     <div className={styles.playIcon}>
-                      <Play size={24} fill="#0b0c10" />
+                      <Play size={24} fill="#ffffff" />
                     </div>
                   </div>
 
@@ -166,13 +83,6 @@ export default function ShowsPage() {
                   </div>
                 </div>
               ))}
-            </div>
-
-            {/* Load More Manual Button */}
-            <div className={styles.loadMoreWrapper}>
-              <button className={styles.loadMoreBtn}>
-                Load More <ChevronDown size={18} />
-              </button>
             </div>
           </div>
         </section>

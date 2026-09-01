@@ -5,12 +5,13 @@
   right: 0;
   width: 100%;
   z-index: 9999;
-  background: rgba(11, 12, 16, 0.94);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   padding: 14px 0;
   transition: background 0.3s ease;
+  box-shadow: 0 4px 20px rgba(1, 42, 104, 0.06);
 }
 
 .inner {
@@ -35,17 +36,17 @@
 }
 
 .brandTitle {
-  font-family: var(--pv-font-sans);
-  font-size: 20px;
-  font-weight: 900;
-  color: #ffffff;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
+  font-family: var(--pv-font-serif, 'Cormorant Garamond', serif);
+  font-size: 24px;
+  font-weight: 700;
+  color: #012a68;
+  letter-spacing: -0.01em;
+  text-transform: none;
   line-height: 1;
 
   span {
-    color: #32a0df;
-    font-weight: 900;
+    color: #012a68;
+    font-weight: 700;
   }
 }
 
@@ -57,11 +58,12 @@
 }
 
 .navLink {
-  font-size: 13px;
-  font-weight: 900;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  font-family: var(--pv-font-serif, 'Cormorant Garamond', serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #012a68;
+  text-transform: none;
+  letter-spacing: 0.01em;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
@@ -72,7 +74,7 @@
 
   &:hover,
   &.activeLink {
-    color: #32a0df;
+    color: #012a68;
 
     &::after {
       content: '';
@@ -81,7 +83,7 @@
       left: 0;
       right: 0;
       height: 2px;
-      background: #32a0df;
+      background: #012a68;
     }
   }
 }
@@ -110,26 +112,26 @@
 }
 
 .dropdownInner {
-  background: #12141d;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 8px;
   padding: 8px 0;
   min-width: 170px;
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 16px 36px rgba(1, 42, 104, 0.15);
 
   a {
     display: block;
     padding: 8px 16px;
     font-size: 12.5px;
     font-weight: 700;
-    color: #d1d5db;
+    color: #1f2937;
     text-decoration: none;
     text-transform: uppercase;
     transition: background 0.2s ease, color 0.2s ease;
 
     &:hover {
-      background: rgba(225, 29, 72, 0.15);
-      color: #ffffff;
+      background: rgba(50, 160, 223, 0.1);
+      color: #012a68;
     }
   }
 }
@@ -147,7 +149,7 @@
   gap: 6px;
   font-size: 12.5px;
   font-weight: 800;
-  color: #ffffff;
+  color: #012a68;
   text-transform: uppercase;
   background: none;
   border: none;
@@ -160,15 +162,15 @@
   }
 
   &:hover {
-    color: #32a0df;
+    color: #012a68;
   }
 }
 
 .liveCtaBtn {
-  background: #32a0df;
+  background: #012a68;
   color: #ffffff;
   padding: 8px 18px;
-  border-radius: 0;
+  border-radius: 9999px;
   font-size: 12px;
   font-weight: 900;
   letter-spacing: 0.06em;
@@ -178,12 +180,12 @@
   align-items: center;
   gap: 8px;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 14px rgba(225, 29, 72, 0.4);
+  box-shadow: 0 4px 14px rgba(50, 160, 223, 0.35);
 
   &:hover {
-    background: #ffffff;
-    color: #0b0c10;
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
+    background: #012a68;
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(1, 42, 104, 0.4);
   }
 
   .liveDot {
@@ -218,14 +220,14 @@
   display: none;
   background: transparent;
   border: none;
-  color: #ffffff;
+  color: #012a68;
   cursor: pointer;
   padding: 6px;
   align-items: center;
   justify-content: center;
 
   &:hover {
-    color: #32a0df;
+    color: #012a68;
   }
 }
 
@@ -234,22 +236,23 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background: #0b0c10;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  background: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
   padding: 20px 16px;
   margin-top: 10px;
+  box-shadow: 0 10px 30px rgba(1, 42, 104, 0.1);
 }
 
 .mobileNavLink {
   font-size: 14px;
   font-weight: 900;
-  color: #ffffff;
+  color: #012a68;
   text-transform: uppercase;
   text-decoration: none;
   padding: 6px 0;
 
   &:hover {
-    color: #32a0df;
+    color: #012a68;
   }
 }
 

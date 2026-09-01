@@ -135,7 +135,7 @@ export default function AboutPage() {
         <section className={styles.hero}>
           <div className="pv-container">
             <h1 className={styles.heroTitle}>
-              A MEDIA PLATFORM<br />BUILT AROUND US
+              A Media Platform<br />Built Around Us
             </h1>
             <p className={styles.heroDesc}>
               NAMMAL is a digital media platform built around the curiosity, stories and conversations of Malayalis everywhere.
@@ -148,7 +148,7 @@ export default function AboutPage() {
             <div className={styles.playRingWrapper}>
               <div className={styles.playRing} title="Explore Nammal Media">
                 <div className={styles.playCircle}>
-                  <Play size={22} fill="#0b0c10" style={{ marginLeft: '2px' }} />
+                  <Play size={22} fill="#ffffff" style={{ marginLeft: '2px' }} />
                 </div>
               </div>
             </div>
@@ -168,7 +168,7 @@ export default function AboutPage() {
               </div>
               <div className={styles.textCol}>
                 <h2 className={styles.sectionTitle}>
-                  KNOWLEDGE &<br />ENTERTAINMENT
+                  Knowledge &<br />Entertainment
                 </h2>
                 <p className={styles.sectionText}>
                   Kerala has always had a deep and enduring passion for knowledge. From science and history to technology, cinema, culture and the mysteries of everyday life, Malayalis have never stopped asking questions, exploring ideas and sharing stories.
@@ -196,7 +196,7 @@ export default function AboutPage() {
         <section className={styles.pillarsSection}>
           <div className="pv-container">
             <div className={styles.pillarsHeader}>
-              <h2 className={styles.pillarsTitle}>WHAT WE BRING TOGETHER</h2>
+              <h2 className={styles.pillarsTitle}>What We Bring Together</h2>
               <p className={styles.pillarsSubtitle}>
                 A rich spectrum of content designed for every generation to watch, explore and engage with.
               </p>
@@ -233,9 +233,9 @@ export default function AboutPage() {
               <div className={styles.textCol}>
                 <span className={styles.leaderTag}>LEADERSHIP</span>
                 <h2 className={styles.sectionTitle}>
-                  THE EXPERIENCE<br />BEHIND NAMMAL
+                  The Experience<br />Behind Nammal
                 </h2>
-                <p className={styles.sectionText} style={{ fontSize: '16px', color: '#ffffff', fontWeight: '700' }}>
+                <p className={styles.sectionText} style={{ fontSize: '16px', color: '#012a68', fontWeight: '700' }}>
                   NAMMAL is led by Grand Master Dr. G. S. Pradeep, one of Kerala's most recognised television and live entertainment personalities.
                 </p>
 
@@ -263,11 +263,11 @@ export default function AboutPage() {
         </section>
 
         {/* 5. Our Approach Horizontal Cards Slider */}
-        <section className={styles.approachSection}>
+        {/* <section className={styles.approachSection}>
           <div className="pv-container">
             <div className={styles.approachHeaderRow}>
               <div className={styles.headerText}>
-                <h2 className={styles.approachTitle}>OUR APPROACH</h2>
+                <h2 className={styles.approachTitle}>Our Approach</h2>
                 <p className={styles.approachDesc}>
                   We believe in a systematic and strategic approach to content creation, ensuring every story resonates with audiences and inspires curiosity.
                 </p>
@@ -291,7 +291,6 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Timeline Track with Nodes */}
             <div className={styles.timelineTrack}>
               <div
                 className={styles.timelineProgress}
@@ -338,7 +337,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* 6. Bottom Overlapping CTA Banner */}
         <div className="pv-container">
@@ -353,8 +352,8 @@ export default function AboutPage() {
 
             <div className={styles.ctaCardOverlay}>
               <h3 className={styles.ctaHead}>
-                GET IN TOUCH<br />
-                WITH NAMMAL MEDIA<span>+</span>
+                Get in Touch<br />
+                With Nammal Media<span>+</span>
               </h3>
               <p className={styles.ctaSub}>
                 We're always happy to hear from our audiences, partners, and media enthusiasts.
