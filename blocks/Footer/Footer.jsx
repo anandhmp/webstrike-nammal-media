@@ -78,13 +78,13 @@ export default function Footer() {
             <h3 className={styles.colHeader}>SERVICES</h3>
             <ul className={styles.linkList}>
               <li>
-                <Link href="/services">Advertising</Link>
+                <Link href="/services/advertising">Advertising</Link>
               </li>
               <li>
-                <Link href="/services">Branding</Link>
+                <Link href="/services/branding">Branding</Link>
               </li>
               <li>
-                <Link href="/services">Events</Link>
+                <Link href="/services/events">Events</Link>
               </li>
             </ul>
           </div>

@@ -199,7 +199,7 @@ export default function StreamingHome() {
               </div>
 
               <div className={styles.statCol}>
-                <span className={styles.statVal}>WE</span>
+                <span className={styles.statVal}>We</span>
                 <span className={styles.statLabel}>
                   A powerful expression of togetherness
                 </span>

@@ -109,12 +109,12 @@ export default function ServicesPage() {
                   <p className={styles.epicBentoDesc}>
                     Reach millions of engaged Malayalis across digital platforms, broadcast shows, and targeted campaign integrations. We craft high-impact video commercials, brand sponsorships, and native digital ad placements that drive real audience engagement.
                   </p>
-                  <Link href="/contact" className={styles.epicBentoBtn}>
+                  <Link href="/services/advertising" className={styles.epicBentoBtn}>
                     Explore Advertising <ArrowUpRight size={16} />
                   </Link>
                 </div>
 
-                <div className={styles.bentoRightGraphic}>
+                <Link href="/services/advertising" className={styles.bentoRightGraphic}>
                   <div className={styles.gridPatternBg} />
                   <div className={styles.graphicIconWrapper}>
                     <img
@@ -122,36 +122,40 @@ export default function ServicesPage() {
                       alt="NAMMAL Advertising Service"
                       className={styles.bento3dImg}
                     />
-                    <span className={styles.graphicTextLogo}>NAMMAL ADVERTISING</span>
+                    <span className={styles.graphicTextLogo}>
+                      NAMMAL<br />ADVERTISING
+                    </span>
                   </div>
                   <span className={styles.verticalTag}>ADVERTISING SERVICE</span>
-                </div>
+                </Link>
               </div>
 
               {/* Bottom Row (2 Equal Bento Cards: Branding & Events) */}
               <div className={styles.epicBentoBottomRow}>
                 {/* Branding Card */}
                 <div className={styles.epicBentoSmallCard}>
-                  <div className={styles.bentoGraphicBox}>
+                  <Link href="/services/branding" className={styles.bentoGraphicBox}>
                     <div className={styles.gridPatternBg} />
                     <div className={styles.graphicIconWrapper}>
                       <img
-                        src="/assets/services/branding.png"
+                        src="/assets/services/branding (1).png"
                         alt="NAMMAL Branding Service"
                         className={styles.bento3dImgSmall}
                       />
                     </div>
                     <span className={styles.verticalTag}>BRANDING SERVICE</span>
-                  </div>
+                  </Link>
 
                   <div className={styles.bentoSmallFooter}>
                     <div className={styles.bentoSmallTextGroup}>
-                      <h3 className={styles.epicBentoSmallTitle}>Branding</h3>
+                      <h3 className={styles.epicBentoSmallTitle}>
+                        <Link href="/services/branding" style={{ color: 'inherit', textDecoration: 'none' }}>Branding</Link>
+                      </h3>
                       <p className={styles.epicBentoSmallDesc}>
                         Strategic visual identity design, brand positioning, and compelling storytelling that build emotional connection and trust.
                       </p>
                     </div>
-                    <Link href="/contact" className={styles.circleArrowBtn} title="Explore Branding">
+                    <Link href="/services/branding" className={styles.circleArrowBtn} title="Explore Branding">
                       <ArrowUpRight size={18} />
                     </Link>
                   </div>
@@ -159,7 +163,7 @@ export default function ServicesPage() {
 
                 {/* Events Card */}
                 <div className={styles.epicBentoSmallCard}>
-                  <div className={styles.bentoGraphicBox}>
+                  <Link href="/services/events" className={styles.bentoGraphicBox}>
                     <div className={styles.gridPatternBg} />
                     <div className={styles.graphicIconWrapper}>
                       <img
@@ -169,16 +173,18 @@ export default function ServicesPage() {
                       />
                     </div>
                     <span className={styles.verticalTag}>EVENTS SERVICE</span>
-                  </div>
+                  </Link>
 
                   <div className={styles.bentoSmallFooter}>
                     <div className={styles.bentoSmallTextGroup}>
-                      <h3 className={styles.epicBentoSmallTitle}>Events</h3>
+                      <h3 className={styles.epicBentoSmallTitle}>
+                        <Link href="/services/events" style={{ color: 'inherit', textDecoration: 'none' }}>Events</Link>
+                      </h3>
                       <p className={styles.epicBentoSmallDesc}>
                         Memorable live entertainment shows, stage productions, cultural festivals, and brand activation experiences.
                       </p>
                     </div>
-                    <Link href="/contact" className={styles.circleArrowBtn} title="Explore Events">
+                    <Link href="/services/events" className={styles.circleArrowBtn} title="Explore Events">
                       <ArrowUpRight size={18} />
                     </Link>
                   </div>

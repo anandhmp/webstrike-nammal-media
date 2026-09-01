@@ -8,15 +8,8 @@
 /* Hero Section with Rich Show Backdrop Image */
 .hero {
   position: relative;
-  height: 240px;
-  background-image: linear-gradient(180deg,
-      rgba(1, 42, 104, 0.7) 0%,
-      rgba(1, 42, 104, 0.95) 100%),
-    // url('https://www.flowerstv.in/wp-content/uploads/2022/05/DESIGN_SM-1.jpg')
-  ;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  height: 320px;
+  background: linear-gradient(0deg, rgba(1, 42, 104, 0.92) 0%, rgba(1, 42, 104, 0.65) 50%, rgba(1, 42, 104, 0.35) 100%), url('/assets/shows/image.png') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -27,8 +20,8 @@
     position: absolute;
     inset: 0;
     background: radial-gradient(circle at center,
-        rgba(0, 0, 0, 0.2) 0%,
-        rgba(1, 42, 104, 0.85) 100%);
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(1, 42, 104, 0.6) 100%);
     z-index: 1;
   }
 }
