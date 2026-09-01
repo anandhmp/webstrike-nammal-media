@@ -214,10 +214,10 @@
   align-items: flex-start;
 
   .overviewTitle {
-    font-family: var(--pv-font-serif, 'Cormorant Garamond', serif);
+    font-family: var(--pv-font-sans);
     font-size: clamp(36px, 5.5vw, 54px);
     font-weight: 700;
-    color: #012a68;
+    color: #000000;
     text-transform: none;
     letter-spacing: -0.01em;
     line-height: 1.12;
@@ -232,11 +232,11 @@
   }
 
   .investorBtn {
-    background: #32a0df;
-    color: #ffffff;
+    background: #012a68;
+    color: #fff263;
     padding: 14px 32px;
     font-size: 13.5px;
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     border: none;
@@ -244,133 +244,378 @@
     text-decoration: none;
     cursor: pointer;
     margin-top: 16px;
-    transition: background 0.25s ease;
+    transition: all 0.25s ease;
 
     &:hover {
-      background: #f43f5e;
+      background: #32a0df;
+      color: #ffffff;
     }
   }
 }
 
-/* Right Chart Box */
+/* Right Impact Pillars List Card */
 .overviewRightCol {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  width: 100%;
 }
 
-.chartMetaHeader {
-  width: 100%;
-  max-width: 440px;
+.impactPillarsContainer {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin-bottom: 16px;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 480px;
+}
 
-  .chartSubtitle {
-    font-size: 12px;
-    color: #9ca3af;
-    line-height: 1.4;
-    max-width: 220px;
-  }
+.impactItem {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  box-shadow: 0 4px 16px rgba(1, 42, 104, 0.04);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 
-  .cagrBadge {
-    font-size: 18px;
-    font-weight: 900;
-    color: #ffffff;
+  &:hover {
+    transform: translateX(4px);
+    border-color: #32a0df;
+    box-shadow: 0 10px 24px rgba(1, 42, 104, 0.08);
 
-    span {
-      font-size: 11px;
-      font-weight: 800;
-      color: #9ca3af;
-      display: block;
-      margin-bottom: 2px;
+    .impactNum {
+      background: #32a0df;
+      color: #ffffff;
     }
   }
 }
 
-.chartBarsWrapper {
+.impactNum {
+  font-size: 13px;
+  font-weight: 800;
+  color: #32a0df;
+  background: rgba(50, 160, 223, 0.1);
+  padding: 6px 12px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+.impactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.impactHead {
+  font-family: var(--pv-font-sans);
+  font-size: 19px;
+  font-weight: 700;
+  color: #012a68;
+  margin: 0;
+  text-transform: none;
+  line-height: 1.2;
+}
+
+.impactDesc {
+  font-size: 13.5px;
+  color: #4b5563;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Bento Grid Services Section (Epic Web Reference Style) */
+.bentoSection {
+  padding: 80px 0 100px;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+}
+
+.bentoHeader {
+  text-align: center;
+  margin-bottom: 48px;
+
+  .title {
+    font-family: var(--pv-font-sans);
+    font-size: clamp(34px, 5vw, 52px);
+    font-weight: 700;
+    color: #000000;
+    text-transform: none;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+  }
+}
+
+.bentoSub {
+  font-size: 15px;
+  color: #4b5563;
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.epicBentoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 1. Top Wide Bento Card */
+.epicBentoTopCard {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 32px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(1, 42, 104, 0.06);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: #32a0df;
+    box-shadow: 0 16px 40px rgba(1, 42, 104, 0.12);
+
+    .bento3dImg {
+      transform: scale(1.08) rotate(-2deg);
+    }
+  }
+}
+
+.bentoLeftInfo {
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.epicBentoTitle {
+  font-family: var(--pv-font-sans);
+  font-size: clamp(32px, 4.5vw, 44px);
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 14px;
+  text-transform: none;
+}
+
+.epicBentoDesc {
+  font-size: 14.5px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 480px;
+}
+
+.epicBentoBtn {
+  background: #012a68;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 0;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.25s ease, transform 0.25s ease;
+
+  &:hover {
+    background: #32a0df;
+    transform: translateY(-2px);
+  }
+}
+
+.bentoRightGraphic {
   position: relative;
+  background: #ffffff;
+  border-left: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 340px;
+  overflow: hidden;
+}
+
+/* Grid Lines Background Pattern (matching reference image) */
+.gridPatternBg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(1, 42, 104, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(1, 42, 104, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.graphicIconWrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 440px;
+  height: 100%;
+}
+
+.bento3dImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  transition: transform 0.4s ease;
+}
+
+.bento3dImgSmall {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  transition: transform 0.4s ease;
+}
+
+.glowIcon {
+  color: #012a68;
+  transition: all 0.3s ease;
+}
+
+.glowIconRocket {
+  color: #32a0df;
+  transition: all 0.3s ease;
+}
+
+.glowIconTrophy {
+  color: #e3ae62;
+  transition: all 0.3s ease;
+}
+
+.graphicTextLogo {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  color: rgba(1, 42, 104, 0.4);
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+.verticalTag {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: rgba(1, 42, 104, 0.35);
+  text-transform: uppercase;
+  user-select: none;
+}
+
+/* 2. Bottom Row (2 Cards) */
+.epicBentoBottomRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.epicBentoSmallCard {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 30px rgba(1, 42, 104, 0.06);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: #32a0df;
+    box-shadow: 0 16px 40px rgba(1, 42, 104, 0.12);
+
+    .bento3dImgSmall {
+      transform: scale(1.08) rotate(2deg);
+    }
+
+    .circleArrowBtn {
+      background: #32a0df;
+      color: #ffffff;
+    }
+  }
+}
+
+.bentoGraphicBox {
+  position: relative;
+  height: 280px;
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.bentoSmallFooter {
+  padding: 32px 28px;
   display: flex;
   align-items: flex-end;
+  justify-content: space-between;
   gap: 16px;
+  flex-grow: 1;
 }
 
-/* Curve Arrow Graphic */
-.curveArrowSvg {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  width: 50%;
-  height: 100px;
-  pointer-events: none;
-  z-index: 5;
-}
-
-/* Bar 1 (2019 Red Bar) */
-.barRed {
-  flex: 1;
-  height: 180px;
-  background: #32a0df;
-  padding: 24px 20px;
+.bentoSmallTextGroup {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  border-radius: 0;
-  box-shadow: 0 12px 30px rgba(225, 29, 72, 0.3);
-
-  .barLabel {
-    font-size: 13px;
-    font-weight: 700;
-    color: #ffffff;
-  }
-
-  .barVal {
-    font-size: 22px;
-    font-weight: 900;
-    color: #ffffff;
-    line-height: 1.1;
-  }
-
-  .barYear {
-    font-size: 14px;
-    font-weight: 800;
-    color: #ffffff;
-  }
 }
 
-/* Bar 2 (2027 White Pillar Bar) */
-.barWhite {
-  flex: 1.1;
-  height: 340px;
-  background: #ffffff;
-  padding: 28px 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.epicBentoSmallTitle {
+  font-family: var(--pv-font-sans);
+  font-size: 26px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 8px;
+  text-transform: none;
+}
+
+.epicBentoSmallDesc {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 360px;
+}
+
+.circleArrowBtn {
+  width: 44px;
+  height: 44px;
   border-radius: 0;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(1, 42, 104, 0.08);
+  color: #012a68;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
 
-  .barLabel {
-    font-size: 13px;
-    font-weight: 700;
-    color: #32a0df;
+@media (max-width: 992px) {
+  .epicBentoTopCard {
+    grid-template-columns: 1fr;
   }
 
-  .barVal {
-    font-size: 24px;
-    font-weight: 900;
-    color: #0b0c10;
-    line-height: 1.1;
-  }
-
-  .barYear {
-    font-size: 14px;
-    font-weight: 900;
-    color: #0b0c10;
+  .epicBentoBottomRow {
+    grid-template-columns: 1fr;
   }
 }
 

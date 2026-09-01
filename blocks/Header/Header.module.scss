@@ -5,13 +5,13 @@
   right: 0;
   width: 100%;
   z-index: 9999;
-  background: rgba(255, 255, 255, 0.95);
+  background: #012a68;
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   padding: 14px 0;
   transition: background 0.3s ease;
-  box-shadow: 0 4px 20px rgba(1, 42, 104, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .inner {
@@ -36,17 +36,17 @@
 }
 
 .brandTitle {
-  font-family: var(--pv-font-serif, 'Cormorant Garamond', serif);
-  font-size: 24px;
-  font-weight: 700;
-  color: #012a68;
+  font-family: var(--pv-font-sans);
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
   letter-spacing: -0.01em;
   text-transform: none;
   line-height: 1;
 
   span {
-    color: #012a68;
-    font-weight: 700;
+    color: #ffffff;
+    font-weight: 500;
   }
 }
 
@@ -58,10 +58,10 @@
 }
 
 .navLink {
-  font-family: var(--pv-font-serif, 'Cormorant Garamond', serif);
-  font-size: 18px;
-  font-weight: 700;
-  color: #012a68;
+  font-family: var(--pv-font-sans);
+  font-size: 15.5px;
+  font-weight: 400;
+  color: #ffffff;
   text-transform: none;
   letter-spacing: 0.01em;
   text-decoration: none;
@@ -74,17 +74,17 @@
 
   &:hover,
   &.activeLink {
-    color: #012a68;
+    color: #fff263;
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: #012a68;
-    }
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   bottom: -6px;
+    //   left: 0;
+    //   right: 0;
+    //   height: 2px;
+    //   background: #fff263;
+    // }
   }
 }
 
@@ -123,7 +123,7 @@
     display: block;
     padding: 8px 16px;
     font-size: 12.5px;
-    font-weight: 700;
+    font-weight: 500;
     color: #1f2937;
     text-decoration: none;
     text-transform: uppercase;
@@ -148,8 +148,8 @@
   align-items: center;
   gap: 6px;
   font-size: 12.5px;
-  font-weight: 800;
-  color: #012a68;
+  font-weight: 500;
+  color: #ffffff;
   text-transform: uppercase;
   background: none;
   border: none;
@@ -162,37 +162,40 @@
   }
 
   &:hover {
-    color: #012a68;
+    color: #fff263;
   }
 }
 
 .liveCtaBtn {
-  background: #012a68;
-  color: #ffffff;
-  padding: 8px 18px;
+  background: #ffffff;
+  color: #012a68;
+  padding: 8px 20px;
   border-radius: 9999px;
-  font-size: 12px;
-  font-weight: 900;
-  letter-spacing: 0.06em;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 8px;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 14px rgba(50, 160, 223, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    background: #012a68;
+    background: #32a0df;
     color: #ffffff;
-    box-shadow: 0 6px 20px rgba(1, 42, 104, 0.4);
+
+    .liveDot {
+      background: #ffffff;
+    }
   }
 
   .liveDot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #ffffff;
+    background: #e11d48;
     display: inline-block;
     animation: livePulse 1.5s infinite;
   }
@@ -220,14 +223,14 @@
   display: none;
   background: transparent;
   border: none;
-  color: #012a68;
+  color: #ffffff;
   cursor: pointer;
   padding: 6px;
   align-items: center;
   justify-content: center;
 
   &:hover {
-    color: #012a68;
+    color: #fff263;
   }
 }
 
@@ -236,23 +239,23 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background: #ffffff;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  background: #012a68;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 20px 16px;
   margin-top: 10px;
-  box-shadow: 0 10px 30px rgba(1, 42, 104, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .mobileNavLink {
-  font-size: 14px;
-  font-weight: 900;
-  color: #012a68;
-  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 450;
+  color: #ffffff;
+  text-transform: none;
   text-decoration: none;
   padding: 6px 0;
 
   &:hover {
-    color: #012a68;
+    color: #fff263;
   }
 }
 

@@ -225,7 +225,7 @@ export default function AboutPage() {
             <div className={`${styles.splitRow} ${styles.reverse}`}>
               <div className={styles.imgCol}>
                 <img
-                  src="/assets/about/GS03.jpeg"
+                  src="/assets/about/GS03.jpg"
                   alt="Grand Master Dr. G. S. Pradeep - Leadership"
                   className={styles.splitImg}
                 />

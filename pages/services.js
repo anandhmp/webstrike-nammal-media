@@ -1,67 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { ArrowRight, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+import { ArrowUpRight, Megaphone, Rocket, Trophy } from 'lucide-react';
 import styles from '@/styles/Services.module.scss';
 
 export default function ServicesPage() {
-  const coreServices = [
-    {
-      id: 0,
-      title: 'Advertising',
-      image: '/assets/services/advertising.jpg',
-    },
-    {
-      id: 1,
-      title: 'Branding',
-      image: '/assets/services/branding.jpg',
-    },
-    {
-      id: 2,
-      title: 'Events',
-      image: '/assets/services/events.jpg',
-    },
-  ];
-
-  // Repeat array 5 times for unending infinite loop
-  const loopedServices = [
-    ...coreServices,
-    ...coreServices,
-    ...coreServices,
-    ...coreServices,
-    ...coreServices,
-  ];
-
-  const [activeIndex, setActiveIndex] = useState(coreServices.length * 2 + 2);
-
-  // Unending Loop Interval
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => {
-        const next = prev + 1;
-        if (next >= coreServices.length * 4) {
-          return coreServices.length * 2;
-        }
-        return next;
-      });
-    }, 3000);
-
-    return () => clearInterval(timer);
-  }, [coreServices.length]);
-
   return (
     <>
       <Head>
         <title>Services & Business Verticals | NAMMAL MEDIA - Malayaliyude Manasakshi</title>
         <meta
           name="description"
-          content="Explore Core Business Verticals of NAMMAL MEDIA including Film Production, Film Distribution, Free to Air Production, Web Series, Cinema, and Pay TV."
+          content="Explore Advertising, Branding, and Event Services from NAMMAL MEDIA. Connecting brands with Malayalam audiences."
         />
         <link rel="canonical" href="https://nammalmedia.com/services" />
         <meta property="og:title" content="Services & Business Verticals | NAMMAL MEDIA" />
         <meta
           property="og:description"
-          content="Film production, web series, cinema distribution, and broadcast media services from NAMMAL MEDIA."
+          content="Advertising, branding, and event production services from NAMMAL MEDIA."
         />
         <meta property="og:url" content="https://nammalmedia.com/services" />
         <meta property="og:image" content="https://nammalmedia.com/assets/og-image.png" />
@@ -135,72 +91,102 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* 2. Core Business Header & Infinite Auto Slider Section (Middle) */}
-        <section style={{ padding: '60px 0 40px' }}>
+        {/* 2. Services Epic Bento Grid Section */}
+        <section id="services-list" className={styles.bentoSection}>
           <div className="pv-container">
-            <div className={styles.sliderHeader}>
-              <h2 className={styles.title}>
-                Services of Nammal Media
-              </h2>
+            <div className={styles.bentoHeader}>
+              <h2 className={styles.title}>Services of Nammal Media</h2>
+              <p className={styles.bentoSub}>
+                Empowering businesses with creative storytelling, advertising reach, and unforgettable event experiences.
+              </p>
             </div>
 
-            <div className={styles.sliderContainer}>
-              <div
-                className={styles.sliderTrack}
-                style={{
-                  '--active-idx': activeIndex,
-                }}
-              >
-                {loopedServices.map((service, idx) => {
-                  const distance = Math.abs(idx - activeIndex);
-                  let bulgeClass = styles.outerCard;
-                  if (distance === 0) {
-                    bulgeClass = styles.activeCenterCard;
-                  } else if (distance === 1) {
-                    bulgeClass = styles.neighborCard;
-                  }
+            <div className={styles.epicBentoContainer}>
+              {/* Top Featured Wide Bento Card (Advertising) */}
+              <div className={styles.epicBentoTopCard}>
+                <div className={styles.bentoLeftInfo}>
+                  <h3 className={styles.epicBentoTitle}>Advertising</h3>
+                  <p className={styles.epicBentoDesc}>
+                    Reach millions of engaged Malayalis across digital platforms, broadcast shows, and targeted campaign integrations. We craft high-impact video commercials, brand sponsorships, and native digital ad placements that drive real audience engagement.
+                  </p>
+                  <Link href="/contact" className={styles.epicBentoBtn}>
+                    Explore Advertising <ArrowUpRight size={16} />
+                  </Link>
+                </div>
 
-                  return (
-                    <div
-                      key={`${service.id}-${idx}`}
-                      className={`${styles.posterCard} ${bulgeClass}`}
-                      onClick={() => setActiveIndex(idx)}
-                    >
-                      <img
-                        src={service.image}
-                        alt={service.title}
-                        className={styles.posterImg}
-                      />
-                      <div className={styles.posterOverlay}>
-                        <h3 className={styles.cardTitle}>{service.title}</h3>
-                        <Link href="/contact" className={styles.cardCtaBtn}>
-                          Explore <ArrowRight size={12} />
-                        </Link>
-                      </div>
-                    </div>
-                  );
-                })}
+                <div className={styles.bentoRightGraphic}>
+                  <div className={styles.gridPatternBg} />
+                  <div className={styles.graphicIconWrapper}>
+                    <img
+                      src="/assets/services/ads.png"
+                      alt="NAMMAL Advertising Service"
+                      className={styles.bento3dImg}
+                    />
+                    <span className={styles.graphicTextLogo}>NAMMAL ADVERTISING</span>
+                  </div>
+                  <span className={styles.verticalTag}>ADVERTISING SERVICE</span>
+                </div>
               </div>
 
-              {/* Slider Dots Indicator */}
-              <div className={styles.controlsRow}>
-                {coreServices.map((_, idx) => {
-                  const realIndex = activeIndex % coreServices.length;
-                  return (
-                    <button
-                      key={idx}
-                      className={`${styles.dotBtn} ${realIndex === idx ? styles.activeDot : ''
-                        }`}
-                      onClick={() => setActiveIndex(coreServices.length * 2 + idx)}
-                      aria-label={`Go to slide ${idx + 1}`}
-                    />
-                  );
-                })}
+              {/* Bottom Row (2 Equal Bento Cards: Branding & Events) */}
+              <div className={styles.epicBentoBottomRow}>
+                {/* Branding Card */}
+                <div className={styles.epicBentoSmallCard}>
+                  <div className={styles.bentoGraphicBox}>
+                    <div className={styles.gridPatternBg} />
+                    <div className={styles.graphicIconWrapper}>
+                      <img
+                        src="/assets/services/branding.png"
+                        alt="NAMMAL Branding Service"
+                        className={styles.bento3dImgSmall}
+                      />
+                    </div>
+                    <span className={styles.verticalTag}>BRANDING SERVICE</span>
+                  </div>
+
+                  <div className={styles.bentoSmallFooter}>
+                    <div className={styles.bentoSmallTextGroup}>
+                      <h3 className={styles.epicBentoSmallTitle}>Branding</h3>
+                      <p className={styles.epicBentoSmallDesc}>
+                        Strategic visual identity design, brand positioning, and compelling storytelling that build emotional connection and trust.
+                      </p>
+                    </div>
+                    <Link href="/contact" className={styles.circleArrowBtn} title="Explore Branding">
+                      <ArrowUpRight size={18} />
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Events Card */}
+                <div className={styles.epicBentoSmallCard}>
+                  <div className={styles.bentoGraphicBox}>
+                    <div className={styles.gridPatternBg} />
+                    <div className={styles.graphicIconWrapper}>
+                      <img
+                        src="/assets/services/events.png"
+                        alt="NAMMAL Events Service"
+                        className={styles.bento3dImgSmall}
+                      />
+                    </div>
+                    <span className={styles.verticalTag}>EVENTS SERVICE</span>
+                  </div>
+
+                  <div className={styles.bentoSmallFooter}>
+                    <div className={styles.bentoSmallTextGroup}>
+                      <h3 className={styles.epicBentoSmallTitle}>Events</h3>
+                      <p className={styles.epicBentoSmallDesc}>
+                        Memorable live entertainment shows, stage productions, cultural festivals, and brand activation experiences.
+                      </p>
+                    </div>
+                    <Link href="/contact" className={styles.circleArrowBtn} title="Explore Events">
+                      <ArrowUpRight size={18} />
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
-
       </main>
     </>
   );

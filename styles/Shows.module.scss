@@ -12,7 +12,8 @@
   background-image: linear-gradient(180deg,
       rgba(1, 42, 104, 0.7) 0%,
       rgba(1, 42, 104, 0.95) 100%),
-    url('https://www.flowerstv.in/wp-content/uploads/2022/05/DESIGN_SM-1.jpg');
+    // url('https://www.flowerstv.in/wp-content/uploads/2022/05/DESIGN_SM-1.jpg')
+  ;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -35,7 +36,7 @@
 .heroTitle {
   position: relative;
   z-index: 10;
-  font-family: var(--pv-font-serif, 'Cormorant Garamond', serif);
+  font-family: var(--pv-font-sans);
   font-size: clamp(32px, 6vw, 54px);
   font-weight: 700;
   letter-spacing: 0.02em;

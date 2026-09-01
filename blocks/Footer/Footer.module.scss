@@ -1,16 +1,16 @@
 .footerWrapper {
-  background-color: #f8fafc;
-  color: #4b5563;
+  background-color: #012a68;
+  color: #ffffff;
   font-family: var(--pv-font-sans);
   position: relative;
   overflow: hidden;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 80px 0 40px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1.4fr 0.8fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1.2fr 1.6fr;
   gap: 40px;
   align-items: start;
   margin-bottom: 64px;
@@ -42,12 +42,12 @@
   .logoText {
     font-size: 22px;
     font-weight: 900;
-    color: #012a68;
+    color: #ffffff;
     letter-spacing: -0.02em;
     text-transform: uppercase;
 
     span {
-      color: #32a0df;
+      color: #fff263;
       font-weight: 900;
     }
   }
@@ -55,16 +55,35 @@
   .brandDesc {
     font-size: 13.5px;
     line-height: 1.65;
-    color: #4b5563;
+    color: rgba(255, 255, 255, 0.85);
     margin: 0;
     max-width: 280px;
+  }
+
+  .socialRow {
+    display: flex;
+    gap: 14px;
+    margin-top: 12px;
+  }
+
+  .socialLink {
+    color: #ffffff;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: #fff263;
+      transform: translateY(-2px);
+    }
   }
 }
 
 .colHeader {
   font-size: 14px;
-  font-weight: 900;
-  color: #012a68;
+  font-weight: 700;
+  color: #fff263;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -83,27 +102,61 @@
   }
 
   a {
-    color: #4b5563;
+    color: #ffffff;
     font-size: 13.5px;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
     transition: color 0.2s ease;
 
     &:hover {
-      color: #32a0df;
+      color: #fff263;
     }
   }
 }
 
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: #fff263;
+      }
+    }
+  }
+
+  .contactIcon {
+    color: #fff263;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+}
+
 .bottomBar {
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   padding-top: 28px;
   text-align: center;
 }
 
 .copyrightText {
   font-size: 13px;
-  color: #6b7280;
+  color: rgba(255, 255, 255, 0.75);
   margin: 0;
 }
 
@@ -113,55 +166,14 @@
   }
 
   .grid {
-    grid-template-columns: 1.4fr 1fr 1fr 1fr;
-    gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
   }
 }
 
-@media (max-width: 768px) {
-  .footerWrapper {
-    padding: 48px 0 28px;
-  }
-
+@media (max-width: 640px) {
   .grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px 20px;
-    margin-bottom: 36px;
-  }
-
-  .brandCol {
-    grid-column: 1 / -1;
-    margin-bottom: 8px;
-
-    .logoImg {
-      height: 48px;
-    }
-
-    .brandDesc {
-      max-width: 100%;
-      font-size: 13px;
-    }
-  }
-
-  .colHeader {
-    font-size: 13px;
-    margin-bottom: 12px;
-  }
-
-  .linkList {
-    gap: 10px;
-
-    a {
-      font-size: 13px;
-    }
-  }
-
-  .bottomBar {
-    padding-top: 20px;
-    text-align: center;
-
-    .copyrightText {
-      font-size: 12px;
-    }
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 }

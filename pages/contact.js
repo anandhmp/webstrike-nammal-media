@@ -30,7 +30,7 @@ export default function ContactPage() {
             <div className={styles.contactHeader}>
               <h1 className={styles.title}>
                 Let's Work Together<br />
-                With Nammal Media<span>+</span>
+                With Nammal Media
               </h1>
               <p className={styles.subtitle}>
                 We're always happy to hear from our viewers, brand partners, investors, and film enthusiasts.
@@ -49,7 +49,7 @@ export default function ContactPage() {
                     <div className={styles.contactBadges}>
                       <div className={styles.badgeItem} style={{ alignItems: 'flex-start', width: '100%', marginBottom: '4px' }}>
                         <MapPin size={18} className={styles.icon} style={{ flexShrink: 0, marginTop: '3px' }} />
-                        <span style={{ lineHeight: '1.5' }}>
+                        <span style={{ lineHeight: '1.5', fontWeight: 400 }}>
                           Grandmaster's creative hub<br />
                           'Manjusha' TC 23/1777, OD4<br />
                           Jawaharnagar, Kowdiar PO, Trivandrum
@@ -162,7 +162,7 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* 5. Global Branches Dotted Map Section */}
+        {/* 5. Global Branches Dotted Map Section - Commented out
         <section className={styles.branchesSection}>
           <div className="pv-container">
             <div className={styles.branchesHeaderRow}>
@@ -184,11 +184,9 @@ export default function ContactPage() {
               <div className={styles.mapContainer} />
 
               <div className={styles.pinContainerLayer}>
-                {/* 1. Trivandrum Headquarters (Active Red Pin) */}
                 <div className={`${styles.mapPin} ${styles.activePin}`} style={{ top: '64%', left: '68.5%' }}>
                   <div className={styles.dotPulse} />
 
-                  {/* Popup Card */}
                   <div className={styles.pinPopupCard}>
                     <img
                       src="/assets/nammal-logo.png"
@@ -209,27 +207,22 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* 2. Dubai UAE Studio */}
                 <div className={styles.mapPin} style={{ top: '56%', left: '62%' }}>
                   <div className={styles.dotPulse} />
                 </div>
 
-                {/* 3. London UK Studio */}
                 <div className={styles.mapPin} style={{ top: '34%', left: '48.5%' }}>
                   <div className={styles.dotPulse} />
                 </div>
 
-                {/* 4. New York USA Studio */}
                 <div className={styles.mapPin} style={{ top: '40%', left: '26%' }}>
                   <div className={styles.dotPulse} />
                 </div>
 
-                {/* 5. Singapore Studio */}
                 <div className={styles.mapPin} style={{ top: '65%', left: '76%' }}>
                   <div className={styles.dotPulse} />
                 </div>
 
-                {/* 6. Sydney Australia Studio */}
                 <div className={styles.mapPin} style={{ top: '80%', left: '86%' }}>
                   <div className={styles.dotPulse} />
                 </div>
@@ -237,8 +230,9 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
+        */}
 
-        {/* 4. Collaboration Opportunities Block Section */}
+        {/* 4. Collaboration Opportunities Block Section - Commented out
         <section className={styles.collabSection}>
           <div className="pv-container">
             <div className={styles.collabHeader}>
@@ -253,7 +247,6 @@ export default function ContactPage() {
 
             <div className={styles.collabBoxContainer}>
               <div className={styles.collabGrid}>
-                {/* Card 1: Featured Active Card */}
                 <div className={`${styles.collabCard} ${styles.activeCollabCard}`}>
                   <div className={styles.numBadge}>1</div>
                   <h3 className={styles.stepTitle}>Submit Your Project</h3>
@@ -265,7 +258,6 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                {/* Card 2 */}
                 <div className={styles.collabCard}>
                   <div className={styles.numBadge}>2</div>
                   <h3 className={styles.stepTitle}>Guidelines</h3>
@@ -274,7 +266,6 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                {/* Card 3 */}
                 <div className={styles.collabCard}>
                   <div className={styles.numBadge}>3</div>
                   <h3 className={styles.stepTitle}>Introduce Yourself</h3>
@@ -283,7 +274,6 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                {/* Card 4 */}
                 <div className={styles.collabCard}>
                   <div className={styles.numBadge}>4</div>
                   <h3 className={styles.stepTitle}>Why Nammal Media+</h3>
@@ -292,7 +282,6 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                {/* Card 5 */}
                 <div className={styles.collabCard}>
                   <div className={styles.numBadge}>5</div>
                   <h3 className={styles.stepTitle}>Review Process</h3>
@@ -301,7 +290,6 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                {/* Card 6 */}
                 <div className={styles.collabCard}>
                   <div className={styles.numBadge}>6</div>
                   <h3 className={styles.stepTitle}>Prepare Collaboration</h3>
@@ -313,6 +301,7 @@ export default function ContactPage() {
             </div>
           </div>
         </section>
+        */}
 
 
       </main>

@@ -1,28 +1,47 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import {
-  Phone,
   Instagram,
-  Globe,
   Facebook,
-  UserCheck,
-  Headphones,
-  MapPin,
-  X,
-  ExternalLink
+  Youtube,
+  Globe,
+  ArrowLeft
 } from 'lucide-react';
 import styles from '@/styles/Subscribe.module.scss';
 
 export default function SubscribePage() {
-  const [showBranchesModal, setShowBranchesModal] = useState(false);
+  const router = useRouter();
 
-  const branches = [
+  const links = [
     {
-      title: "Headquarters - Trivandrum",
-      address: "Grandmaster's creative hub, 'Manjusha' TC 23/1777, OD4, Jawaharnagar, Trivandrum, Kerala 695003",
-      phone: "+91 79077 60700",
-      mapUrl: "https://maps.google.com/?q=Jawaharnagar+Trivandrum"
+      id: 'instagram',
+      title: 'Instagram',
+      url: 'https://www.instagram.com/nammal__media/',
+      icon: Instagram,
+      isExternal: true,
+    },
+    {
+      id: 'facebook',
+      title: 'Facebook',
+      url: 'https://www.facebook.com/profile.php?id=61590600346051',
+      icon: Facebook,
+      isExternal: true,
+    },
+    {
+      id: 'youtube',
+      title: 'YouTube',
+      url: 'https://www.youtube.com/@NAMMAL-MalayaliyudeManasakshi',
+      icon: Youtube,
+      isExternal: true,
+    },
+    {
+      id: 'website',
+      title: 'Website',
+      url: '/',
+      icon: Globe,
+      isExternal: false,
     },
   ];
 
@@ -32,11 +51,22 @@ export default function SubscribePage() {
         <title>Subscribe & Connect | NAMMAL Media</title>
         <meta
           name="description"
-          content="Connect with NAMMAL Media on Instagram, Facebook, YouTube, call our helpline, or visit our branches."
+          content="Follow, Watch, Discover, and Connect with NAMMAL Media on Instagram, Facebook, YouTube, and our official website."
         />
+        <link rel="canonical" href="https://nammalmedia.com/subscribe" />
       </Head>
 
       <main className={styles.subscribeWrapper}>
+        {/* Back Button */}
+        <button
+          className={styles.backBtn}
+          onClick={() => router.back()}
+          aria-label="Go Back to Previous Page"
+        >
+          <ArrowLeft size={18} />
+          <span>Back</span>
+        </button>
+
         {/* Top Right Concentric Circles Graphic */}
         <svg
           className={styles.circleBgTopRight}
@@ -76,136 +106,47 @@ export default function SubscribePage() {
             />
           </div>
 
-          {/* Title */}
-          {/* <h1 className={styles.brandTitle}>NAMMAL Media</h1> */}
+          {/* Tagline / CTA Subtitle */}
+          <h2 className={styles.ctaTagline}>Follow. Watch. Discover. Connect.</h2>
 
-          {/* Action Grid (2 Rows x 3 Columns) */}
+          {/* Action Grid (2 Rows x 2 Columns) */}
           <div className={styles.actionGrid}>
-            {/* Call */}
-            <a
-              href="tel:+917907760700"
-              className={styles.actionItem}
-              title="Call Us"
-            >
-              <div className={styles.iconSquare}>
-                <Phone size={28} strokeWidth={2.2} />
-              </div>
-              <span className={styles.actionLabel}>Call</span>
-            </a>
+            {links.map((link) => {
+              const IconComponent = link.icon;
+              if (link.isExternal) {
+                return (
+                  <a
+                    key={link.id}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.actionItem}
+                    title={link.title}
+                  >
+                    <div className={styles.iconSquare}>
+                      <IconComponent size={28} strokeWidth={2.2} />
+                    </div>
+                    <span className={styles.actionLabel}>{link.title}</span>
+                  </a>
+                );
+              }
 
-            {/* Instagram */}
-            <a
-              href="https://www.instagram.com/nammal__media/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.actionItem}
-              title="Instagram"
-            >
-              <div className={styles.iconSquare}>
-                <Instagram size={28} strokeWidth={2.2} />
-              </div>
-              <span className={styles.actionLabel}>Instagram</span>
-            </a>
-
-            {/* Website */}
-            <Link
-              href="/"
-              className={styles.actionItem}
-              title="Website"
-            >
-              <div className={styles.iconSquare}>
-                <Globe size={28} strokeWidth={2.2} />
-              </div>
-              <span className={styles.actionLabel}>Website</span>
-            </Link>
-
-            {/* Facebook */}
-            <a
-              href="https://www.facebook.com/profile.php?id=61590600346051"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.actionItem}
-              title="Facebook"
-            >
-              <div className={styles.iconSquare}>
-                <Facebook size={28} strokeWidth={2.2} />
-              </div>
-              <span className={styles.actionLabel}>Facebook</span>
-            </a>
-
-            {/* Director */}
-            <a
-              href="https://wa.me/917907760700"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.actionItem}
-              title="Director"
-            >
-              <div className={styles.iconSquare}>
-                <UserCheck size={28} strokeWidth={2.2} />
-              </div>
-              <span className={styles.actionLabel}>Director</span>
-            </a>
-
-            {/* Customer Care */}
-            <a
-              href="mailto:grandmastercreativehub@gmail.com"
-              className={styles.actionItem}
-              title="Customer Care"
-            >
-              <div className={styles.iconSquare}>
-                <Headphones size={28} strokeWidth={2.2} />
-              </div>
-              <span className={styles.actionLabel}>Customer Care</span>
-            </a>
-          </div>
-
-          {/* Bottom Pill Button: Branches */}
-          <button
-            className={styles.pillButton}
-            onClick={() => setShowBranchesModal(true)}
-            aria-label="View Branches"
-          >
-            <span className={styles.pillIcon}>
-              <MapPin size={20} strokeWidth={2.2} />
-            </span>
-            Branches
-          </button>
-        </div>
-
-        {/* Branches Modal */}
-        {showBranchesModal && (
-          <div className={styles.modalBackdrop} onClick={() => setShowBranchesModal(false)}>
-            <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
-              <div className={styles.modalHeader}>
-                <h3>Our Branches</h3>
-                <button
-                  className={styles.closeBtn}
-                  onClick={() => setShowBranchesModal(false)}
-                  aria-label="Close"
+              return (
+                <Link
+                  key={link.id}
+                  href={link.url}
+                  className={styles.actionItem}
+                  title={link.title}
                 >
-                  <X size={20} />
-                </button>
-              </div>
-
-              <div className={styles.branchList}>
-                {branches.map((branch, idx) => (
-                  <div key={idx} className={styles.branchCard}>
-                    <h4>{branch.title}</h4>
-                    <p>{branch.address}</p>
-                    <a
-                      href={branch.mapUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <MapPin size={14} /> Get Directions <ExternalLink size={12} />
-                    </a>
+                  <div className={styles.iconSquare}>
+                    <IconComponent size={28} strokeWidth={2.2} />
                   </div>
-                ))}
-              </div>
-            </div>
+                  <span className={styles.actionLabel}>{link.title}</span>
+                </Link>
+              );
+            })}
           </div>
-        )}
+        </div>
       </main>
     </>
   );
