@@ -17,6 +17,15 @@ export default function App({ Component, pageProps }) {
     });
   }, []);
 
+  // Use custom layout if defined on component, or fallback to default Header/Footer layout
+  const getLayout = Component.getLayout || ((page) => (
+    <>
+      <Header />
+      {page}
+      <Footer />
+    </>
+  ));
+
   return (
     <>
       {/* Google Analytics Scripts using next/script */}
@@ -33,9 +42,7 @@ export default function App({ Component, pageProps }) {
         `}
       </Script>
 
-      <Header />
-      <Component {...pageProps} />
-      <Footer />
+      {getLayout(<Component {...pageProps} />)}
     </>
   );
 }

@@ -821,7 +821,146 @@
   }
 }
 
+/* Pillars / What We Bring Together Section */
+.pillarsSection {
+  padding: 80px 0;
+  background-color: #000000;
+  position: relative;
+}
+
+.pillarsHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.pillarsTitle {
+  font-size: clamp(28px, 5vw, 44px);
+  font-weight: 900;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.pillarsSubtitle {
+  font-size: 15px;
+  color: #9ca3af;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.pillarGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.pillarCard {
+  background: #111622;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 32px 24px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: rgba(50, 160, 223, 0.6);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6), 0 0 25px rgba(50, 160, 223, 0.15);
+
+    .pillarIconCircle {
+      background: #32a0df;
+      color: #ffffff;
+      transform: scale(1.1);
+    }
+  }
+}
+
+.pillarIconCircle {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(50, 160, 223, 0.12);
+  border: 1px solid rgba(50, 160, 223, 0.25);
+  color: #32a0df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.pillarCardTitle {
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+
+.pillarCardDesc {
+  font-size: 14px;
+  color: #9ca3af;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Leadership Section */
+.leadershipSection {
+  padding: 80px 0;
+  background: #0b0c10;
+}
+
+.leaderTag {
+  align-self: flex-start;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(50, 160, 223, 0.15);
+  color: #32a0df;
+  border: 1px solid rgba(50, 160, 223, 0.3);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+
+.leaderList {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.leaderListItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14.5px;
+  color: #d1d5db;
+  line-height: 1.6;
+
+  .checkDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #32a0df;
+    margin-top: 8px;
+    flex-shrink: 0;
+  }
+}
+
 @media (max-width: 992px) {
+  .pillarGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .hero {
     min-height: 480px;
     padding: 60px 0 60px;
@@ -883,7 +1022,14 @@
     }
   }
 
+  .pillarGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
   .storySection,
+  .pillarsSection,
+  .leadershipSection,
   .teamSection,
   .frameSection,
   .approachSection,
